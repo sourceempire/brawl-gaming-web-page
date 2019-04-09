@@ -1,0 +1,16 @@
+@import "../../resources/variables.scss";
+
+.navigation {
+  a {
+    display: inline-block;
+    line-height: 50px;
+    font-size: 1rem;
+    color: $color-text;
+    &:hover {
+      color: $color-active;
+    }
+  }
+  .active {
+    color: $color-active;
+  }
+}

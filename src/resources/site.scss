@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: $color-background;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+}
+
+a {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
