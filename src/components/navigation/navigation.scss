@@ -1,16 +1,57 @@
 @import "../../resources/variables.scss";
 
+$navigation-height: 80px;
+
 .navigation {
-  a {
-    display: inline-block;
-    line-height: 50px;
-    font-size: 1rem;
-    color: $color-text;
-    &:hover {
-      color: $color-active;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: $navigation-height;
+  background-color: $color-navigation;
+
+  .logo {
+    img {
+      height: $navigation-height - 25px;
     }
   }
-  .active {
-    color: $color-active;
+
+  .menu {
+    a {
+      display: inline-block;
+      line-height: $navigation-height;
+      padding: 0 10px;
+      font-size: 1rem;
+      color: $color-text;
+      &:hover {
+        color: $color-active;
+      }
+    }
+    .login {
+      font-size: 0.7rem;
+      line-height: $navigation-height - 45px;
+      border: 1px solid $color-active;
+      border-radius: 5px;
+      margin: 0 10px;
+    }
+
+    .signup {
+      font-size: 0.7rem;
+      line-height: $navigation-height - 45px;
+      border: 1px solid $color-active;
+      background: $color-button-gradient-accept;
+      border-radius: 5px;
+      margin-left: 5px;
+    }
+
+    .active {
+      color: $color-active;
+    }
   }
 }

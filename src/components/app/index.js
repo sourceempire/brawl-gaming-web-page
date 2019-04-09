@@ -16,11 +16,11 @@ const App = () => {
         <Navigation />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/download" component={Download} />
-          <Route exact path="/games" component={Games} />
-          <Route exact path="/concept" component={Concept} />
-          <Route exact path="/faq" component={FAQ} />
-          <Redirect to="/" component={Home} />
+          <Route path="/download" component={Download} />
+          <Route path="/games" component={Games} />
+          <Route path="/concept" component={Concept} />
+          <Route path="/faq" component={FAQ} />
+          <Redirect from="*" to="/" component={Home} />
         </Switch>
       </div>
     </BrowserRouter>
