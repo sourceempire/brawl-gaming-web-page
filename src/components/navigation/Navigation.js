@@ -6,7 +6,9 @@ const Navigation = () => {
   return (
     <div className="navigation">
       <div className="logo">
-        <img src="/images/logo.png" alt="logo" />
+        <NavLink exact to="/">
+          <img src="/images/logo.png" alt="logo" />
+        </NavLink>
       </div>
       <div className="menu">
         <NavLink exact to="/">

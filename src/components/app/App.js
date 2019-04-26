@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import Navigation from "../navigation";
-import Home from "../home";
-import Download from "../download";
-import Games from "../games";
-import Concept from "../concept";
-import FAQ from "../faq";
+import Navigation from "../navigation/Navigation";
+import Home from "../home/Home";
+import Download from "../download/Download";
+import Games from "../games/Games";
+import Concept from "../concept/Concept";
+import FAQ from "../faq/Faq";
 import "./app.scss";
 import "../../resources/site.scss";
 
