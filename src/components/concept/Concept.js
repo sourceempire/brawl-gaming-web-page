@@ -2,7 +2,11 @@ import React from "react";
 import "./concept.scss";
 
 const Concept = () => {
-  return <div>Concept</div>;
+  return (
+    <section>
+      <h1>Concept</h1>
+    </section>
+  );
 };
 
 export default Concept;
