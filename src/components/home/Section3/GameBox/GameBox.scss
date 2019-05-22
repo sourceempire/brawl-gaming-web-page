@@ -1,0 +1,16 @@
+@import "../../../../resources/variables.scss";
+.gameBox{
+    margin-top: 80px;
+    width:270px;
+    height:450px;
+    background: red;
+    padding:5%;
+    .gameImage{
+        width:100%;
+    }
+    .label{
+        padding: 0 20px;
+        width:50px;
+        border-left:4px solid #598053;
+    }
+}

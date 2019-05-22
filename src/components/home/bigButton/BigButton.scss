@@ -1,0 +1,17 @@
+@import "../../../resources/variables.scss";
+.BigButton{
+    width: 142px;
+    height: 162px;
+    border-radius: 10px;
+    border:none;
+    margin:0 20px;
+    img{
+        width:52px;
+        align-content: center;
+    } 
+    hr{
+        text-align: center;
+        width:120px;
+    }
+    
+}
