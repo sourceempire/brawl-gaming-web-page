@@ -1,0 +1,59 @@
+@import "../../../resources/variables.scss";
+
+.categories {
+  width: 70vw;
+  max-width: 750px;
+  margin: 0 auto;
+
+  h1 {
+    padding: 40px 0 20px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .category {
+    width: 200px;
+    height: 280px;
+    min-width: 180px;
+    margin: 10px 10px 50px 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: $color-text;
+    position: relative;
+    img {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 0.8rem;
+      margin: 5px 0 0 0;
+    }
+
+    a {
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $color-button-gradient-accept;
+      color: $color-text;
+      font-size: 0.8rem;
+      border-radius: 5px;
+      height: 35px;
+      width: 140px;
+      border: 1px solid $color-active;
+      margin: 0 auto;
+    }
+  }
+}

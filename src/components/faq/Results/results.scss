@@ -1,0 +1,36 @@
+@import "../../../resources/variables.scss";
+
+.results {
+  text-align: left;
+  color: $color-text;
+  margin: 0 auto;
+  width: 50vw;
+  min-width: 300px;
+
+  h1 {
+    padding: 40px 20px 0 20px;
+  }
+
+  .result {
+    padding: 20px;
+    span {
+      width: 50vw;
+      min-width: 300px;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: auto 50px;
+      grid-template-rows: auto;
+      grid-template-areas: "header button";
+      align-items: center;
+
+      img {
+        grid-area: "button";
+        height: 18px;
+      }
+      h4 {
+        grid-area: "header";
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

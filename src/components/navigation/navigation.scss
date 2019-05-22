@@ -15,10 +15,23 @@ $navigation-height: 80px;
   box-sizing: border-box;
   height: $navigation-height;
   background-color: $color-navigation;
+  z-index: 10000;
 
   .logo {
+    display: flex;
+    flex-flow: row;
     img {
       height: $navigation-height - 25px;
+    }
+    .text {
+      color: $color-text;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: flex-start;
+      h4 {
+        margin: 2px;
+      }
     }
   }
 

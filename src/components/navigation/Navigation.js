@@ -9,6 +9,10 @@ const Navigation = () => {
         <NavLink exact to="/">
           <img src="/images/logo.png" alt="logo" />
         </NavLink>
+        <div className="text">
+          <h4>Brawl</h4>
+          <h4>Gaming</h4>
+        </div>
       </div>
       <div className="menu">
         <NavLink exact to="/">
