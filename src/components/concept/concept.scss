@@ -1,1 +1,39 @@
 @import "../../resources/variables.scss";
+
+
+.grids {
+    display: flex;
+    flex-flow: column wrap;
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        /* grid-template-areas: 'text img';*/
+        grid-gap: 0px;
+        margin-top: 20%;
+
+        .text{
+            grid-area: text;
+            text-align: left;
+
+            h4 {
+                font-family: "Orbitron", sans-serif; 
+                color: #EDE4D7;
+                font-size: 225%;
+                justify-content: center;
+            }   
+
+            p {
+                font-family: "Roboto", sans-serif; 
+                color: #EDE4D7;
+            }
+        }
+        
+        img {
+            grid-area: 'img';
+            width: 100%;
+            height: 150px;
+        }
+    }
+}
+

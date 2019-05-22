@@ -1,0 +1,12 @@
+@import "../../../resources/variables.scss";
+.MediumButton{
+    margin:20px;
+    width: 270px;
+    height: 60px;
+    background: $color-button-gradient-accept;
+    border-radius: 10px;
+    border: 1px solid $color-active;
+    h3{
+        font-size: 20px;
+    }
+}
