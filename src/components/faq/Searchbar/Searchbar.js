@@ -14,17 +14,15 @@ const Searchbar = ({ onSearch }) => {
       const ret = await res.json();
       onSearch(ret);
     } else {
-      onSearch([]);
       alert("Not able to search right now.");
+      onSearch([]);
     }
-
-    // onSearch(ret);
   };
 
   return (
     <form className="searchbar" onSubmit={e => search(e)}>
       <input type="text" ref={searchRef} placeholder="Describe your issue" />
-      <button>
+      <button type="submit">
         <img src="/images/search.svg" alt="search" />
       </button>
     </form>

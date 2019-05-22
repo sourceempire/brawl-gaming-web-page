@@ -47,7 +47,7 @@ const cats = [
   },
   {
     id: 5,
-    icon: "/images/user.svg",
+    icon: "/images/account.svg",
     label: "Account",
     top: [
       "What games can you play?",

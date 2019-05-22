@@ -1,72 +1,72 @@
 @import "../../resources/variables.scss";
 
-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.download {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #dl {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 50px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
 }
 
 p {
-    color: $color-text;
+  color: $color-text;
 }
 
 #logo {
-    height: 150px;
+  height: 150px;
 }
 
 .logoDiv {
-    display: flex;
-    flex-flow: row;
-    margin-bottom: 30px;
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 30px;
 }
 
 #logoText {
-    color: $color-text;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 45px;
-    letter-spacing: 1px;
+  color: $color-text;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 45px;
+  letter-spacing: 1px;
 }
 
 #dlBtn {
-    background: $color-button-gradient-accept;
-    border: none;
-    border-radius: 7px;
-    color: $color-text;
-    cursor: pointer;
-    width: 300px;
-    height: 60px;
-    padding: 10px 20px;
-    margin-top: 30px;
-    margin-bottom: 10px;
+  background: $color-button-gradient-accept;
+  border: none;
+  border-radius: 7px;
+  color: $color-text;
+  cursor: pointer;
+  width: 300px;
+  height: 60px;
+  padding: 10px 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 #dlText {
-    display: inline-block;
-    font-size: 18pt;
-    font-weight: lighter;
-    letter-spacing: 1px;
+  display: inline-block;
+  font-size: 18pt;
+  font-weight: lighter;
+  letter-spacing: 1px;
 }
 
 .dlAlt {
-    width: 265px;
-    height: 60px;
-} 
+  width: 265px;
+  height: 60px;
+}
 
 #altTxt {
-    display: inline-block;
-    font-family: "Roboto", sans-serif;
-    text-align: left;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
 }
 
 .dlBtnImg {
@@ -82,5 +82,5 @@ p {
 }
 
 #slogan {
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }

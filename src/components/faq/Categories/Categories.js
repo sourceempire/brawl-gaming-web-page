@@ -9,7 +9,7 @@ const Categories = ({ list }) => {
       <h1>Categories</h1>
       <div className="container">
         {list.map(c => (
-          <Category key={c.id} category={c} />
+          <Category key={Math.random()} category={c} />
         ))}
       </div>
     </div>
