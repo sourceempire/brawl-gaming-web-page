@@ -40,33 +40,38 @@ const Download = () => {
 
   return (
     <section className="download">
-      <div id="dl">
-        <div className="logoDiv">
-          <img id="logo" src="/images/logo.png" alt="logo" />
-          <div id="logoText">
-            <h4>Brawl</h4>
-            <h4>Gaming</h4>
+      <div id="dlcontent">
+        <div id="dl">
+          <div className="logoDiv">
+            <img id="logo" src="/images/logo.png" alt="logo" />
+            <div id="logoText">
+              <h4>Brawl</h4>
+              <h4>Gaming</h4>
+            </div>
+          </div>
+          <p id="slogan">
+            Brawl Gaming is the ultimate way to earn money while gaming.
+          </p>
+          <button id="dlBtn" onClick={downloadPrimary}>
+            <h3 id="dlText">Download</h3>
+            <img className="dlBtnImg" src={osImg1} alt="current os" />
+          </button>
+          <div className="dlAlt">
+            <p id="altTxt">Also available on: </p>
+            <img
+              className="dlBtnImg"
+              id="altImg"
+              src={osImg2}
+              onClick={downloadSecondary}
+              alt="alternative os"
+            />
           </div>
         </div>
-        <p id="slogan">
-          Brawl Gaming is the ultimate way to earn money while gaming.
-        </p>
-        <button id="dlBtn" onClick={downloadPrimary}>
-          <h3 id="dlText">Download</h3>
-          <img className="dlBtnImg" src={osImg1} alt="current os" />
-        </button>
-        <div className="dlAlt">
-          <p id="altTxt">Also available on: </p>
-          <img
-            className="dlBtnImg"
-            id="alt"
-            src={osImg2}
-            onClick={downloadSecondary}
-            alt="alternative os"
-          />
+        <div className="computerDiv">
+          <img className="computerImg" src="/images/dator.svg" alt="computer" />
+          <img className="clientImg" src="/images/app-start.png" alt="client" />
         </div>
       </div>
-      <img className="computerImg" src="/images/dator.svg" alt="computer" />
     </section>
   );
 };
