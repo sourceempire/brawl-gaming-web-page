@@ -1,5 +1,8 @@
 @import "../../resources/variables.scss";
 
+li {
+    list-style: none;
+}
 
 .grids {
     display: flex;
@@ -39,4 +42,19 @@
             height: auto;
         }
     }
+}
+
+.sideNav-box{
+  height: 30%;
+  width: 9%;
+  position: fixed;
+  z-index: 1;
+  top: 30%;
+  left: 0;
+  background-color: #111;
+  opacity: 0.7;
+  border-top-right-radius: 8%; 
+  border-bottom-right-radius: 8%;
+  overflow-x: hidden;
+  padding-top: 20px;
 }

@@ -3,19 +3,19 @@ import "../concept.scss";
 
 const Grids = ({concept}) => {
     const style = concept.left ? "'text img'" : "'img text'";
-
+    var gridPosStyle = {}
+    
     if(style === "'text img'"){
-        var gridPosStyle = {
+        gridPosStyle = {
             gridTemplateColumns:"50% 30%",
             gridTemplateAreas: style 
         }
     }else{
-        var gridPosStyle = {
+        gridPosStyle = {
             gridTemplateColumns:"30% 50%",
             gridTemplateAreas: style 
         }
     }
-
     return (
         <div className="grids">
             <div className="grid" style = {gridPosStyle}>

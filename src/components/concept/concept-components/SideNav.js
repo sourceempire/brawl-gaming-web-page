@@ -2,11 +2,16 @@ import React from "react";
 import "../concept.scss";
 
 const SideNav = () => {
-    
-
     return (
-        <div>
-            <h1>SIDEBAR</h1>
+        <div className = "sideNav">
+            <div className = "sideNav-box">
+                <p>About BG</p>
+                <p>Register</p>
+                <p>Get started</p>
+                <p>Making bets</p>
+                <p>Matchmaking</p>
+            </div>
+            
         </div>
     )
 }

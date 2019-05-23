@@ -17,7 +17,8 @@ const Concept = () => {
         "and our automatic match verification instantly gets the match " + 
         "result and rewards the winners. No manual match reporting " + 
         "needed!",
-        img: "/images/no_image.svg"
+        img: "/images/no_image.svg", 
+        key: 0
     },
     {
         left: false,
@@ -28,7 +29,8 @@ const Concept = () => {
         "creating multiple accounts, you need to enter your personal " +
         "number. We at Brawl Gaming take security very seriously, and we " +
         "can assure you that your personal information is secure with us.",
-        img: "/images/no_image.svg"
+        img: "/images/no_image.svg", 
+        key: 1
     },
     {
         left: true,
@@ -37,7 +39,8 @@ const Concept = () => {
         "your preferred game and game mode. Then you can invite friends to " +
         "your team, or you can choose to queue up solo and get matched " +
         "with both teammates and opponents. ",
-        img: "/images/no_image.svg"
+        img: "/images/no_image.svg", 
+        key: 2
     },
     {
         left: false,
@@ -49,7 +52,8 @@ const Concept = () => {
         "your chances of quickly finding a match. The creator of the lobby " +
         "choose the bet amount, and everyone in the lobby have to accept " +
         "the bet amount before you can queue up.",
-        img: "/images/no_image.svg"
+        img: "/images/no_image.svg", 
+        key: 3
     },
     {
         left: true,
@@ -61,14 +65,17 @@ const Concept = () => {
         "instantly. Since the match is played on our own server, our " +
         "automatic match verification knows who won and eliminates the " + 
         "need to manually report a match score.",
-        img: "/images/no_image.svg"
+        img: "/images/no_image.svg", 
+        key: 4
     }
 ]
 
   return (
     <section>
       {concepts.map(concept =>(
-        <Grids concept={concept} />
+        <li key = {concept.key}>
+          <Grids concept={concept} />
+        </li>
       ))}
         <SideNav/>
     </section>
