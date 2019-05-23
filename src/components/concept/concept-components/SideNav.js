@@ -5,11 +5,11 @@ const SideNav = () => {
     return (
         <div className = "sideNav">
             <div className = "sideNav-box">
-                <p>About BG</p>
-                <p>Register</p>
-                <p>Get started</p>
-                <p>Making bets</p>
-                <p>Matchmaking</p>
+                <a>About BG</a>
+                <a>Register</a>
+                <a>Get started</a>
+                <a>Making bets</a>
+                <a>Matchmaking</a>
             </div>
             
         </div>

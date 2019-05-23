@@ -1,5 +1,7 @@
 @import "../../resources/variables.scss";
 
+$font-color: #EDE4D7;
+
 li {
     list-style: none;
 }
@@ -22,7 +24,7 @@ li {
 
             h5 {
                 font-family: "Orbitron", sans-serif; 
-                color: #EDE4D7;
+                color: $font-color;
                 font-size: 225%;
                 justify-content: center;
                 font-weight: 100;
@@ -30,7 +32,7 @@ li {
 
             p {
                 font-family: "Roboto", sans-serif; 
-                color: #EDE4D7;
+                color: $font-color;
                 font-size: 90%;
                 font-weight: normal; 
             }
@@ -44,9 +46,10 @@ li {
     }
 }
 
-.sideNav-box{
+.sideNav{
+    .sideNav-box{
   height: 30%;
-  width: 9%;
+  width: 12%;
   position: fixed;
   z-index: 1;
   top: 30%;
@@ -57,4 +60,13 @@ li {
   border-bottom-right-radius: 8%;
   overflow-x: hidden;
   padding-top: 20px;
+
+  a {
+    padding: 21px 3px 0px 0px;
+    text-decoration: none;
+    font-size: 14px;
+    color: $font-color;
+    display: block;
+  }
+}
 }
