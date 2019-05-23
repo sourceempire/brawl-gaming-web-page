@@ -13,7 +13,7 @@ const Section3 = () => {
             <GameBox image="/images/FIFA-19-BACKGROUND.png" label="CS:GO"gamemodes="5 vs 5"/>
             <GameBox image="/images/FIFA-19-BACKGROUND.png" label="CS:GO"gamemodes="Deathmatch"/>
             </div>
-                <MediumButton label="See more games"/>
+                <MediumButton label="See more games"navigationTo="games"/>
         </div>
         );
 };

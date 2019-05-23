@@ -18,7 +18,7 @@ const Section2 = () => {
                     <img className="arrow" src="/images/Arrow.svg" alt="Arrow"/>
                     <BoxHolder image="/images/brawl.svg" label="Brawl" text={brawlText}/>
                 </div>
-                <MediumButton label="Read more"/>
+                <MediumButton label="Read more" navigationTo="concept"/>
         </div>
         );
 };

@@ -1,13 +1,14 @@
 import React from "react";
 import "./MediumButton.scss";
-const MediumButton = ({label}) => {
+import { Link } from "react-router-dom";
+const MediumButton = ({label,navigationTo}) => {
 
-    
+
     return (
         <div>
-        <button className="MediumButton" onClick="submit">
+        <Link className="MediumButton" to={`/${navigationTo}`}>
             <h3>{label}</h3>
-        </button>
+        </Link>
         </div>
         );
 };
