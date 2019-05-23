@@ -60,7 +60,7 @@ const Download = () => {
             <p id="altTxt">Also available on: </p>
             <img
               className="dlBtnImg"
-              id="alt"
+              id="altImg"
               src={osImg2}
               onClick={downloadSecondary}
               alt="alternative os"
