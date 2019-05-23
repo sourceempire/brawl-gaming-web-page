@@ -1,11 +1,20 @@
 import React from "react";
 import "./GameBox.scss";
-const MediumButton = ({image,label}) => {
+const MediumButton = ({image,label,gamemodes}) => {
     return (
         <div className="gameBox">
-            <img className="gameImage"src= {image} alt={label}/>
+            <div className="gameImage" style={{backgroundImage:`url(${image})`}}>
+                <div className="gamemodes">
+                    <div className="textInImage">
+                    <h1>Gamemodes</h1>
+                    <hr/>
+                    <h3>{gamemodes}</h3>
+                    <hr/>
+                    </div>
+                </div>
+            </div>
             <div className="label">
-            <h3>{label}</h3>
+                <h2>{label}</h2>
             </div>
         
         </div>

@@ -1,14 +1,53 @@
 @import "../../../../resources/variables.scss";
 .gameBox{
     margin-top: 80px;
-    width:270px;
-    height:450px;
-    background: red;
+    width:300px;
     padding:5%;
+    background-color: red;
+  
     .gameImage{
-        width:100%;
+        border:1px solid #598053;
+        position: relative;
+        height: 400px;
+        border-radius:10px;
+        background-size: cover;
+        transition:.3s;
+      &:hover{
+          .textInImage{
+              opacity: 1;
+              
+          }
+      }
+      .textInImage{
+        transition: 0.5s ease-out;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        opacity:0;
+        bottom: -50px;
+        top:0;
+        bottom: 0;
+        left:0;
+        right:0;
+        border-radius:10px;
+        z-index:1;
+        transition:.3s;
+        .gamemodes{
+            position: absolute;
+            padding: 0 2%;
+            text-align:left;
+            color:$color-text;  
+        }
+      hr{
+        background-color:  #598053;
+        height: 4px;
+        width: 80%;
+        border:none;
+        text-align: left;
+      }
+    }     
     }
     .label{
+        margin:1em 0;
         padding: 0 20px;
         width:50px;
         border-left:4px solid #598053;

@@ -1,15 +1,19 @@
 import React from "react";
 import "./BigButton.scss";
-const BigButton = ({icon,label,labelcolor,color}) => {
+import { Link } from "react-router-dom";
+const BigButton = ({icon,label,labelcolor,color,navigationTo}) => {
+
+
+    const GoTo = () => {
+        
+    }
     return (
         <div>
-        <button className="BigButton" type="submit" style={{background:color}}>
+        <Link className="BigButton" to={`/${navigationTo}`} style={{background:color}}>
             <img src={icon} alt="icon"/>
-            <hr/>
-            <br/>
+            <hr style={{color:labelcolor}}/>
             <h3 style={{color:labelcolor}}>{label}</h3>
-        </button>
-
+        </Link>
         </div>
         );
 };

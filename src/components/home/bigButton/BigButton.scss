@@ -1,13 +1,24 @@
 @import "../../../resources/variables.scss";
 .BigButton{
+    display: block;
     width: 80%;
     height: 160%;
     border-radius: 10px;
     border:none;
     margin:0 20px;
+    outline: 0;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     img{
+        position: relative;
         width:52px;
         align-content: center;
+        margin:5px 0; 
+
     } 
     hr{
         text-align: center;
