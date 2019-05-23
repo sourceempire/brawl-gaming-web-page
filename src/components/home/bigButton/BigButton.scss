@@ -13,19 +13,31 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    &:hover{
+        .hrUnder{
+            opacity: 1;
+        }
+    }
     
     img{
         position: relative;
         width:52px;
         align-content: center;
         margin:5px 0; 
-
     } 
     hr{
         text-align: center;
         width:120px;
+        
     }
-    &:hover{
-        background-color: rgba(0,0,0,0.5);
+    .hrUnder{
+        transition: 0.3s ease-out;
+        position: relative;
+        width:120px;
+        height:2px;
+        
+        justify-content: center;
+        opacity: 0;
     }
 }
+

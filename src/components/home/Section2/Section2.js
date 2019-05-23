@@ -1,4 +1,5 @@
 import React from "react";
+import "./Section2.scss";
 import MediumButton from "../MediumButton/MediumButton";
 import BoxHolder from "../Section2/BoxHolder/BoxHolder";
 const Section2 = () => {
@@ -17,8 +18,9 @@ const Section2 = () => {
                     <BoxHolder image="/images/Dollars.svg" label="Bet" text={betText}/>
                     <img className="arrow" src="/images/Arrow.svg" alt="Arrow"/>
                     <BoxHolder image="/images/brawl.svg" label="Brawl" text={brawlText}/>
+                    <MediumButton label="Read more" navigationTo="concept"/>
                 </div>
-                <MediumButton label="Read more" navigationTo="concept"/>
+                
         </div>
         );
 };

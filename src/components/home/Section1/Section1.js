@@ -1,4 +1,5 @@
 import React from "react";
+import "./Section1.scss";
 import BigButton from "../bigButton/BigButton";
 const Section1 = () => {
 

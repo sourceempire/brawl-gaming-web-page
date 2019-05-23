@@ -9,13 +9,15 @@
     width:100%;
     padding: 60px 0;
 }
-.label{
-    padding: 0 20px;
-    width:50px;
-    border-left:4px solid $color-border;
-}
-p{
-    padding: 0 25px;
-    text-align: left;
+.textUnder{
+    .label{
+        padding: 0 20px;
+        width:50px;
+        border-left:4px solid $color-border;
+    }
+    p{
+        padding: 0 25px;
+        text-align: left;
+    }
 }
 }
