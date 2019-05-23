@@ -3,13 +3,18 @@ import PropTypes from "prop-types";
 import "./categories.scss";
 import Category from "./Category";
 
-const Categories = ({ list }) => {
+const Categories = ({ list, setCategory, setCategoryResults }) => {
   return (
     <div className="categories">
       <h1>Categories</h1>
       <div className="container">
         {list.map(c => (
-          <Category key={Math.random()} category={c} />
+          <Category
+            key={c.id}
+            category={c}
+            setCategory={setCategory}
+            setCategoryResults={setCategoryResults}
+          />
         ))}
       </div>
     </div>
@@ -23,7 +28,9 @@ Categories.propTypes = {
       icon: PropTypes.string,
       label: PropTypes.string,
       top: PropTypes.arrayOf(PropTypes.string)
-    })
-  )
+    }).isRequired
+  ),
+  setCategory: PropTypes.func.isRequired,
+  setCategoryResults: PropTypes.func.isRequired
 };
 export default Categories;

@@ -1,27 +1,46 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import "./categories.scss";
 
-const Categories = ({ category }) => {
+const Category = ({ category, setCategory, setCategoryResults }) => {
+  const searchCategory = async e => {
+    e.preventDefault();
+    const res = await fetch(
+      `http://130.239.212.58:5000/faq/cat/${category.id}`,
+      {
+        method: "GET"
+      }
+    );
+    if (res.status === 200) {
+      const ret = await res.json();
+      setCategory(category.label);
+      setCategoryResults(ret);
+    } else {
+      setCategory("Not able to find category right now.");
+      setCategoryResults([]);
+    }
+  };
+
   return (
     <div className="category">
       <img src={category.icon} alt={category.label} />
       <h3>{category.label}</h3>
       {category.top.map(t => (
-        <p>{t}</p>
+        <p key={Math.random()}>{t}</p>
       ))}
-      <Link to={`/faq/${category.label.toLowerCase()}`}>Show more</Link>
+      <button onClick={e => searchCategory(e)}>Show more</button>
     </div>
   );
 };
 
-Categories.propTypes = {
+Category.propTypes = {
   category: PropTypes.shape({
     id: PropTypes.number,
     icon: PropTypes.string,
     label: PropTypes.string,
     top: PropTypes.arrayOf(PropTypes.string)
-  })
+  }).isRequired,
+  setCategory: PropTypes.func.isRequired,
+  setCategoryResults: PropTypes.func.isRequired
 };
-export default Categories;
+export default Category;

@@ -1,0 +1,83 @@
+@import "../../resources/variables.scss";
+
+.signup {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100vh;
+  grid-template-areas: "text form";
+
+  .text {
+    grid-area: text;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    color: $color-text;
+    padding: 80px 3vw;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      border-left: 2px solid $color-border;
+      list-style: none;
+      text-align: left;
+      padding: 3px 20px;
+    }
+  }
+
+  .form {
+    padding: 80px 3vw;
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50px;
+    grid-template-areas:
+      "firstname lastname"
+      "email email"
+      "password confirm"
+      "submit submit";
+    grid-gap: 5px;
+
+    input {
+      padding: 15px;
+      margin: 5px;
+      outline: none;
+      appearance: none;
+      border-radius: 5px;
+      border: 1px solid $color-border;
+      background: $color-text;
+    }
+
+    .firstname {
+      grid-area: firstname;
+    }
+    .lastname {
+      grid-area: lastname;
+    }
+    .email {
+      grid-area: email;
+    }
+    .password {
+      grid-area: password;
+    }
+    .confirm {
+      grid-area: confirm;
+    }
+    .submit {
+      grid-area: submit;
+      background: $color-button-gradient-accept;
+      font-family: "Orbitron", sans-serif;
+      color: $color-text;
+      cursor: pointer;
+      border: 1px solid $color-active;
+      &:hover {
+        color: $color-active;
+      }
+    }
+  }
+}

@@ -38,7 +38,10 @@
       margin: 5px 0 0 0;
     }
 
-    a {
+    button {
+      appearance: none;
+      outline: none;
+      cursor: pointer;
       position: absolute;
       bottom: 0;
       left: 10px;
@@ -54,6 +57,7 @@
       width: 140px;
       border: 1px solid $color-active;
       margin: 0 auto;
+      font-family: "Orbitron", sans-serif;
     }
   }
 }

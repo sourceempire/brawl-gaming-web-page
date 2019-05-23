@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./navigation.scss";
+import Login from "../login/Login";
 
 const Navigation = () => {
   return (
@@ -22,9 +23,7 @@ const Navigation = () => {
         <NavLink to="/concept">Concept</NavLink>
         <NavLink to="/games">Games</NavLink>
         <NavLink to="/faq">FAQ</NavLink>
-        <NavLink to="/login" className="login">
-          Log in
-        </NavLink>
+        <Login />
         <NavLink to="/signup" className="signup">
           Sign up
         </NavLink>
