@@ -2,6 +2,7 @@ import React from "react";
 import "./concept.scss";
 import "./concept-components/Grids"
 import Grids from "./concept-components/Grids";
+import SideNav from "./concept-components/SideNav";
 
 const Concept = () => {
 
@@ -69,6 +70,7 @@ const Concept = () => {
       {concepts.map(concept =>(
         <Grids concept={concept} />
       ))}
+        <SideNav/>
     </section>
   );
 };
