@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
 import "./games.scss";
-
+import GameBox from "../home/Section3/GameBox/GameBox";
 
 const Games = () => {
+  
   const gameArray = [
     {id:1, title:'CS:GO', img_back:'csgo_back.png', img_front:'csgo_front.png', modes:[{ id:1, mode:'pvp' }, {id:2, mode:'pve'}] },
     {id:2, title:'FIFA 19', image:'https://bit.ly/2HNpxbs'},
@@ -34,6 +35,9 @@ const Games = () => {
         {games.map(game => (
           <div className="game">
             <div alt={`${game.title}`} className="cover" style={{backgroundImage:`url('/images/game-images/'${game.image_back})`}}>
+              
+             
+              
               <img src={'/images/game-images/' + game.image_front} alt={`${game.title}`} className="cover" />
             </div>
             <h2>{game.title}</h2>
@@ -44,6 +48,11 @@ const Games = () => {
                 </ul>
               </div>
             ))}
+            <GameBox
+                  image={game.image_front}
+                  label={game.title}
+                  gamemodes={game.modes}
+                />
           </div>
         ))}
       </div>

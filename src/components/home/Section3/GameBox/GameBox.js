@@ -3,7 +3,7 @@ import "./GameBox.scss";
 const MediumButton = ({image,label,gamemodes}) => {
     return (
         <div className="gameBox">
-            <div className="gameImage" style={{backgroundImage:`url(${image})`}}>
+            <div className="gameImage" style={{backgroundImage:`url(/images/${image})`}}>
                 <div className="gamemodes">
                     <div className="textInImage">
                     <h1>Gamemodes</h1>

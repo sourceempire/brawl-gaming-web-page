@@ -47,9 +47,10 @@
         align-content: center;
         margin:5px 0; 
     } 
-    hr{
+    .line{
         text-align: center;
-        width:120px;   
+        width:120px;  
+        height:2px; 
     }
     .hrUnder{
         transition: 0.3s ease-out;
