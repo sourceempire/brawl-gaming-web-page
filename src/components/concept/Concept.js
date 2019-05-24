@@ -18,7 +18,7 @@ const Concept = () => {
         "result and rewards the winners. No manual match reporting " + 
         "needed!",
         img: "/images/no_image.svg", 
-        key: 0
+        key: "About"
     },
     {
         left: false,
@@ -30,7 +30,7 @@ const Concept = () => {
         "number. We at Brawl Gaming take security very seriously, and we " +
         "can assure you that your personal information is secure with us.",
         img: "/images/no_image.svg", 
-        key: 1
+        key: "Register"
     },
     {
         left: true,
@@ -40,7 +40,7 @@ const Concept = () => {
         "your team, or you can choose to queue up solo and get matched " +
         "with both teammates and opponents. ",
         img: "/images/no_image.svg", 
-        key: 2
+        key: "GetStarted"
     },
     {
         left: false,
@@ -53,7 +53,7 @@ const Concept = () => {
         "choose the bet amount, and everyone in the lobby have to accept " +
         "the bet amount before you can queue up.",
         img: "/images/no_image.svg", 
-        key: 3
+        key: "MakingBets"
     },
     {
         left: true,
@@ -66,7 +66,7 @@ const Concept = () => {
         "automatic match verification knows who won and eliminates the " + 
         "need to manually report a match score.",
         img: "/images/no_image.svg", 
-        key: 4
+        key: "Matchmaking"
     }
 ]
 

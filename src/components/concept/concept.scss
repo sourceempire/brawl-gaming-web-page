@@ -47,26 +47,27 @@ li {
 }
 
 .sideNav{
-    .sideNav-box{
-  height: 30%;
-  width: 12%;
-  position: fixed;
-  z-index: 1;
-  top: 30%;
-  left: 0;
-  background-color: #111;
-  opacity: 0.7;
-  border-top-right-radius: 8%; 
-  border-bottom-right-radius: 8%;
-  overflow-x: hidden;
-  padding-top: 20px;
 
-  a {
-    padding: 21px 3px 0px 0px;
-    text-decoration: none;
-    font-size: 14px;
-    color: $font-color;
-    display: block;
-  }
-}
+    .sideNav-box{
+        height: 24%;
+        width: 10%;
+        position: fixed;
+        z-index: 1;
+        top: 35%;
+        left: 0;
+        background-color: #111;
+        opacity: 0.4;
+        border-top-right-radius: 8%;
+        border-bottom-right-radius: 8%;
+        overflow-x: hidden;
+    }
+
+    a {
+        padding: 17px 0px 0px 0px;
+        text-decoration: none;
+        font-size: 14px;
+        color: $font-color;
+        display: block;
+        opacity: 3;
+    }
 }
