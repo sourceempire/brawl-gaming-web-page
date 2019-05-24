@@ -4,18 +4,26 @@ import "./login.scss";
 import Fetcher from "../../utils/Fetcher";
 
 const Login = () => {
+  const SERVER_URL = "https://brawl-gaming-server.herokuapp.com/"
   const [active, setActive] = useState(false);
   const usernameEl = useRef("");
   const passwordEl = useRef("");
 
   const login = e => {
     e.preventDefault();
-    Fetcher.post("https://brawl-gaming-server.herokuapp.com/login", {
-      username: usernameEl.current.value,
-      password: passwordEl.current.value
-    })
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
+    const params = { 
+      username: usernameEl.current.value, 
+      password: passwordEl.current.value 
+    }
+    Fetcher.get(
+      SERVER_URL + "login/validate", {}) //KOLLAR OM MAN REDAN ÄR INLOGGAD
+      .then(res => console.log("Already logged in")) //OM MAN ÄR INLOGGAD KOMMER MAN HIT
+      .catch(() => //OM MAN INTE ÄR INLOGGAD KOMMER MAN HIT
+        Fetcher.post(SERVER_URL + "login", params)) //OM MAN INTE ÄR INLOGGAD => LOGGA IN
+        .then(() => Fetcher.get(SERVER_URL + "api/user")) //OM MAN LYCKAS LOGGA IN =>  HÄMTAR INFORMATION OM ANVÄNDAREN SOM LOGGATS IN
+        .then(user => console.log(user)) //HÄR HÄMTAS ANVÄNDARE => SÄTT ATT MAN ÄR INLOGGAD, TA BORT SIGN UP OCH LOG IN OCH LÄGG TILL ANVÄNDARE DÄR ISTÄLLET
+        .catch(err => console.log(err))
+    
   };
   return (
     <div className="login">

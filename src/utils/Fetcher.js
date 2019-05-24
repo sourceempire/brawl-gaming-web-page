@@ -52,14 +52,16 @@ const Fetcher = {
       headers: headers(options)
     }).then(checkStatus),
 
-  post: (url, body, options = {}) =>
-    fetch(url, {
+  post: (url, body, options = {}) => {
+    console.log(body)
+    return fetch(url, {
       ...options,
       method: "POST",
       credentials: "include",
       body: JSON.stringify(body),
       headers: headers(options)
-    }).then(checkStatus),
+    }).then(checkStatus)},
+    
 
   delete: (url, params, options = {}) =>
     fetch(addParams(url, params), {
