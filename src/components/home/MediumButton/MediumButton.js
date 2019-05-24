@@ -8,7 +8,6 @@ const MediumButton = ({label,navigationTo}) => {
         <div>
         <Link className="MediumButton" to={`/${navigationTo}`}>
             <h3>{label}</h3>
-            <p>test</p>
         </Link>
         </div>
         );
