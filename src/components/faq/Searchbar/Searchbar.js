@@ -8,12 +8,9 @@ const Searchbar = ({ setPhrase, onSearch }) => {
   const search = async e => {
     e.preventDefault();
     const phrase = searchRef.current.value;
-    const res = await fetch(
-      `http://130.239.212.58:5000/faq/keyword/${phrase}`,
-      {
-        method: "GET"
-      }
-    );
+    const res = await fetch(`http://172.20.10.9:5000/faq/keyword/${phrase}`, {
+      method: "GET"
+    });
     if (res.status === 200) {
       const ret = await res.json();
       setPhrase(phrase);

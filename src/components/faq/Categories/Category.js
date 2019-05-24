@@ -5,12 +5,9 @@ import "./categories.scss";
 const Category = ({ category, setCategory, setCategoryResults }) => {
   const searchCategory = async e => {
     e.preventDefault();
-    const res = await fetch(
-      `http://130.239.212.58:5000/faq/cat/${category.id}`,
-      {
-        method: "GET"
-      }
-    );
+    const res = await fetch(`http://172.20.10.9:5000/faq/cat/${category.id}`, {
+      method: "GET"
+    });
     if (res.status === 200) {
       const ret = await res.json();
       setCategory(category.label);

@@ -12,7 +12,7 @@
     flex-flow: column;
     align-items: flex-start;
     color: $color-text;
-    padding: 80px 3vw;
+    padding: 80px 10vw;
     h1 {
       font-size: 2rem;
       margin-bottom: 10px;
@@ -31,7 +31,7 @@
   }
 
   .form {
-    padding: 80px 3vw;
+    padding: 80px 10vw;
     grid-area: form;
     display: grid;
     grid-template-columns: 1fr 1fr;
