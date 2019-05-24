@@ -4,7 +4,7 @@ import "../concept.scss";
 const Grids = ({concept}) => {
     const style = concept.left ? "'text img'" : "'img text'";
     var gridPosStyle = {}
-
+    var id = {}
     if(style === "'text img'"){
         gridPosStyle = {
             gridTemplateColumns:"50% 30%",
@@ -16,9 +16,10 @@ const Grids = ({concept}) => {
             gridTemplateAreas: style 
         }
     }
+    id = concept.id;
     
     return (
-        <div className="grids">
+        <div id={id}className="grids">
             <div className="grid" style = {gridPosStyle}>
                 <div className="text">
                     <h5>{concept.header}</h5>

@@ -8,11 +8,11 @@ const SideNav = () => {
     return (
         <div className = "sideNav">
             <div className = "sideNav-box">
-                <a href = "#About">About BG</a>
-                <a href = "#Register">Register</a>
-                <a href = "#GetStarted">Get started</a>
-                <a href = "#MakingBets">Making bets</a>
-                <a href = "#Matchmaking">Matchmaking</a>
+                <a href = "#1">About BG</a>
+                <a href = "#2">Register</a>
+                <a href = "#3">Get started</a>
+                <a href = "#4">Making bets</a>
+                <a href = "#5">Matchmaking</a>
             </div>
         </div>
     )

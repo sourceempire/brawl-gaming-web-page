@@ -8,6 +8,7 @@ const Concept = () => {
 
   const concepts = [
     {
+        id:1,
         left: true,
         header: "About Brawl Gaming",
         text: "Brawl gaming is a desktop client that lets gamers bet money on " +
@@ -21,6 +22,7 @@ const Concept = () => {
         key: "About"
     },
     {
+        id:2,
         left: false,
         header: "Register Account",
         text: "To register an account, fill in our registration form. To make " + 
@@ -33,6 +35,7 @@ const Concept = () => {
         key: "Register"
     },
     {
+        id:3,
         left: true,
         header: "Getting started",
         text: "After making an account and downloading the client, you choose " +
@@ -42,7 +45,8 @@ const Concept = () => {
         img: "/images/no_image.svg", 
         key: "GetStarted"
     },
-    {
+    {   
+        id:4,
         left: false,
         header: "Making bets",
         text: "After adding money to your account, you can place bets on you or " +
@@ -56,6 +60,7 @@ const Concept = () => {
         key: "MakingBets"
     },
     {
+        id:5,
         left: true,
         header: "Matchmaking",
         text: "Our queue system matches you with players of similar skill level " + 

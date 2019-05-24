@@ -1,6 +1,5 @@
 @import "../../resources/variables.scss";
 
-$font-color: #EDE4D7;
 
 li {
     list-style: none;
@@ -24,7 +23,7 @@ li {
 
             h5 {
                 font-family: "Orbitron", sans-serif; 
-                color: $font-color;
+                color: $color-text;
                 font-size: 225%;
                 justify-content: center;
                 font-weight: 100;
@@ -32,7 +31,7 @@ li {
 
             p {
                 font-family: "Roboto", sans-serif; 
-                color: $font-color;
+                color: $color-text;
                 font-size: 90%;
                 font-weight: normal; 
             }
@@ -60,14 +59,25 @@ li {
         border-top-right-radius: 8%;
         border-bottom-right-radius: 8%;
         overflow-x: hidden;
+        
     }
 
     a {
         padding: 17px 0px 0px 0px;
         text-decoration: none;
         font-size: 14px;
-        color: $font-color;
+        color: $color-text;
         display: block;
-        opacity: 3;
+        scroll-behavior:  auto  smooth ;
+        opacity: 1;
+        &:hover {
+            color: $color-active;
+          }
+        &:active{
+                text-decoration: underline;
+              
+        }
     }
+    
+    
 }
