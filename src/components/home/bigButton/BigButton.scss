@@ -5,7 +5,7 @@
   border: none;
   margin: 0 20px;
   outline: 0;
-  padding: 30px 20px;
+  padding: 12% 5%;
   cursor: pointer;
   display: flex;
   flex-flow: column;
@@ -33,7 +33,7 @@
     }
     &:hover{
         .line{
-            transition: 1.6s;
+            transition: .5s;
             transform: scale(.3, 1);
         }
     }
