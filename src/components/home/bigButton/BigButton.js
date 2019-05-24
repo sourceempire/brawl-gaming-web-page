@@ -11,10 +11,12 @@ const BigButton = ({ icon, label, labelcolor, color, navigationTo }) => {
         style={{ background: color, color: labelcolor }}
       >
         <img src={icon} alt="icon" />
-        <div className="line" style={{ backgroundColor: labelcolor }}/>
+        <div className="line" style={{ background: labelcolor }}>
+        </div>
         <h3 style={{ color: labelcolor }}>{label}</h3>
         
-        <hr className="hrUnder" style={{ color: labelcolor }} />
+        <div className="hrUnder" style={{ color: labelcolor }} />
+        
       </Link>
     </div>
   );

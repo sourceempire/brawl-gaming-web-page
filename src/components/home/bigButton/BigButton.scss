@@ -16,51 +16,25 @@
       opacity: 1;
     }
   }
-
   img {
     position: relative;
     width: 52px;
     align-content: center;
     margin: 5px 0;
   }
-  hr {
-    text-align: center;
-    width: 120px;
-    display: block;
-  }
-  .hrUnder {
-    transition: 0.3s ease-out;
+ 
+  .line{
     position: relative;
-    width: 120px;
-    height: 2px;
-
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin:10px 0 ;
+    padding: 1px 60px;
+    opacity: 1;
+    
+    }
     &:hover{
-        .hrUnder{
-            opacity: 1;
+        .line{
+            transition: 1.6s;
+            transform: scale(.3, 1);
         }
     }
-    img{
-        position: relative;
-        width:52px;
-        align-content: center;
-        margin:5px 0; 
-    } 
-    .line{
-        text-align: center;
-        width:120px;  
-        height:2px; 
-    }
-    .hrUnder{
-        transition: 0.3s ease-out;
-        position: relative;
-        width:120px;
-        height:2px;
-        
-        justify-content: center;
-        opacity: 0;
-    }
-    opacity: 0;
-  }
 }

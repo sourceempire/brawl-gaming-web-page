@@ -15,9 +15,29 @@ return(
           <img className="clientImg" src="/images/app-start.png" alt="client" />
         </div>
        <div className="threeButtons">
-          <BigButton className="conceptButton" icon="/images/concept.svg" navigationTo="concept" label="Concept"color="linear-gradient(#32322F, #171715)"/>
-          <BigButton className="registerButton" icon="/images/Register.svg" navigationTo="signup" label="Register" color="linear-gradient(#66b62d, #457c1e)"/>
-          <BigButton className="loginButton" icon="/images/Download.svg" navigationTo="download" labelcolor="black" label="Download" color="linear-gradient(#FFFFFF, #EDE4D7)"/>
+          <BigButton
+            className="conceptButton" 
+            icon="/images/concept.svg" 
+            navigationTo="concept" 
+            labelcolor="#f2eae0"
+            label="Concept"
+            color="linear-gradient(#32322F,#171715)"/>
+
+          <BigButton 
+            className="registerButton" 
+            icon="/images/Register.svg" 
+            navigationTo="signup" 
+            labelcolor="#f2eae0"
+            label="Register" 
+            color="linear-gradient(#66b62d, #457c1e)"/>
+
+          <BigButton 
+            className="loginButton" 
+            icon="/images/Download.svg" 
+            navigationTo="download" 
+            labelcolor="black" 
+            label="Download" 
+            color="linear-gradient(#FFFFFF, #EDE4D7)"/>
        </div>
     </div>
 );

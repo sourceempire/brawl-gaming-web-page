@@ -13,14 +13,14 @@
     position: absolute;
     display: flex;
     flex-flow: row wrap;
-    bottom: 20%;
-    left: 4%;
+    bottom: 80px;
+    left: 60px;
 }
 .computerDiv1{
     position: absolute;
     width: 48%;
     right: 80px;
-    bottom: 80px;
+    bottom: 65px;
     max-width: 48vw;
     max-height: 48vw;
     display: grid;
@@ -30,8 +30,6 @@
 .computer{
     grid-column: 1 / 4;
     grid-row: 1 / 4;
-  
-    
 }
 .client{
     max-width: 100%;
