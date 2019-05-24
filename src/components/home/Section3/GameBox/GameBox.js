@@ -9,14 +9,12 @@ const MediumButton = ({image,label,gamemodes}) => {
                     <h1>Gamemodes</h1>
                     <hr/>
                     <h3>{gamemodes}</h3>
-                    <hr/>
                     </div>
                 </div>
             </div>
             <div className="label">
                 <h2>{label}</h2>
             </div>
-        
         </div>
         );
 };
