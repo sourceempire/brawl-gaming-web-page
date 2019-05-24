@@ -14,9 +14,6 @@ const BigButton = ({ icon, label, labelcolor, color, navigationTo }) => {
         <div className="line" style={{ background: labelcolor }}>
         </div>
         <h3 style={{ color: labelcolor }}>{label}</h3>
-        
-        <div className="hrUnder" style={{ color: labelcolor }} />
-        
       </Link>
     </div>
   );

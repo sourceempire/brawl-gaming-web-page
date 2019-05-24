@@ -1,11 +1,11 @@
 @import "../../../../resources/variables.scss";
 .gameBox{
     margin-top: 80px;
-    width:300px;
-    padding:5%;
+    padding:7% 5% 2% 5%;
     .gameImage{
         border:1px solid #598053;
         position: relative;
+        width:300px;
         height: 400px;
         border-radius:10px;
         background-size: cover;
