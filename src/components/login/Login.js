@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./login.scss";
+import Fetcher from "../../utils/Fetcher";
 
 const Login = () => {
   const [active, setActive] = useState(false);
+  const usernameEl = useRef("");
+  const passwordEl = useRef("");
 
   const login = e => {
     e.preventDefault();
-    alert("Logging in");
+    Fetcher.post("https://brawl-gaming-server.herokuapp.com/login", {
+      username: usernameEl.current.value,
+      password: passwordEl.current.value
+    })
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
   };
   return (
     <div className="login">
@@ -19,8 +27,13 @@ const Login = () => {
         className="form"
         style={{ display: `${active ? "flex" : "none"}` }}
       >
-        <input type="email" placeholder="E-Mail" required />
-        <input type="password" placeholder="Password" required />
+        <input ref={usernameEl} type="email" placeholder="E-Mail" required />
+        <input
+          ref={passwordEl}
+          type="password"
+          placeholder="Password"
+          required
+        />
         <input type="submit" value="Log in" />
         <span>
           <Link to="/signup" onClick={() => setActive(!active)}>

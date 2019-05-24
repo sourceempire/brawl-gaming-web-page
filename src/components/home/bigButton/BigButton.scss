@@ -1,43 +1,40 @@
 @import "../../../resources/variables.scss";
-.BigButton{
-    display: block;
-    width: 80%;
-    height: 160%;
-    border-radius: 10px;
-    border:none;
-    margin:0 20px;
-    outline: 0;
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    &:hover{
-        .hrUnder{
-            opacity: 1;
-        }
+.BigButton {
+  display: block;
+  border-radius: 10px;
+  border: none;
+  margin: 0 20px;
+  outline: 0;
+  padding: 30px 20px;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    .hrUnder {
+      opacity: 1;
     }
-    
-    img{
-        position: relative;
-        width:52px;
-        align-content: center;
-        margin:5px 0; 
-    } 
-    hr{
-        text-align: center;
-        width:120px;
-        
-    }
-    .hrUnder{
-        transition: 0.3s ease-out;
-        position: relative;
-        width:120px;
-        height:2px;
-        
-        justify-content: center;
-        opacity: 0;
-    }
-}
+  }
 
+  img {
+    position: relative;
+    width: 52px;
+    align-content: center;
+    margin: 5px 0;
+  }
+  hr {
+    text-align: center;
+    width: 120px;
+    display: block;
+  }
+  .hrUnder {
+    transition: 0.3s ease-out;
+    position: relative;
+    width: 120px;
+    height: 2px;
+
+    justify-content: center;
+    opacity: 0;
+  }
+}
