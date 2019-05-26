@@ -1,6 +1,6 @@
 import React from "react";
 import "./GameBox.scss";
-const MediumButton = ({image,label,gamemodes}) => {
+const GameBox = ({image,label,gamemodes}) => {
     return (
         <div className="gameBox">
             <div className="gameImage" style={{backgroundImage:`url(/images/${image})`}}>
@@ -8,7 +8,9 @@ const MediumButton = ({image,label,gamemodes}) => {
                     <div className="textInImage">
                     <h1>Gamemodes</h1>
                     <hr/>
-                    <h3>{gamemodes}</h3>
+                    {gamemodes.map(modes =>( 
+                        <h3>{modes.mode}</h3>
+                    ))}
                     </div>
                 </div>
             </div>
@@ -19,4 +21,4 @@ const MediumButton = ({image,label,gamemodes}) => {
         );
 };
 
-export default MediumButton;
+export default GameBox;

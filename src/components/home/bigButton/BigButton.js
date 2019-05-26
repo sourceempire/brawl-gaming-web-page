@@ -2,7 +2,6 @@ import React from "react";
 import "./BigButton.scss";
 import { Link } from "react-router-dom";
 const BigButton = ({ icon, label, labelcolor, color, navigationTo }) => {
-  const GoTo = () => {};
   return (
     <div>
       <Link
