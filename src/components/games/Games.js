@@ -14,7 +14,7 @@ const Games = () => {
   const [games, setGames] = useState([]);
 
   const fetchGames = async () => {
-    const res = await fetch("http://130.239.212.58:5000/game", {
+    const res = await fetch("http://130.239.212z.58:5000/game", {
       method: "GET"
     });
     if (res.status === 200) {

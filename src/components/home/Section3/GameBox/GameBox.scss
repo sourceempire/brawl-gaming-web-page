@@ -4,6 +4,7 @@
         height: 400px;
     margin-top: 80px;
     padding:7% 5% 6% 5%;
+   
     .gameImage{
         border:1px solid #598053;
         position: relative;
@@ -12,6 +13,7 @@
         border-radius:10px;
         background-size: cover;
         transition:.3s ease-in;
+        background-position: center;
       &:hover{
           .textInImage{
               opacity: 1;
