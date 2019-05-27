@@ -1,12 +1,14 @@
 @import "../../../../resources/variables.scss";
 .gameBox{
-    width: 80/3 * 1%;
+    width:20%;
+    height: 70%;
     padding: 5% 0% 5% 0;
     .gameImage{
         border: 2px solid $color-border;
         position: relative;
         width:auto;
         height:100%;
+        
         border-radius:10px;
         background-size: cover;
         transition:.3s ease-in;
@@ -14,9 +16,10 @@
         .frontImage{
             position: absolute;
             bottom:0;
-            right: -25px;
-            left: -25px; 
-            height: 120%;
+            width:auto;
+            right: -25%;
+            left: -25%; 
+            height: 110%;
             border: none;
             margin-left: auto;
             margin-right: auto;
@@ -55,7 +58,6 @@
             padding: 0 2%;
             text-align:center;
             color:$color-text; 
-            
         }
         hr{
             background-color:  $color-border;
