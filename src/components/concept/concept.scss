@@ -1,83 +1,59 @@
 @import "../../resources/variables.scss";
 
-
-li {
-    list-style: none;
-}
-
 .grids {
-    display: flex;
-    flex-flow: column wrap;
-    .grid {
-        display: grid;
-        grid-template-rows: auto;
-        margin-top: 6%;
-        margin-bottom: 6%;
-        padding-left: 12%;
-        padding-right: 6%;
-        justify-content: space-between; 
+  display: flex;
+  flex-flow: column wrap;
+  .grid {
+    display: grid;
+    grid-template-rows: auto;
+    margin: 6% 0;
+    padding-left: 17%;
+    padding-right: 6%;
+    justify-content: space-between;
 
-        .text{
-            grid-area: text;
-            text-align: left;
-
-            h5 {
-                font-family: "Orbitron", sans-serif; 
-                color: $color-text;
-                font-size: 225%;
-                justify-content: center;
-                font-weight: 100;
-            }   
-
-            p {
-                font-family: "Roboto", sans-serif; 
-                color: $color-text;
-                font-size: 90%;
-                font-weight: normal; 
-            }
-        }
-        
-        img {
-            grid-area: 'img';
-            width: 100%;
-            height: auto;
-        }
+    .text {
+      grid-area: text;
+      text-align: left;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
     }
+
+    .img {
+      grid-area: img;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
-.sideNav{
+.sideNav {
+  position: fixed;
+  left: 0;
+  top: calc(50% - 125px);
+  background-color: rgba(17, 17, 17, 0.4);
+  height: 250px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 
-    .sideNav-box{
-        height: 24%;
-        width: 10%;
-        position: fixed;
-        z-index: 1;
-        top: 35%;
-        left: 0;
-        background-color: #111;
-        opacity: 0.4;
-        border-top-right-radius: 8%;
-        border-bottom-right-radius: 8%;
-        overflow-x: hidden;
-        
+  .link {
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    color: $color-text;
+    padding: 0 20px;
+    font-family: "Orbitron", sans-serif;
+    &:hover {
+      color: $color-active;
     }
+  }
 
-    a {
-        padding: 17px 0px 0px 0px;
-        text-decoration: none;
-        font-size: 14px;
-        color: $color-text;
-        display: block;
-        scroll-behavior:  auto  smooth ;
-        opacity: 1;
-        &:hover {
-            color: $color-active;
-          }
-        &:active{
-                text-decoration: underline;
-              
-        }
-    }
-    
-    
+  .active {
+    color: $color-active;
+  }
 }
