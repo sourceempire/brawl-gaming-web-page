@@ -4,6 +4,7 @@ const GameBox = ({image,front_img,label,gamemodes}) => {
     return (
         <div className="gameBox">
             <div className="gameImage" style={{backgroundImage:`url(/images/game-images/${image})`}}>
+            
             <img className="frontImage" src={'/images/game-images/'+ front_img} alt="front img"/>
                 <div className="gamemodes">
                     <div className="textInImage">

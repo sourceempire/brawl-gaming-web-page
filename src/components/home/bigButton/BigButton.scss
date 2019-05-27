@@ -5,7 +5,7 @@
   border: none;
   margin: 0 20px;
   outline: 0;
-  padding: 12% 5%;
+  padding: 35px 23px;
   cursor: pointer;
   display: flex;
   flex-flow: column;
@@ -17,12 +17,15 @@
     align-content: center;
     margin: 5px 0;
   }
+  h3{
+    font-size: 1rem;
+  }
  
   .line{
     position: relative;
     display: block;
     margin:10px 0 ;
-    padding: 1px 50px;
+    padding: 1px 48px;
     opacity: 1;
     
     }

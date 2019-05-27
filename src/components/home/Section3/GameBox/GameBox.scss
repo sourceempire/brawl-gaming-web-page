@@ -9,10 +9,17 @@
         .frontImage{
             position: absolute;
             bottom:0;
-            left:-10%;
+            right: -25px;
+            left: -25px;    
+          
             
+            display: block;
             height: 450px;
+            width: auto;
             border: none;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
            }
         border: 2px solid $color-border;
         position: relative;
