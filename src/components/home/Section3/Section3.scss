@@ -1,6 +1,6 @@
 @import "../../../resources/variables.scss";
 .Games{
-    position: absolute;
+    text-align: left;
     margin-top: 80px;
     left:5%;
     border-left:4px solid #598053;
@@ -9,6 +9,6 @@
 .threeGames{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    
+    justify-content: space-around;
+    height:550px;
 }
