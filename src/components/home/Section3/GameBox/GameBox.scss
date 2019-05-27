@@ -1,18 +1,18 @@
 @import "../../../../resources/variables.scss";
 .gameBox{
-    width:300px;
-        height: 400px;
+    width: calc((100% - 60px) / 3);
+    height: 400px;
     margin-top: 80px;
-    padding:7% 5% 6% 5%;
+    padding: 5% 0% 5% 0;
+    justify-content: center;
+    align-items: center;
    
     .gameImage{
         .frontImage{
             position: absolute;
             bottom:0;
             right: -25px;
-            left: -25px;    
-          
-            
+            left: -25px; 
             display: block;
             height: 450px;
             width: auto;
@@ -20,6 +20,7 @@
             margin-left: auto;
             margin-right: auto;
             justify-content: center;
+            
            }
         border: 2px solid $color-border;
         position: relative;
@@ -44,14 +45,12 @@
       .textInImage{
         background-color: rgba(0,0,0,0.5);
         position: absolute;
-        opacity:0;
-        top:300px;
-        top:0;
+        opacity:1;
+        top:200px;
         bottom: 0px;
         left:0;
         right:0;
         border-radius:10px;
-        z-index:1;
         transition: .2s ease-in-out;
         h3{
             padding: 5px;
@@ -63,7 +62,7 @@
         .gamemodes{
             position: absolute;
             padding: 0 2%;
-            text-align:left;
+            text-align:center;
             color:$color-text; 
             
         }
@@ -84,101 +83,4 @@
         border-left:4px solid #598053;
     }
     
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-width: 1200px) 
-  and (max-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi)
-   { 
-    .gameBox{
-        width:300px;
-        height: 400px;
-        margin-top: 80px;
-        padding:7% 5% 6% 5%;
-       
-        .gameImage{
-            .frontImage{
-                position: absolute;
-                bottom:0;
-                right: -25px;
-                left: -25px;    
-              
-                
-                display: block;
-                height: 450px;
-                width: auto;
-                border: none;
-                margin-left: auto;
-                margin-right: auto;
-                justify-content: center;
-               }
-            border: 2px solid $color-border;
-            position: relative;
-            width:300px;
-            height: 400px;
-            border-radius:10px;
-            background-size: cover;
-            transition:.3s ease-in;
-            background-position: center;
-          &:hover{
-              .textInImage{
-                  opacity: 1;
-                  top:0;
-                  bottom: 0;
-              }
-              .frontImage{
-                filter:brightness(10%);
-                transition: 0.5s ease-out;
-            }
-    
-          }
-          .textInImage{
-            background-color: rgba(0,0,0,0.5);
-            position: absolute;
-            opacity:0;
-            top:300px;
-            top:0;
-            bottom: 0px;
-            left:0;
-            right:0;
-            border-radius:10px;
-            z-index:1;
-            transition: .2s ease-in-out;
-            h3{
-                padding: 5px;
-                font-size: 24px;
-            } 
-            h1{
-                font-size: 2rem;
-            }
-            .gamemodes{
-                position: absolute;
-                padding: 0 2%;
-                text-align:left;
-                color:$color-text; 
-                
-            }
-            hr{
-                background-color:  $color-border;
-                height: 4px;
-                width: 80%;
-                border:none;
-                text-align: left;
-            }
-        }     
-        }
-        .label{
-            margin:1em 0;
-            padding: 0 20px;
-            width:100%;
-            text-align: left;
-            border-left:4px solid #598053;
-        }
-        
-    }
-
-
 }

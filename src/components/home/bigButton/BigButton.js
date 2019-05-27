@@ -3,7 +3,6 @@ import "./BigButton.scss";
 import { Link } from "react-router-dom";
 const BigButton = ({ icon, label, labelcolor, color, navigationTo }) => {
   return (
-    <div>
       <Link
         className="BigButton"
         to={`/${navigationTo}`}
@@ -14,7 +13,6 @@ const BigButton = ({ icon, label, labelcolor, color, navigationTo }) => {
         </div>
         <h3 style={{ color: labelcolor }}>{label}</h3>
       </Link>
-    </div>
   );
 };
 

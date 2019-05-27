@@ -4,17 +4,21 @@ import BigButton from "../bigButton/BigButton";
 const Section1 = () => {
 
 return(
-    <div>
-    <div className="RBB">
-        <h1>Ready.</h1>
-        <h1>Bet.</h1>
-        <h1>Brawl.</h1>
+    <div className="section1">
+    
+        <div className="right">
+          <div className="computerDiv1">
+            <img className="computer" src="/images/dator.svg" alt="computer" />
+            <img className="clientImg" src="/images/app-start.png" alt="client" />
+          </div>
         </div>
-        <div className="computerDiv1">
-          <img className="computer" src="/images/dator.svg" alt="computer" />
-          <img className="clientImg" src="/images/app-start.png" alt="client" />
-        </div>
-       <div className="threeButtons">
+        <div className="left">
+          <div className="RBB">
+          <h1>Ready.</h1>
+          <h1>Bet.</h1>
+          <h1>Brawl.</h1>
+          </div>
+          <div className="threeButtons">
           <BigButton
             className="conceptButton" 
             icon="/images/concept.svg" 
@@ -38,6 +42,7 @@ return(
             labelcolor="black" 
             label="Download" 
             color="linear-gradient(#FFFFFF, #EDE4D7)"/>
+            </div>
        </div>
     </div>
 );

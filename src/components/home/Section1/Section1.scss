@@ -1,69 +1,37 @@
 @import "../../../resources/variables.scss";
-.RBB{
-    position: absolute;
-    margin-top: 5%;
-    left:80px;
-    border-left: 4px solid #598053;
-    border-radius:4px;
-    padding:0 20px;
-    text-align: left;
-    font-size: 3rem;
-}
-.threeButtons{
-    position: absolute;
-    display: flex;
-    flex-flow: row wrap;
-    bottom: 10%;
-    left: 5%;
-}
-.computerDiv1{
-    position: absolute;
-    width: 48%;
-    right: 5%;
-    bottom: 9%;
-    max-width: 48vw;
-    max-height: 48vw;
+.section1{
     display: grid;
-    grid-template-columns: 3.8% 75.5% 20.7%;
-    grid-template-rows: 17.3% 58% 24.7%;
-}
-.computer{
-    grid-column: 1 / 4;
-    grid-row: 1 / 4;
-}
-.client{
-    max-width: 100%;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
+    grid-template-columns: 35% 65%;
 
-/* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-width: 1200px) 
-  and (max-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi)
-   { 
+    grid-template-rows:calc(100vh - 160px);
+    grid-template-areas: "left right";
+    .left{
+        grid-area: left;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;  
+    }
+    .right{
+        grid-area: right;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
     .RBB{
-        position: absolute;
         margin-top: 5%;
-        left:80px;
         border-left: 4px solid #598053;
         border-radius:4px;
         padding:0 20px;
         text-align: left;
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     .threeButtons{
-        position: absolute;
         display: flex;
         flex-flow: row wrap;
-        bottom: 10%;
-        left: 5%;
+        justify-content: space-between;
     }
     .computerDiv1{
-        position: absolute;
-        width: 48%;
+        width: 90%;
         right: 5%;
         bottom: 9%;
         max-width: 48vw;
@@ -81,4 +49,4 @@
         grid-column: 2 / 3;
         grid-row: 2 / 3;
     }
-   }
+}
