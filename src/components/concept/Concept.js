@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useEventListener } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./concept.scss";
 import SideNav from "./SideNav";
 
@@ -29,7 +29,7 @@ const concepts = [
       "creating multiple accounts, you need to enter your personal " +
       "number. We at Brawl Gaming take security very seriously, and we " +
       "can assure you that your personal information is secure with us.",
-    img: "/images/concept-images/client_register.png",
+    img: "/images/register_icon.svg",
     key: "register"
   },
   {

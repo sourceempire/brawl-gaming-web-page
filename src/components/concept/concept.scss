@@ -21,6 +21,9 @@
 
     .img {
       grid-area: img;
+      display: flex;
+      align-items: center;
+
       img {
         width: 100%;
       }
