@@ -19,9 +19,9 @@ const Section3 = () => {
 
         {gameArray.map(game=>(
           <GameBox
-          label={game.title}
-          image={game.img_back}
-          front_img={game.img_front}
+          title={game.title}
+          img_back={game.img_back}
+          img_front={game.img_front}
           gamemodes={game.modes}
 
         />
