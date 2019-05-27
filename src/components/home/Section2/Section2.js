@@ -11,7 +11,7 @@ const Section2 = () => {
     "Play against opponents worldwide, and the winners gets the whole pot instantly after the match!";
 
   return (
-    <div>
+    <section>
       <div className="HTB">
         <h1>How To Brawl</h1>
       </div>
@@ -23,7 +23,7 @@ const Section2 = () => {
         <BoxHolder image="/images/brawl.svg" label="Brawl" text={brawlText} />
       </div>
       <MediumButton label="Read more" navigationTo="concept" />
-    </div>
+    </section>
   );
 };
 

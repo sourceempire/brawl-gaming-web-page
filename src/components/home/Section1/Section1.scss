@@ -1,52 +1,52 @@
 @import "../../../resources/variables.scss";
-.section1{
-    display: grid;
-    grid-template-columns: 35% 65%;
+.section1 {
+  display: grid;
+  grid-template-columns: 35% 65%;
 
-    grid-template-rows:calc(100vh - 160px);
-    grid-template-areas: "left right";
-    .left{
-        grid-area: left;
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;  
-    }
-    .right{
-        grid-area: right;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-    }
-    .RBB{
-        margin-top: 5%;
-        border-left: 4px solid #598053;
-        border-radius:4px;
-        padding:0 20px;
-        text-align: left;
-        font-size: 3rem;
-    }
-    .threeButtons{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-    }
-    .computerDiv1{
-        width: 90%;
-        right: 5%;
-        bottom: 9%;
-        max-width: 48vw;
-        max-height: 48vw;
-        display: grid;
-        grid-template-columns: 3.8% 75.5% 20.7%;
-        grid-template-rows: 17.3% 58% 24.7%;
-    }
-    .computer{
-        grid-column: 1 / 4;
-        grid-row: 1 / 4;
-    }
-    .client{
-        max-width: 100%;
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-    }
+  grid-template-rows: calc(100vh - 160px);
+  grid-template-areas: "left right";
+  .left {
+    grid-area: left;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  .right {
+    grid-area: right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .RBB {
+    margin-top: 5%;
+    border-left: 4px solid #598053;
+    border-radius: 4px;
+    padding: 0 20px;
+    text-align: left;
+    font-size: 3rem;
+  }
+  .threeButtons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .computerDiv1 {
+    width: 90%;
+    right: 5%;
+    bottom: 9%;
+    max-width: 48vw;
+    max-height: 48vw;
+    display: grid;
+    grid-template-columns: 3.8% 75.5% 20.7%;
+    grid-template-rows: 17.3% 58% 24.7%;
+  }
+  .computer {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+  }
+  .client {
+    max-width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
 }

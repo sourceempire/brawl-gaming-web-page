@@ -11,7 +11,7 @@ const Home = () => {
       <section>
       <Section1/>
       </section>
-      <Section2/>
+      <Section2/>        
       <section>
       <Section3/>
       </section>
