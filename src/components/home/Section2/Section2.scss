@@ -1,17 +1,16 @@
 @import "../../../resources/variables.scss";
 .HTB{
-    position: absolute;
+    text-align: left;
     margin-top: 80px;
     left:5%;
     border-left:4px solid #598053;
     padding:0 20px; 
 }
 .threeBoxes{
-    position: relative;
-    justify-content: center;
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-evenly;
     .arrow{
-        width: 20px;
+        width: 1.2%;
     }
 }
