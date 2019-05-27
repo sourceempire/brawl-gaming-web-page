@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Server from "../../../utils/Server";
 import "./categories.scss";
 
 const Category = ({ category, setCategory, setCategoryResults }) => {
   const searchCategory = async e => {
     e.preventDefault();
-    const res = await fetch(`http://172.20.10.9:5000/faq/cat/${category.id}`, {
+    const res = await fetch(`${Server.ip}/faq/cat/${category.id}`, {
       method: "GET"
     });
     if (res.status === 200) {

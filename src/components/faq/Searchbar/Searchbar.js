@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import PropTypes from "prop-types";
+import Server from "../../../utils/Server";
 import "./searchbar.scss";
 
 const Searchbar = ({ setPhrase, onSearch }) => {
@@ -8,7 +9,7 @@ const Searchbar = ({ setPhrase, onSearch }) => {
   const search = async e => {
     e.preventDefault();
     const phrase = searchRef.current.value;
-    const res = await fetch(`http://172.20.10.9:5000/faq/keyword/${phrase}`, {
+    const res = await fetch(`${Server.ip}/faq/keyword/${phrase}`, {
       method: "GET"
     });
     if (res.status === 200) {
