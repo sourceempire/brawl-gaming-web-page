@@ -6,7 +6,15 @@
     padding:7% 5% 6% 5%;
    
     .gameImage{
-        border:1px solid #598053;
+        .frontImage{
+            position: absolute;
+            bottom:0;
+            left:-10%;
+            
+            height: 450px;
+            border: none;
+           }
+        border: 2px solid $color-border;
         position: relative;
         width:300px;
         height: 400px;
@@ -20,6 +28,11 @@
               top:0;
               bottom: 0;
           }
+          .frontImage{
+            filter:brightness(10%);
+            transition: 0.5s ease-out;
+        }
+
       }
       .textInImage{
         transition: 0.5s ease-out;
