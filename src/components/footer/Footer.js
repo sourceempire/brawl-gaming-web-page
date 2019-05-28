@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "./footer.scss";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="footer">
       <div className="box">
@@ -16,13 +20,21 @@ const Footer = () => {
       <div className="box">
         <div>
           <h4>Links</h4>
-          <Link exact to="/">
+          <Link exact to="/" onClick={() => scrollToTop()}>
             Home
           </Link>
-          <Link to="/download">Download</Link>
-          <Link to="/concept">Concept</Link>
-          <Link to="/games">Games</Link>
-          <Link to="/faq">FAQ</Link>
+          <Link to="/download" onClick={() => scrollToTop()}>
+            Download
+          </Link>
+          <Link to="/concept" onClick={() => scrollToTop()}>
+            Concept
+          </Link>
+          <Link to="/games" onClick={() => scrollToTop()}>
+            Games
+          </Link>
+          <Link to="/faq" onClick={() => scrollToTop()}>
+            FAQ
+          </Link>
         </div>
       </div>
       <div className="box">
