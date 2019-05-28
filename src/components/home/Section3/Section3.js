@@ -4,11 +4,6 @@ import Server from "../../../utils/Server";
 import MediumButton from "../MediumButton/MediumButton";
 import GameBox from "../Section3/GameBox/GameBox";
 const Section3 = () => {
-  const gameArray = [
-    {id:1, title:'CS:GO', img_back:'csgo_back.png', img_front:'csgo_front.png', modes:[{ id:1, mode:'pvp' }, {id:2, mode:'pve'}, {id:3, mode:'pve'}] },
-    {id:2, title:'FIFA 19', img_back:'fifa19_back.png',img_front:'fifa19_front.png',modes:[{ id:1, mode:'Team deathmatch' }, {id:2, mode:'3 vs 3'}] },
-    {id:3, title:'Rocket League', img_back:'fifa19_back.png',img_front:'csgo_front.png', modes:[{ id:1, mode:'1 vs 1' }, {id:2, mode:'5 vs 5'}] }
-    ]
     const [games, setGames] = useState([]);
 
     const fetchGames = async () => {
@@ -18,7 +13,6 @@ const Section3 = () => {
       if (res.status === 200) {
         const ret = await res.json();
         setGames(ret);
-        console.log(ret);
       } else {
         alert("Not able to get games right now.");
         setGames([]);
