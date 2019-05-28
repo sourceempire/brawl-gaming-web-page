@@ -31,9 +31,8 @@ const Games = () => {
 
   return (
     <section>    
-      {/* <div className="availableGames">
+       <div className="availableGames">
         {games.map(game => (
-          
           <GameBox 
             title={game.title}
             img_back={game.img_back}
@@ -41,7 +40,7 @@ const Games = () => {
             gamemodes={game.modes}
           />
         ))}
-      </div> */}
+      </div> {/*
       <div className="availableGames">
         {gameArray.map(game => (
           <div className="game">
@@ -59,7 +58,7 @@ const Games = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div>*/}
     </section>
   );
 };
