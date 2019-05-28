@@ -4,6 +4,9 @@ import "./navigation.scss";
 import Login from "../login/Login";
 
 const Navigation = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="navigation">
       <div className="logo">
@@ -16,15 +19,23 @@ const Navigation = () => {
         </div>
       </div>
       <div className="menu">
-        <NavLink exact to="/">
+        <NavLink exact to="/" onClick={() => scrollToTop()}>
           Home
         </NavLink>
-        <NavLink to="/download">Download</NavLink>
-        <NavLink to="/concept">Concept</NavLink>
-        <NavLink to="/games">Games</NavLink>
-        <NavLink to="/faq">FAQ</NavLink>
+        <NavLink to="/download" onClick={() => scrollToTop()}>
+          Download
+        </NavLink>
+        <NavLink to="/concept" onClick={() => scrollToTop()}>
+          Concept
+        </NavLink>
+        <NavLink to="/games" onClick={() => scrollToTop()}>
+          Games
+        </NavLink>
+        <NavLink to="/faq" onClick={() => scrollToTop()}>
+          FAQ
+        </NavLink>
         <Login />
-        <NavLink to="/signup" className="signup">
+        <NavLink to="/signup" className="signup" onClick={() => scrollToTop()}>
           Sign up
         </NavLink>
       </div>

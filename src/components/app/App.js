@@ -7,6 +7,7 @@ import Games from "../games/Games";
 import Concept from "../concept/Concept";
 import FAQ from "../faq/Faq";
 import Signup from "../signup/Signup";
+import Footer from "../footer/Footer";
 import "./app.scss";
 import "../../resources/site.scss";
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/signup" component={Signup} />
           <Redirect from="*" to="/" component={Home} />
         </Switch>
+        <Footer />
       </div>
     </BrowserRouter>
   );

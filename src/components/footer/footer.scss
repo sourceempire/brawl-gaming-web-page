@@ -1,0 +1,52 @@
+@import "../../resources/variables.scss";
+
+.footer {
+  min-height: 20vh;
+  background: $color-background;
+  padding: 80px 80px 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 50px;
+  grid-template-areas: "com com com" "copy copy copy";
+  grid-gap: 20px;
+
+  .box {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
+    div {
+      display: flex;
+      align-items: flex-start;
+      flex-flow: column;
+      h4 {
+        display: block;
+        color: $color-text;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 0.9rem;
+        color: $color-text;
+      }
+
+      a {
+        font-size: 0.9rem;
+        font-family: "Roboto", sans-serif;
+        color: $color-text;
+        &:hover {
+          color: $color-active;
+        }
+      }
+    }
+  }
+  .copyright {
+    grid-area: copy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-text;
+    font-size: 0.9rem;
+    font-family: "Roboto", sans-serif;
+    opacity: 0.7;
+  }
+}
