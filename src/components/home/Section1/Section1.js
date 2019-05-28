@@ -50,6 +50,12 @@ const Section1 = () => {
           />
         </div>
       </div>
+      <img
+        className="arrow"
+        src="/images/angle-double-down-solid.svg"
+        alt="downarrow"
+        onClick={() => window.scrollTo(0, 1000 - 160)}
+      />
     </div>
   );
 };
