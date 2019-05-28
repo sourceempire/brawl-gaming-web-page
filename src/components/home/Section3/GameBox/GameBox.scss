@@ -37,6 +37,9 @@
 
       }
       .textInImage{
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
         background-color: rgba(0,0,0,0.5);
         position: absolute;
         opacity:0;

@@ -8,8 +8,8 @@ const GameBox = ({img_back,img_front,title,gamemodes}) => {
             <img className="frontImage" src={'/images/game-images/'+ img_front} alt="front img"/>
                 <div className="gamemodes">
                     <div className="textInImage">
-                    <h1>Gamemodes</h1>
-                    <hr/>
+                        <h1>Gamemodes</h1>
+                        <hr/>
                     {gamemodes.map(modes =>( 
                         <h3>{modes.mode}</h3>
                     ))}
