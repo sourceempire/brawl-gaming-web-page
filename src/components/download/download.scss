@@ -50,7 +50,7 @@ p {
 
 #dlBtn {
   background: $color-button-gradient-accept;
-  border: none;
+  border: 1px solid $color-active;
   border-radius: 7px;
   color: $color-text;
   cursor: pointer;
