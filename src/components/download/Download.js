@@ -2,15 +2,19 @@ import React, { useState, useEffect } from "react";
 import "./download.scss";
 
 const Download = () => {
+
+  const mslogo = "/images/mslogo.png";
+  const applelogo = "/images/applelogo.png";
+  
   const [os, setOs] = useState("windows");
-  const [osImg1, setOsImg1] = useState("/images/mslogo.png");
-  const [osImg2, setOsImg2] = useState("/images/applelogo.png");
+  const [osImg1, setOsImg1] = useState(mslogo);
+  const [osImg2, setOsImg2] = useState(applelogo);
 
   const detectOs = () => {
     if (/Mac/.test(navigator.platform)) {
       setOs("osx");
-      setOsImg1("/images/applelogo.png");
-      setOsImg2("/images/mslogo.png");
+      setOsImg1(applelogo);
+      setOsImg2(mslogo);
     }
   };
 

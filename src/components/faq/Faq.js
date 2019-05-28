@@ -40,9 +40,9 @@ const cats = [
     icon: "/images/payments.svg",
     label: "Payments",
     top: [
-      "What is Brawl Gaming?",
-      "Is Brawl Gaming secure?",
-      "What am I downloading?"
+      "How does the betting work?",
+      "Why does it cost more than my bet?",
+      "What is the minimum amount I can bet?"
     ]
   },
   {

@@ -19,7 +19,7 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  margin-right: 50px;
+  margin: 20px;
 }
 
 p {
@@ -34,6 +34,7 @@ p {
   display: flex;
   flex-flow: row;
   margin-bottom: 20px;
+  margin-left: -25px;
 }
 
 #logoText {
@@ -44,6 +45,7 @@ p {
   align-items: flex-start;
   font-size: 45px;
   letter-spacing: 1px;
+  line-height: 1.2;
 }
 
 #dlBtn {
@@ -57,13 +59,16 @@ p {
   padding: 10px 20px;
   margin-top: 30px;
   margin-bottom: 10px;
+  &:hover {
+      background: $color-button-hover;
+  }
 }
 
 #dlText {
   display: inline-block;
   font-size: 18pt;
   font-weight: lighter;
-  letter-spacing: 1px;
+  padding-top: 2px;
 }
 
 .dlAlt {
