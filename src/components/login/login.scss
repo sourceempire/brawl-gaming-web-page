@@ -3,10 +3,27 @@
 $navigation-height: 80px;
 
 .login {
-  display: inline-block;
+  display: inline-flex;
   position: relative;
 
   .button {
+    font-family: "Orbitron", sans-serif;
+    cursor: pointer;
+    display: block;
+    font-size: 0.7rem;
+    line-height: $navigation-height - 45px;
+    border: 1px solid $color-active;
+    border-radius: 5px;
+    color: $color-text;
+    margin: 0 10px;
+    padding: 0 10px;
+    &:hover {
+      color: $color-active;
+    }
+  }
+
+  .signup {
+    background: $color-button-gradient-accept;
     font-family: "Orbitron", sans-serif;
     cursor: pointer;
     display: block;
@@ -26,7 +43,7 @@ $navigation-height: 80px;
     box-sizing: border-box;
     position: absolute;
     top: $navigation-height - 40px;
-    right: 10px;
+    right: 92px;
     width: 300px;
     display: flex;
     flex-flow: column;
@@ -66,6 +83,37 @@ $navigation-height: 80px;
         &:hover {
           color: $color-active;
         }
+      }
+    }
+  }
+
+  .menu {
+    box-sizing: border-box;
+    position: absolute;
+    top: $navigation-height - 40px;
+    right: 10px;
+    width: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid $color-active;
+    background: $color-background;
+    input {
+      padding: 15px;
+      margin: 5px;
+      outline: none;
+      appearance: none;
+      border-radius: 5px;
+      border: 1px solid $color-border;
+      background: $color-text;
+      &[type="submit"] {
+        background: $color-button-gradient-accept;
+        font-family: "Orbitron", sans-serif;
+        color: $color-text;
+        cursor: pointer;
+        border: 1px solid $color-active;
       }
     }
   }

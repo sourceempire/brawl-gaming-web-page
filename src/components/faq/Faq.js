@@ -71,6 +71,7 @@ const FAQ = () => {
   const [phrase, setPhrase] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [category, setCategory] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [categories, setCategories] = useState(cats);
   const [categoryResults, setCategoryResults] = useState([]);
   const categoryResultsRef = useRef();

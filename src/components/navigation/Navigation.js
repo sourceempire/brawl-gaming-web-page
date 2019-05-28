@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./navigation.scss";
 import Login from "../login/Login";
 
-const Navigation = () => {
+const Navigation = ({ loggedIn, setLoggedIn }) => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
@@ -34,10 +34,7 @@ const Navigation = () => {
         <NavLink to="/faq" onClick={() => scrollToTop()}>
           FAQ
         </NavLink>
-        <Login />
-        <NavLink to="/signup" className="signup" onClick={() => scrollToTop()}>
-          Sign up
-        </NavLink>
+        <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       </div>
     </div>
   );
