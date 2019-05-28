@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Navigation from "../navigation/Navigation";
 import Home from "../home/Home";
@@ -12,10 +12,11 @@ import "./app.scss";
 import "../../resources/site.scss";
 
 const App = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <BrowserRouter>
       <div className="app">
-        <Navigation />
+        <Navigation loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/download" component={Download} />
