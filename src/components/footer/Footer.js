@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="box">
         <div>
           <h4>Links</h4>
-          <Link exact to="/" onClick={() => scrollToTop()}>
+          <Link to="/" onClick={() => scrollToTop()}>
             Home
           </Link>
           <Link to="/download" onClick={() => scrollToTop()}>
