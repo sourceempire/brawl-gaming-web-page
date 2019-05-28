@@ -58,6 +58,10 @@
       border: 1px solid $color-active;
       margin: 0 auto;
       font-family: "Orbitron", sans-serif;
+
+      &:hover {
+        background: $color-button-hover;
+      }
     }
   }
 }
