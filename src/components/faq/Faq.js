@@ -50,9 +50,9 @@ const cats = [
     icon: "/images/account.svg",
     label: "Account",
     top: [
-      "What games can you play?",
-      "Are there coming more games?",
-      "What type of games is there?"
+      "How do I edit my account?",
+      "How do I add money to my account?",
+      "How do I take money from my account?"
     ]
   },
   {
@@ -60,9 +60,9 @@ const cats = [
     icon: "/images/client.svg",
     label: "Client",
     top: [
-      "How do I play a match?",
-      "How does the matchmaking work?",
-      "What happens if someone disconnects?"
+      "My Client is not starting, what do I do?",
+      "Why has my download stopped?",
+      "How do I invite friends?"
     ]
   }
 ];
