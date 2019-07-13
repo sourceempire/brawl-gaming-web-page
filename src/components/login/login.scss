@@ -5,9 +5,11 @@ $navigation-height: 80px;
 .login {
   display: inline-flex;
   position: relative;
+  align-items: center;
 
   .button {
     font-family: "Orbitron", sans-serif;
+    min-width: 55px;
     cursor: pointer;
     display: block;
     font-size: 0.7rem;
@@ -17,6 +19,9 @@ $navigation-height: 80px;
     color: $color-text;
     margin: 0 10px;
     padding: 0 10px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
     &:hover {
       color: $color-active;
     }
@@ -24,6 +29,7 @@ $navigation-height: 80px;
 
   .signup {
     background: $color-button-gradient-accept;
+    min-width: 55px;
     font-family: "Orbitron", sans-serif;
     cursor: pointer;
     display: block;
@@ -117,4 +123,13 @@ $navigation-height: 80px;
       }
     }
   }
+
+}
+
+@media (max-width: 700px) {
+  .login{
+  .form{
+    right: 2px;
+  }
+}
 }

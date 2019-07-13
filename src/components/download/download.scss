@@ -115,3 +115,13 @@ p {
   text-align: left;
   max-width: 67%;
 }
+
+@media only screen and (max-width: 600px) {
+  .section{
+    min-height: calc(100vh - 220px);
+  }
+    .computerDiv{
+      display: none;
+    }
+  
+}

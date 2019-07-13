@@ -6,9 +6,9 @@ import Result from "./Result";
 const Results = ({ title, list }) => {
   return (
     <div className="results">
-      <h1>{list.length === 0 ? "" : title}</h1>
-      {list.map(r => (
-        <Result key={r.id} result={r} />
+      <h1>{Object.keys(list).length === 0 ? "" : title}</h1>
+      {Object.entries(list).map(([question, answer]) => ( 
+        <Result question={question} answer={answer} key={question}/>
       ))}
     </div>
   );

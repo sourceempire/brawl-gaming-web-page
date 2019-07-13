@@ -83,6 +83,7 @@ const FAQ = () => {
       if (categoryResults.length > 0) {
         await setCategoryResultHeight(100);
         window.scrollTo(0, categoryResultsRef.current.offsetTop - 80);
+        
       } else {
         await setCategoryResultHeight(0);
       }
@@ -90,22 +91,29 @@ const FAQ = () => {
     scroll();
   }, [categoryResults]);
 
+  useEffect(() => {
+    if (searchResults) {
+      
+    }
+  })
+
   return (
     <section className="faq">
       <h1 className="title">How can we help you?</h1>
       <Searchbar setPhrase={setPhrase} onSearch={setSearchResults} />
-      <Results title={`Search results for: "${phrase}"`} list={searchResults} />
+      { searchResults.length !== 0 ? <Results title={`Search results for: "${phrase}"`} list={searchResults} /> : <Results id="categoryResult" title={category} list={categoryResults} />}
+      
       <Categories
         list={categories}
         setCategory={setCategory}
         setCategoryResults={setCategoryResults}
       />
-      <div
+      {/*<div
         ref={categoryResultsRef}
         style={{ minHeight: categoryResultHeight + "vh" }}
       >
-        <Results id="categoryResult" title={category} list={categoryResults} />
-      </div>
+        
+      </div>*/}
     </section>
   );
 };

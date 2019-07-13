@@ -77,3 +77,9 @@
     }
   }
 }
+
+@media (max-width: 700px) {
+  .section1{
+    grid-template-areas: "left" "right";
+  }
+}

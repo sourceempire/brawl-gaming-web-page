@@ -17,24 +17,27 @@ const Navigation = ({ loggedIn, setLoggedIn }) => {
           <h4>Brawl</h4>
           <h4>Gaming</h4>
         </div>
+        <div className="mobile"> 
+        <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+        </div>
       </div>
       <div className="menu">
-        <NavLink exact to="/" onClick={() => scrollToTop()}>
+        <NavLink className="nav-text" exact to="/" onClick={() => scrollToTop()}>
           Home
         </NavLink>
-        <NavLink to="/download" onClick={() => scrollToTop()}>
+        <NavLink className="nav-text" to="/download" onClick={() => scrollToTop()}>
           Download
         </NavLink>
-        <NavLink to="/concept" onClick={() => scrollToTop()}>
+        <NavLink className="nav-text" to="/concept" onClick={() => scrollToTop()}>
           Concept
         </NavLink>
-        <NavLink to="/games" onClick={() => scrollToTop()}>
+        <NavLink className="nav-text" to="/games" onClick={() => scrollToTop()}>
           Games
         </NavLink>
-        <NavLink to="/faq" onClick={() => scrollToTop()}>
+        <NavLink className="nav-text" to="/faq" onClick={() => scrollToTop()}>
           FAQ
         </NavLink>
-        <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+        <div className="not-mobile"><Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} /></div>
       </div>
     </div>
   );

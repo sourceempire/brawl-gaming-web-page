@@ -60,3 +60,31 @@
     color: $color-active;
   }
 }
+
+@media (max-width: 700px) {
+  section{
+    margin: auto;
+    padding: 0px;
+  .grid {
+    padding: 0 10%;
+    grid-template-areas:
+       "img" 
+       "text" !important;
+
+        .text{
+          text-align: center !important;
+        }
+
+       .img{
+         padding-bottom: 15px;
+         width: 100%;
+       }
+
+  
+    grid-template-columns: 100% !important;
+  }
+  .sideNav{
+    display: none;
+  }
+}
+}

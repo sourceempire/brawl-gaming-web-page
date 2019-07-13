@@ -33,28 +33,22 @@ $navigation-height: 80px;
         margin: 2px;
       }
     }
+    .mobile {
+      display: none;
+    }
   }
 
   .menu {
     a {
       display: inline-block;
       line-height: $navigation-height;
-      padding: 0 10px;
+      padding: 0 15px;
       font-size: 1rem;
       color: $color-text;
       &:hover {
         color: $color-active;
       }
     }
-    /* 
-    .login {
-      font-size: 0.7rem;
-      line-height: $navigation-height - 45px;
-      border: 1px solid $color-active;
-      border-radius: 5px;
-      margin: 0 10px;
-    }
-    */
     .signup {
       font-size: 0.7rem;
       line-height: $navigation-height - 45px;
@@ -67,5 +61,43 @@ $navigation-height: 80px;
     .active {
       color: $color-active;
     }
+    .not-mobile{
+      display: inline-block;
+    }
   }
+  
+}
+
+@media only screen and (max-width: 770px) {
+
+
+  .navigation{
+    width: 100%;
+    align-content: center;
+    flex-wrap: wrap; 
+    padding: 0;
+    margin: auto;
+    height: auto;
+    .logo{
+      width: 100%;
+      align-items: center;
+      padding: 5px;
+      .text{
+        flex-grow: 1;
+      }
+      .mobile{
+        display: inline-block;
+        align-items: center;
+      }
+    }
+    .menu{
+      width: 100%;
+      a  { padding: 0px 5px; line-height: 42px;}
+
+      .not-mobile{
+        display: none;
+      }
+    }
+  }
+
 }

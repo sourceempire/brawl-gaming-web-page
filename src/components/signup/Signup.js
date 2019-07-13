@@ -1,7 +1,9 @@
 import React from "react";
 import "./signup.scss";
 
-const Signup = () => {
+import RegistrationForm from "../registrationForm/RegistrationForm"
+
+const Signup = ({history}) => {
   const createAccount = async e => {
     e.preventDefault();
     alert("created account");
@@ -18,34 +20,7 @@ const Signup = () => {
           <li>Brawl for the pot</li>
         </ul>
       </div>
-      <form className="form" onSubmit={e => createAccount(e)}>
-        <input
-          className="firstname"
-          type="text"
-          placeholder="Firstname"
-          required
-        />
-        <input
-          className="lastname"
-          type="text"
-          placeholder="Lastname"
-          required
-        />
-        <input className="email" type="email" placeholder="E-Mail" required />
-        <input
-          className="password"
-          type="password"
-          placeholder="Password"
-          required
-        />
-        <input
-          className="confirm"
-          type="password"
-          placeholder="Password"
-          required
-        />
-        <input className="submit" type="submit" value="Create account" />
-      </form>
+      <RegistrationForm history={history}/>
     </section>
   );
 };

@@ -17,19 +17,23 @@ function checkStatus(res) {
 }
 
 function addParams(url, params) {
-  const u = new URL(url);
+  const query = new URLSearchParams();
   for (var key in params) {
-    const value = params[key];
+      const value = params[key];
 
-    if (Array.isArray(value)) {
-      u.searchParams.append(key, JSON.stringify(value));
-    } else if (typeof value === "object") {
-      u.searchParams.append(key, JSON.stringify(value));
-    } else {
-      u.searchParams.append(key, value);
-    }
+      if (Array.isArray(value)) {
+        query.append(key, JSON.stringify(value));
+      } else if (typeof value === "object") {
+        query.append(key, JSON.stringify(value));
+      } else {
+        query.append(key, value);
+      }
   }
-  return u.toString();
+  if (url.includes('?')) {
+    return url + '&' + query.toString();
+  } else {
+    return url + '?' + query.toString();
+  }
 }
 
 function headers(options) {

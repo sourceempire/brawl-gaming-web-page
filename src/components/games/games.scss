@@ -22,42 +22,62 @@
     }
 }
 
-.availableGames {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-    grid-row-gap: 4em;
-    padding-top: 4em;
+.games-section {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    .game {
-        display: grid;
-        grid-template-columns: 300px;       /*    300px         : 1vw = 2560/100    */
-        grid-template-rows: 400px 50px;     /*    400px, 50px   : 1vh = 1600/100    */
-        grid-template-areas: "image" "text";
-        grid-row-gap: 2em;
-
-        .cover-front {
-            @extend %cover;
-            border: none;
-            position: absolute;
-            height: 420px;
-            left: -25px;
-            right: -25px;
-            margin-left: auto;
-            margin-right: auto;
-            bottom: 0;
-            display: block;
-            width: auto;
+    .header-games{
+        display: flex;
+        flex-grow: 1;
+        width: 100%;
+        border-left: 4px solid #598053;
+        padding: 0 20px;
+        h1{
+            align-items: flex-start;
         }
+    }
 
-        .cover-back {
-            @extend %cover;
-        }
+    .availableGames {
+        width: 100%;
+        display: flex;
+        //grid-template-columns: auto auto;
+        justify-content: space-evenly;
+        //grid-row-gap: 4em;
+        //padding-top: 4em;
+        flex-wrap: wrap; 
 
-        .hidden-container{
-            position: absolute;
-            visibility: hidden;
-            opacity: 0;
+        .game {
+            display: grid;
+            grid-template-columns: 300px;       /*    300px         : 1vw = 2560/100    */
+            grid-template-rows: 400px 50px;     /*    400px, 50px   : 1vh = 1600/100    */
+            grid-template-areas: "image" "text";
+            grid-row-gap: 2em;
+
+            .cover-front {
+                @extend %cover;
+                border: none;
+                position: absolute;
+                height: 420px;
+                left: -25px;
+                right: -25px;
+                margin-left: auto;
+                margin-right: auto;
+                bottom: 0;
+                display: block;
+                width: auto;
+            }
+
+            .cover-back {
+                @extend %cover;
+            }
+
+            .hidden-container{
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+            }
         }
     }
 }

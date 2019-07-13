@@ -1,40 +1,54 @@
 import React, { useState, useEffect } from "react";
 import "./games.scss";
-import Server from "../../utils/Server";
+import Fetcher from "../../utils/Fetcher";
 import GameBox from "../home/Section3/GameBox/GameBox";
+
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const Games = () => {
   const [games, setGames] = useState([]);
-
+  
   const fetchGames = async () => {
-    const res = await fetch(`${Server.ip}/games`, {
-      method: "GET"
-    });
-    if (res.status === 200) {
-      const ret = await res.json();
-      setGames(ret);
-      console.log(ret);
-    } else {
-      alert("Not able to get games right now.");
+    Fetcher.get(SERVER_URL + "api/public/games", {})
+    .then(resp => {
+      setGames(resp.games);
+    })
+    .catch((err) => {
+      //OM MAN INTE ÄR INLOGGAD KOMMER MAN HIT
       setGames([]);
-    }
-  };
+      console.log(err);
+    }) 
+  }
 
-  useEffect(() => {
+   useEffect(() => {
     fetchGames();
   }, []);
 
+  const getFrontAndBackImage = (str) => {
+    if(str === '4747a477-3445-4b0a-9db9-bf0e68238208' ) {
+      return 'csgo_';
+    }
+  } 
+
   return (
-    <section>
+    <section className="games-section">
+      <div className="header-games"><h1>Available Games</h1></div>
       <div className="availableGames">
-        {games.map(game => (
+        {Object.entries(games).map(([id, game]) => (
           <GameBox
-            title={game.title}
-            img_back={game.img_back}
-            img_front={game.img_front}
-            gamemodes={game.modes}
+            key={id}
+            title={game.name}
+            img_back={getFrontAndBackImage(id) + 'back.png'}
+            img_front={getFrontAndBackImage(id) + 'front.png'}
+            contests={game.contests}
           />
         ))}
+        <GameBox 
+          title="More coming soon"
+          img_back="Brawl-MoreCommingSoon-Back.png"
+          img_front="Brawl-MoreCommingSoon-Front.png"
+          contests={[]}
+        />
       </div>
     </section>
   );

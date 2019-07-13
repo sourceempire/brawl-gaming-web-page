@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./results.scss";
 
-const Result = ({ result }) => {
+const Result = ({ question, answer }) => {
   const [active, setActive] = useState(true);
   const style = active ? "scaleY(-1)" : "scaleY(1)";
   return (
     <div className="result">
       <span onClick={() => setActive(!active)}>
-        <h4>{result.question}</h4>
+        <h4>{question}</h4>
         <img
           src="/images/chevron.svg"
           alt="arrow"
           style={{ transform: style }}
         />
       </span>
-      <p hidden={active}>{result.answer}</p>
+      <p hidden={active}>{answer}</p>
     </div>
   );
 };

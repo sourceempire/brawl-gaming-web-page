@@ -117,7 +117,6 @@ const Concept = () => {
         </div>
       ))}
       <SideNav links={concepts} active={active} onClick={setActive} />
-      <section />
     </section>
   );
 };
