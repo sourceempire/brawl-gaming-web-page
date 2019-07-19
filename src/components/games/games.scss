@@ -1,0 +1,87 @@
+@import "../../resources/variables.scss";
+@import "../../resources/colors.scss";
+
+.available-games-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 135px 20px 100px 20px;
+    
+    .games {
+        width: 100%;
+        text-align: left;
+        border-left: 4px solid #598053;
+        box-sizing: border-box;
+        padding:0 20px; 
+
+        h1 {
+            font-size: 32px;
+        }
+    }
+
+    .game-container {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        max-width: 900px;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 957px) {
+    .available-games-container {
+        padding: 180px 20px 0px 20px;
+        
+        .game-container {
+            max-width: 300px;
+        }
+    }
+  }
+
+  @media (max-width: 608px) {
+    .available-games-container {
+        
+        .games {
+    
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 540px) {
+    .available-games-container { 
+      justify-content: flex-start;
+    }
+  }
+  
+  @media only screen and (max-width: 522px) {
+    .available-games-container {
+      padding: 247px 20px 0px 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 521px) {
+    .available-games-container {
+      padding: 292px 20px 0px 20px;
+    }
+  }
+  
+  
+  @media (max-width: 482px) {
+    .available-games-container {
+      padding: 309px 20px 0px 20px;
+      
+    }
+  }
+  
+  @media only screen and (max-width: 322px) {
+    .available-games-container {
+      padding: 337px 20px 0px 20px;
+    }
+  }

@@ -1,0 +1,129 @@
+@import "../../resources/variables.scss";
+
+.concept {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 135px 20px 20px 20px;
+
+  .wrappers {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    max-width: 900px;
+    margin-bottom: 80px;
+
+    .container {
+      display: grid;
+      grid-template-rows: auto;
+      padding-left: 0%;
+      padding-right: 0%;
+      justify-content: space-between;
+
+      .text {
+        grid-area: text;
+        text-align: left;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+      }
+
+      .img {
+        grid-area: img;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+.sideNav {
+  position: fixed;
+  left: 0;
+  top: calc(50% - 125px);
+  background-color: rgba(17, 17, 17, 0.4);
+  height: 250px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  .link {
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    color: $color-text;
+    padding: 0 20px;
+    font-family: "Orbitron", sans-serif;
+    &:hover {
+      color: $color-active;
+    }
+  }
+
+  .active {
+    color: $color-active;
+  }
+}
+
+@media (max-width: 957px) {
+  .concept {
+    padding: 180px 20px 20px 20px;
+  
+    .wrappers {
+  
+      .container {
+        grid-template-areas:
+        "img" 
+        "text" !important;
+        grid-template-columns: 100% !important;
+
+        .text {
+          max-width: 450px;
+        }
+
+        .img {
+          margin-bottom: 20px;
+  
+          img {
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 522px) {
+  .concept {
+    padding: 247px 20px 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 521px) {
+  .concept {
+    padding: 292px 20px 20px 20px;
+  }
+}
+
+
+@media (max-width: 482px) {
+  .concept {
+    padding: 309px 20px 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 322px) {
+  .concept {
+    padding: 337px 20px 20px 20px;
+  }
+}

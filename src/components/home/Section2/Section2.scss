@@ -1,0 +1,106 @@
+@import "../../../resources/variables.scss";
+
+.HTB-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 100px 20px 100px 20px;
+    
+    .HTB {
+        width: 100%;
+        text-align: left;
+        border-left: 4px solid #598053;
+        box-sizing: border-box;
+        padding:0 20px; 
+
+        h1 {
+            font-size: 32px;
+        }
+    }
+
+    .content-container {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        max-width: 900px;
+        margin-top: 100px;
+
+        .steps {
+            width: 180px;
+        }
+
+        .steps-arrow {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            box-sizing: border-box;
+            padding-top: calc(90px - 27.5px);
+            margin-bottom: calc(90px - 27.5px);
+            width: 180px;
+        }
+
+        .steps-arrow-small {
+            display: none;
+            align-items: flex-start;
+            justify-content: center;
+            box-sizing: border-box;
+            padding-top: calc(90px - 27.5px);
+            margin-bottom: calc(90px - 27.5px);
+            width: 180px;
+        }
+        
+        .arrow {
+            width: 20px;
+        }
+        
+        .arrow-small {
+            height: 20px;
+        }
+    }
+}
+
+@media (max-width: 957px) {
+    .HTB-container {
+        
+        .content-container {
+            max-width: 180px;
+
+            .steps-arrow {
+                display: none;
+                align-items: flex-start;
+                justify-content: center;
+                box-sizing: border-box;
+                padding-top: 40px;
+                margin-bottom: 40px;
+                width: 180px;
+            }
+
+            .steps-arrow-small {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                box-sizing: border-box;
+                padding-top: 40px;
+                margin-bottom: 40px;
+                width: 180px;
+            }
+        }
+    }
+  }
+
+  @media (max-width: 608px) {
+    .HTB-container {
+        
+        .HTB {
+    
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+  }
+  

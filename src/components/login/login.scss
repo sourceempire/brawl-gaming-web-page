@@ -1,0 +1,154 @@
+@import "../../resources/variables.scss";
+
+$navigation-height: 80px;
+
+.login {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+
+  .button {
+    font-family: "Orbitron", sans-serif;
+    min-width: 75px;
+    cursor: pointer;
+    display: block;
+    font-size: 0.7rem;
+    line-height: $navigation-height - 45px;
+    border: 1px solid $color-active;
+    border-radius: 5px;
+    color: $color-text;
+    margin-left: 15px;
+    padding: 0 10px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    &:hover {
+      color: $color-active;
+    }
+  }
+
+  .signup {
+    background: $color-button-gradient-accept;
+    min-width: 75px;
+    font-family: "Orbitron", sans-serif;
+    cursor: pointer;
+    display: block;
+    font-size: 0.7rem;
+    line-height: $navigation-height - 45px;
+    border: 1px solid $color-active;
+    border-radius: 5px;
+    color: $color-text;
+    margin: 0 0px;
+    padding: 0 10px;
+    &:hover {
+      color: $color-active;
+    }
+  }
+
+  .form {
+    box-sizing: border-box;
+    position: absolute;
+    top: $navigation-height - 40px;
+    right: 131px;
+    width: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid $color-active;
+    background: $color-background;
+    input {
+      padding: 15px;
+      margin: 5px;
+      outline: none;
+      appearance: none;
+      border-radius: 5px;
+      border: 1px solid $color-border;
+      background: $color-text;
+      &[type="submit"] {
+        background: $color-button-gradient-accept;
+        font-family: "Orbitron", sans-serif;
+        color: $color-text;
+        cursor: pointer;
+        border: 1px solid $color-active;
+      }
+    }
+    span {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      margin: 5px;
+      a {
+        display: inline-block;
+        line-height: 20px;
+        padding: 0;
+        font-size: 0.7rem;
+        color: $color-border;
+        font-family: "Roboto", sans-serif;
+        &:hover {
+          color: $color-active;
+        }
+      }
+    }
+  }
+
+  .menu {
+    box-sizing: border-box;
+    position: absolute;
+    top: $navigation-height - 40px;
+    right: 10px;
+    width: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid $color-active;
+    background: $color-background;
+    input {
+      padding: 15px;
+      margin: 5px;
+      outline: none;
+      appearance: none;
+      border-radius: 5px;
+      border: 1px solid $color-border;
+      background: $color-text;
+      &[type="submit"] {
+        background: $color-button-gradient-accept;
+        font-family: "Orbitron", sans-serif;
+        color: $color-text;
+        cursor: pointer;
+        border: 1px solid $color-active;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 957px) {
+  .login {
+  
+    .button {
+      margin-left: 0px;
+    }
+
+    .signup {
+      margin-left: 30px;
+    }
+
+    .form {
+      top: $navigation-height - 31px;
+      right: 126px;
+    }
+  }
+}
+
+@media (max-width: 522px) {
+  .login{
+    .form{
+      top: $navigation-height - 40px;
+      right: calc(50% - 150px);
+    }
+}
+}

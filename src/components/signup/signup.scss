@@ -1,0 +1,134 @@
+@import 'src/resources/colors';
+@import 'src/resources/fonts';
+@import "../../resources/variables.scss";
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 135px 20px 100px 20px;
+
+  .register-content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 900px;
+
+    .left-register-content {
+      width: 350px;
+      display: flex;
+      align-items: flex-start;;
+      justify-content: center;
+      flex-flow: column wrap;
+      box-sizing: border-box;
+      padding: 0px 5px;
+
+      .SU {
+        display: block;
+        border-left: 4px solid #598053;
+        border-radius: 4px;
+        padding: 0 10px;
+        text-align: left;
+        font-size: 3rem;
+
+        h1 {
+          font-size: 65px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+    
+        ul {
+          list-style: none;
+          text-align: left;
+          padding-inline-start: 0px;
+          margin: 0 auto;
+          font-size: 16px;
+          color: #ede4d7;
+        }
+      }
+    }
+  
+    .right-register-content {
+      width: 550px;
+      box-sizing: border-box;
+      padding: 0px 5px;
+    }
+  }
+}
+
+@media (max-width: 957px) {
+  .register {
+    padding: 180px 20px 100px 20px;
+
+    .register-content-wrapper {
+
+      .left-register-content {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 608px) {
+  .register {
+    
+    .register-content-wrapper {
+
+      .left-register-content {
+        width: 100%;
+  
+        .SU {
+  
+          h1 {
+            font-size: 24px;
+          }
+
+          p {
+            font-size: 18px;
+          }
+      
+          ul {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .right-register-content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 522px) {
+  .register {
+    padding: 247px 20px 100px 20px;
+  }
+}
+
+@media only screen and (max-width: 521px) {
+  .register {
+    padding: 292px 20px 100px 20px;
+  }
+}
+
+
+@media (max-width: 482px) {
+  .register {
+    padding: 309px 20px 100px 20px;
+  }
+}
+
+@media only screen and (max-width: 322px) {
+  .register {
+    padding: 337px 20px 100px 20px;
+  }
+}
+

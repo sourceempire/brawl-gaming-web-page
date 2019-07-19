@@ -1,0 +1,283 @@
+@import "../../resources/variables.scss";
+
+.download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 135px 20px 100px 20px;
+
+  .download-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 900px;
+
+    .left-container {
+      width: 350px;
+      display: flex;
+      align-items: flex-start;;
+      justify-content: center;
+      flex-flow: column wrap;
+      box-sizing: border-box;
+      padding: 0px 5px;
+
+      .left-download-content {
+        position: relative;
+        display: block;
+        border-left: 4px solid #598053;
+        border-radius: 4px;
+        padding: 0 10px;
+        text-align: left;
+        font-size: 3rem;
+
+        .logoDiv {
+          display: flex;
+          flex-flow: row;
+          margin-bottom: 20px;
+          margin-left: -25px;
+
+          #logo {
+            height: 150px;
+          }
+
+          #logoText {
+            color: $color-text;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 45px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+          }
+        }
+
+        #slogan {
+          font-family: "Roboto", sans-serif;
+          text-align: left;
+          font-size: 16px;
+        }
+
+        #dlBtn {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $color-button-gradient-accept;
+          border: 1px solid $color-active;
+          border-radius: 7px;
+          color: $color-text;
+          cursor: pointer;
+          width: 300px;
+          height: 60px;
+          padding: 10px 20px;
+          margin-top: 30px;
+          pointer-events: none; // TAKE AWAY WHEN BUTTON SHOULD WORK
+
+          &:hover {
+              background: $color-button-hover;
+          }
+
+          // TAKE AWAY WHEN BUTTON SHOULD WORK
+          .overlay {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #1d211c;
+            border-radius: 5px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.9);
+
+            // TAKE AWAY WHEN BUTTON SHOULD WORK
+            .overlay-content {
+              display: flex;
+              align-items: center;
+            }  
+          }
+
+          #dlText {
+            display: inline-block;
+            font-size: 18pt;
+            font-weight: lighter;
+            padding-top: 2px;
+          }
+
+          .dlBtnImg {
+            margin-left: 30px;
+            width: 20px;
+            float: right;
+            cursor: pointer;
+          }
+        }
+
+        #dlBtn-secondary {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $color-button-gradient-accept;
+          border: 1px solid $color-active;
+          border-radius: 7px;
+          color: $color-text;
+          cursor: pointer;
+          width: 300px;
+          height: 60px;
+          padding: 10px 20px;
+          margin-top: 10px;
+          pointer-events: none; // TAKE AWAY WHEN BUTTON SHOULD WORK
+
+          &:hover {
+              background: $color-button-hover;
+          }
+
+          // TAKE AWAY WHEN BUTTON SHOULD WORK
+          .overlay {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #1d211c;
+            border-radius: 5px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.9);
+
+            // TAKE AWAY WHEN BUTTON SHOULD WORK
+            .overlay-content {
+              display: flex;
+              align-items: center;
+            }  
+          }
+
+          #dlText {
+            display: inline-block;
+            font-size: 18pt;
+            font-weight: lighter;
+            padding-top: 2px;
+          }
+
+          .dlBtnImg {
+            margin-left: 30px;
+            width: 20px;
+            float: right;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  
+    .right-container {
+      width: 550px;
+      box-sizing: border-box;
+      padding: 0px 5px;
+
+      .right-download-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3.8% 75.5% 20.7%;
+        grid-template-rows: 17.3% 58% 24.7%;
+
+        .computer {
+          grid-column: 1 / 4;
+          grid-row: 1 / 4;
+        }
+
+        .clientImg {
+          max-width: 100%;
+          grid-column: 2 / 3;
+          grid-row: 2 / 3;
+        }
+      }
+    }
+}
+
+@media (max-width: 957px) {
+  .download {
+    padding: 180px 20px 100px 20px;
+    
+    .download-wrapper {
+    
+      .left-container {
+        width: 100%;
+        margin-bottom: 50px;
+        align-items: center;
+        padding: 0px 0px;
+
+        .left-download-content {
+          border-left: 0px;
+          width: 280px;
+
+          .logoDiv {
+            justify-content: center;
+            margin-left: 0px;
+
+            #logo {
+              height: 100px;
+            }
+
+            #logoText {
+              font-size: 32px;
+            }
+          }
+
+          #slogan {
+            width: 100%;
+            text-align: center;
+          }
+
+          #dlBtn {
+            width: 100%;
+          }
+
+          #dlBtn-secondary {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 608px) {
+  .download {
+    
+    .download-wrapper {
+
+      .right-container {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 522px) {
+  .download {
+    padding: 247px 20px 100px 20px;
+  }
+}
+
+@media only screen and (max-width: 521px) {
+  .download {
+    padding: 292px 20px 100px 20px;
+  }
+}
+
+
+@media (max-width: 482px) {
+  .download {
+    padding: 309px 20px 100px 20px;
+  }
+}
+
+@media only screen and (max-width: 322px) {
+  .download {
+    padding: 337px 20px 100px 20px;
+  }
+}

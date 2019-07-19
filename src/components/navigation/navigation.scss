@@ -1,0 +1,132 @@
+@import "../../resources/variables.scss";
+
+$navigation-height: 80px;
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: $color-navigation;
+  z-index: 10000;
+
+  .logo {
+    display: flex;
+    flex-flow: row;
+
+    .logo-wrapper {
+      display: flex;
+    }
+
+    img {
+      height: $navigation-height - 25px;
+    }
+    .text {
+      color: $color-text;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: flex-start;
+      h4 {
+        margin: 2px;
+      }
+    }
+    .mobile {
+      display: none;
+    }
+
+    .is-mobile{
+      display: none;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-flow: row wrap;
+
+    .nav-text {
+      margin: 0;
+    }
+
+    a {
+      display: inline-block;
+      line-height: 35px;
+      padding: 0 15px;
+      font-size: 1rem;
+      color: $color-text;
+      &:hover {
+        color: $color-active;
+      }
+    }
+    .signup {
+      font-size: 0.7rem;
+      line-height: $navigation-height - 45px;
+      border: 1px solid $color-active;
+      background: $color-button-gradient-accept;
+      border-radius: 5px;
+      margin-left: 30px;
+      min-width: 70px;
+    }
+
+    .active {
+      color: #ede4d7;
+    }
+    .not-mobile {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 957px) {
+  .navigation {
+    flex-flow: column wrap;
+
+    .logo {
+      width: 100%;
+      justify-content: space-between;
+
+      .is-mobile {
+        display: flex;
+      }
+    }
+
+    .menu {
+
+      .nav-text {
+        margin-top: 10px;
+      }
+
+      .not-mobile{
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 522px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding-top: 20px;
+
+    .logo {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+
+      .is-mobile {
+        display: flex;
+        padding-top: 20px;
+      }
+    }
+
+    .menu {
+      justify-content: center;
+    }
+  }
+}
