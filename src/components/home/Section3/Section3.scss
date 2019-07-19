@@ -51,4 +51,13 @@
         }
     }
   }
+
+  @media (max-width: 540px) {
+    .PG-container {
+        
+        .games-container {
+            max-width: 150px;
+        }
+    }
+  }
   

@@ -3,6 +3,7 @@
     width:300px;
     height: 400px;
     padding: 5% 0% 5% 0;
+    margin: 0px 50px;
     .gameImage{
         border: 2px solid $color-border;
         position: relative;
@@ -80,6 +81,13 @@
     }
     
 }
+
+@media (max-width: 957px) {
+    .gameBox{
+        margin: 50px 0px;
+    }
+}
+
 
 @media (max-width: 540px) {
     .gameBox{
