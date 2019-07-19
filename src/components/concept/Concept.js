@@ -93,11 +93,11 @@ const Concept = () => {
   }, [active]);
 
   return (
-    <section ref={conceptRef}>
+    <section className="concept" ref={conceptRef}>
       {concepts.map((concept, i) => (
-        <div key={concept.key} ref={refs[i]} className="grids">
+        <div key={concept.key} ref={refs[i]} className="wrappers">
           <div
-            className="grid"
+            className="container"
             style={{
               gridTemplateAreas: `${
                 concept.left ? "'text img'" : "'img text'"

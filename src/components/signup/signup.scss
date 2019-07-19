@@ -1,83 +1,134 @@
+@import 'src/resources/colors';
+@import 'src/resources/fonts';
 @import "../../resources/variables.scss";
 
-.signup {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100vh;
-  grid-template-areas: "text form";
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 135px 20px 100px 20px;
 
-  .text {
-    grid-area: text;
+  .register-content-wrapper {
     display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-    color: $color-text;
-    padding: 80px 10vw;
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 900px;
 
-    p {
-      margin-bottom: 10px;
-    }
+    .left-register-content {
+      width: 350px;
+      display: flex;
+      align-items: flex-start;;
+      justify-content: center;
+      flex-flow: column wrap;
+      box-sizing: border-box;
+      padding: 0px 5px;
 
-    ul {
-      border-left: 2px solid $color-border;
-      list-style: none;
-      text-align: left;
-      padding: 3px 20px;
+      .SU {
+        display: block;
+        border-left: 4px solid #598053;
+        border-radius: 4px;
+        padding: 0 10px;
+        text-align: left;
+        font-size: 3rem;
+
+        h1 {
+          font-size: 65px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+    
+        ul {
+          list-style: none;
+          text-align: left;
+          padding-inline-start: 0px;
+          margin: 0 auto;
+          font-size: 16px;
+          color: #ede4d7;
+        }
+      }
+    }
+  
+    .right-register-content {
+      width: 550px;
+      box-sizing: border-box;
+      padding: 0px 5px;
     }
   }
+}
 
-  .form-reg-sup {
-    padding: 80px 10vw;
-    grid-area: form;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 50px;
-    grid-template-areas:
-      "firstname lastname"
-      "email email"
-      "password confirm"
-      "submit submit";
-    grid-gap: 5px;
+@media (max-width: 957px) {
+  .register {
+    padding: 180px 20px 100px 20px;
 
-    input {
-      padding: 15px;
-      margin: 5px;
-      outline: none;
-      appearance: none;
-      border-radius: 5px;
-      border: 1px solid $color-border;
-      background: $color-text;
-    }
+    .register-content-wrapper {
 
-    .firstname {
-      grid-area: firstname;
-    }
-    .lastname {
-      grid-area: lastname;
-    }
-    .email {
-      grid-area: email;
-    }
-    .password {
-      grid-area: password;
-    }
-    .confirm {
-      grid-area: confirm;
-    }
-    .submit {
-      grid-area: submit;
-      background: $color-button-gradient-accept;
-      font-family: "Orbitron", sans-serif;
-      color: $color-text;
-      cursor: pointer;
-      border: 1px solid $color-active;
-      &:hover {
-        color: $color-active;
+      .left-register-content {
+        margin-bottom: 50px;
       }
     }
   }
 }
+
+@media (max-width: 608px) {
+  .register {
+    
+    .register-content-wrapper {
+
+      .left-register-content {
+        width: 100%;
+  
+        .SU {
+  
+          h1 {
+            font-size: 24px;
+          }
+
+          p {
+            font-size: 18px;
+          }
+      
+          ul {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .right-register-content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 522px) {
+  .register {
+    padding: 247px 20px 100px 20px;
+  }
+}
+
+@media only screen and (max-width: 521px) {
+  .register {
+    padding: 292px 20px 100px 20px;
+  }
+}
+
+
+@media (max-width: 482px) {
+  .register {
+    padding: 309px 20px 100px 20px;
+  }
+}
+
+@media only screen and (max-width: 322px) {
+  .register {
+    padding: 337px 20px 100px 20px;
+  }
+}
+

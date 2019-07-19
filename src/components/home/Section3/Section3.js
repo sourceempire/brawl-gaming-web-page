@@ -32,33 +32,29 @@ const Section3 = () => {
   } 
 
   return (
-    <div>
-      <div className="Games">
-        <h1>Popular games</h1>
+    <section className="PG-container">
+      <div className="PG">
+        <h1>Popular Games</h1>
       </div>
-      
-      <div className="threeGames">
-
-      {Object.entries(games).map(([id, game]) => (
-          <GameBox
-            key={id}
-            title={game.name}
-            img_back={getFrontAndBackImage(id) + 'back.png'}
-            img_front={getFrontAndBackImage(id) + 'front.png'}
-            contests={game.contests}
+      <div className="games-container">
+        {Object.entries(games).map(([id, game]) => (
+            <GameBox
+              key={id}
+              title={game.name}
+              img_back={getFrontAndBackImage(id) + 'back.png'}
+              img_front={getFrontAndBackImage(id) + 'front.png'}
+              contests={game.contests}
+            />
+          ))}
+          <GameBox 
+            //title="More coming soon"
+            img_back="Brawl-MoreCommingSoon-Back.png"
+            img_front="Brawl-MoreCommingSoon-Front.png"
+            contests={[]}
           />
-        ))}
-        <GameBox 
-          title="More coming soon"
-          img_back="Brawl-MoreCommingSoon-Back.png"
-          img_front="Brawl-MoreCommingSoon-Front.png"
-          contests={[]}
-        />
-        
-        
       </div>
-      <MediumButton label="See more games" navigationTo="games" />
-    </div>
+      <MediumButton className="see-more" label="Read more" navigationTo="concept" />
+    </section>
   );
 };
 

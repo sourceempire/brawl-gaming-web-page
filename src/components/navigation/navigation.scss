@@ -7,19 +7,23 @@ $navigation-height: 80px;
   top: 0;
   left: 0;
   right: 0;
-  padding: 0 20px;
+  padding: 10px 20px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  height: $navigation-height;
   background-color: $color-navigation;
   z-index: 10000;
 
   .logo {
     display: flex;
     flex-flow: row;
+
+    .logo-wrapper {
+      display: flex;
+    }
+
     img {
       height: $navigation-height - 25px;
     }
@@ -36,12 +40,23 @@ $navigation-height: 80px;
     .mobile {
       display: none;
     }
+
+    .is-mobile{
+      display: none;
+    }
   }
 
   .menu {
+    display: flex;
+    flex-flow: row wrap;
+
+    .nav-text {
+      margin: 0;
+    }
+
     a {
       display: inline-block;
-      line-height: $navigation-height;
+      line-height: 35px;
       padding: 0 15px;
       font-size: 1rem;
       color: $color-text;
@@ -55,49 +70,63 @@ $navigation-height: 80px;
       border: 1px solid $color-active;
       background: $color-button-gradient-accept;
       border-radius: 5px;
-      margin-left: 5px;
+      margin-left: 30px;
+      min-width: 70px;
     }
 
     .active {
-      color: $color-active;
+      color: #ede4d7;
     }
-    .not-mobile{
-      display: inline-block;
+    .not-mobile {
+      display: flex;
     }
   }
-  
 }
 
-@media only screen and (max-width: 770px) {
+@media (max-width: 957px) {
+  .navigation {
+    flex-flow: column wrap;
 
-
-  .navigation{
-    width: 100%;
-    align-content: center;
-    flex-wrap: wrap; 
-    padding: 0;
-    margin: auto;
-    height: auto;
-    .logo{
+    .logo {
       width: 100%;
-      align-items: center;
-      padding: 5px;
-      .text{
-        flex-grow: 1;
-      }
-      .mobile{
-        display: inline-block;
-        align-items: center;
+      justify-content: space-between;
+
+      .is-mobile {
+        display: flex;
       }
     }
-    .menu{
-      width: 100%;
-      a  { padding: 0px 5px; line-height: 42px;}
+
+    .menu {
+
+      .nav-text {
+        margin-top: 10px;
+      }
 
       .not-mobile{
         display: none;
       }
     }
   }
+}
 
+@media only screen and (max-width: 522px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding-top: 20px;
+
+    .logo {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+
+      .is-mobile {
+        display: flex;
+        padding-top: 20px;
+      }
+    }
+
+    .menu {
+      justify-content: center;
+    }
+  }
 }

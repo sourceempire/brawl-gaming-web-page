@@ -9,7 +9,7 @@ $navigation-height: 80px;
 
   .button {
     font-family: "Orbitron", sans-serif;
-    min-width: 55px;
+    min-width: 75px;
     cursor: pointer;
     display: block;
     font-size: 0.7rem;
@@ -17,7 +17,7 @@ $navigation-height: 80px;
     border: 1px solid $color-active;
     border-radius: 5px;
     color: $color-text;
-    margin: 0 10px;
+    margin-left: 15px;
     padding: 0 10px;
     max-width: 100px;
     overflow: hidden;
@@ -29,7 +29,7 @@ $navigation-height: 80px;
 
   .signup {
     background: $color-button-gradient-accept;
-    min-width: 55px;
+    min-width: 75px;
     font-family: "Orbitron", sans-serif;
     cursor: pointer;
     display: block;
@@ -38,7 +38,7 @@ $navigation-height: 80px;
     border: 1px solid $color-active;
     border-radius: 5px;
     color: $color-text;
-    margin: 0 10px;
+    margin: 0 0px;
     padding: 0 10px;
     &:hover {
       color: $color-active;
@@ -49,7 +49,7 @@ $navigation-height: 80px;
     box-sizing: border-box;
     position: absolute;
     top: $navigation-height - 40px;
-    right: 92px;
+    right: 131px;
     width: 300px;
     display: flex;
     flex-flow: column;
@@ -126,10 +126,29 @@ $navigation-height: 80px;
 
 }
 
-@media (max-width: 700px) {
-  .login{
-  .form{
-    right: 2px;
+@media (max-width: 957px) {
+  .login {
+  
+    .button {
+      margin-left: 0px;
+    }
+
+    .signup {
+      margin-left: 30px;
+    }
+
+    .form {
+      top: $navigation-height - 31px;
+      right: 126px;
+    }
   }
+}
+
+@media (max-width: 522px) {
+  .login{
+    .form{
+      top: $navigation-height - 40px;
+      right: calc(50% - 150px);
+    }
 }
 }

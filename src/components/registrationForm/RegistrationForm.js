@@ -441,7 +441,7 @@ class RegistrationForm extends Component {
                 <input className={"form-input " + ((this.state.inputs.alphakey.valid === "valid") ? "valid": "") + ((this.state.inputs.alphakey.valid === "invalid") ? "invalid": "")} id="api-key-input" type='text' name="alphakey" placeholder="API-KEY" onChange={this.onInputChange} onBlur={this.liveValidation} autoComplete="off" value={this.state.inputs.alphakey.value}></input>
                 <span className="errorMessage">{this.state.inputs.alphakey.error}</span>
               </div>
-              <div className="input-container-reg">
+              <div className="input-container-reg-button">
                 <button id="form-submit" className={(this.state.submitFormActive ? "active" : "")} onClick={this.state.submitFormActive ? (e) => {this.onEmailSubmit(e); this.setState({loading: true})} : () => {}}>Create Account</button>
               </div>
             </React.Fragment>

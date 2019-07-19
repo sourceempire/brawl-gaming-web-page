@@ -1,8 +1,8 @@
 @import "../../../resources/variables.scss";
 
 .categories {
-  width: 70vw;
-  max-width: 750px;
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
 
   h1 {
@@ -12,12 +12,22 @@
   .container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
+
+    .button-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-grow: 1;
+      width: 100%;
+    }
   }
 
   .category {
+    display: flex;
+    flex-flow: column wrap;
     width: 200px;
-    height: 280px;
+    //height: 280px;
     min-width: 180px;
     margin: 10px 10px 50px 10px;
     padding: 10px;
@@ -42,7 +52,8 @@
       appearance: none;
       outline: none;
       cursor: pointer;
-      position: absolute;
+      //position: absolute;
+      margin-top: 20px;
       bottom: 0;
       left: 10px;
       right: 10px;
@@ -56,7 +67,6 @@
       height: 35px;
       width: 140px;
       border: 1px solid $color-active;
-      margin: 0 auto;
       font-family: "Orbitron", sans-serif;
 
       &:hover {

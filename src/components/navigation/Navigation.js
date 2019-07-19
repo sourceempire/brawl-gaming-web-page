@@ -11,15 +11,17 @@ const Navigation = ({ loggedIn, setLoggedIn }) => {
     <div className="navigation">
       <div className="logo">
         <NavLink exact to="/">
-          <img src="/images/logo.png" alt="logo" />
+          <div className="logo-wrapper">
+            <img src="/images/logo.png" alt="logo" />
+            <div className="text">
+              <h4>Brawl Gaming</h4>
+            </div>
+          </div>
         </NavLink>
-        <div className="text">
-          <h4>Brawl</h4>
-          <h4>Gaming</h4>
-        </div>
         <div className="mobile"> 
         <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
         </div>
+        <div className="is-mobile"><Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} /></div>
       </div>
       <div className="menu">
         <NavLink className="nav-text" exact to="/" onClick={() => scrollToTop()}>

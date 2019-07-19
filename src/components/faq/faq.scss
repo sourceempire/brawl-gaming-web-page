@@ -1,18 +1,63 @@
 @import "../../resources/variables.scss";
 
 .faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 135px 20px 100px 20px;
+
   .title {
-    margin: 80px 0 40px 0;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  .searchbar-wrapper {
+    width: 100%;
+    max-width: 900px;
   }
 }
 
+@media (max-width: 608px) {
+  .faq {
 
-@media only screen and (max-width: 770px) {
-  .categories {
-    justify-content: center;
-    .container{
-      justify-content: center;
+    .title {
+      font-size: 24px;
     }
-    
   }
 }
+
+@media (max-width: 957px) {
+  .faq {
+    padding: 180px 20px 0px 20px;
+  }
+}
+
+@media only screen and (max-width: 522px) {
+  .faq {
+    padding: 247px 20px 0px 20px;
+  }
+}
+
+@media only screen and (max-width: 521px) {
+  .faq {
+    padding: 292px 20px 0px 20px;
+  }
+}
+
+
+@media (max-width: 482px) {
+  .faq {
+    padding: 309px 20px 0px 20px;
+  }
+}
+
+@media only screen and (max-width: 322px) {
+  .faq {
+    padding: 337px 20px 0px 20px;
+  }
+}
+

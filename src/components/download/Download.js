@@ -43,40 +43,42 @@ const Download = () => {
   }, []);
 
   return (
-    <section className="download">
-      <div id="dlcontent">
-        <div id="dl">
-          <div className="logoDiv">
-            <img id="logo" src="/images/logo.png" alt="logo" />
-            <div id="logoText">
-              <h4>Brawl</h4>
-              <h4>Gaming</h4>
+    <div className="download">
+      <div className="download-wrapper">
+        <div className="left-container">
+          <div className="left-download-content">
+            <div className="logoDiv">
+              <img id="logo" src="/images/logo.png" alt="logo" />
+              <div id="logoText">
+                <h4>Brawl</h4>
+                <h4>Gaming</h4>
+              </div>
             </div>
-          </div>
-          <p id="slogan">
-            Brawl Gaming is the ultimate way to earn money while gaming.
-          </p>
-          <button id="dlBtn" onClick={downloadPrimary}>
-            <h3 id="dlText">Download</h3>
-            <img className="dlBtnImg" src={osImg1} alt="current os" />
-          </button>
-          <div className="dlAlt">
-            <p id="altTxt">Also available on: </p>
-            <img
-              className="dlBtnImg"
-              id="altImg"
-              src={osImg2}
-              onClick={downloadSecondary}
-              alt="alternative os"
-            />
+            <p id="slogan">
+              Brawl Gaming is the ultimate way to earn money while gaming.
+            </p>
+            <button id="dlBtn" onClick={downloadPrimary}>
+              <h3 id="dlText">Download</h3>
+              <img className="dlBtnImg" src={osImg1} alt="current os" />
+            </button>
+            <button id="dlBtn-secondary" onClick={downloadSecondary}>
+              <h3 id="dlText">Download</h3>
+              <img className="dlBtnImg" src={osImg2} alt="current os" />
+            </button>
           </div>
         </div>
-        <div className="computerDiv">
-          <img className="computerImg" src="/images/dator.svg" alt="computer" />
-          <img className="clientImg" src="/images/app-start.png" alt="client" />
+        <div className="right-container">
+          <div className="right-download-content">
+            <img className="computer" src="/images/dator.svg" alt="computer" />
+            <video className="clientImg" loop autoPlay muted>
+              <source src="/videos/bg.mp4" type="video/mp4" />
+              <source src="/videos/bg.mp4" type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

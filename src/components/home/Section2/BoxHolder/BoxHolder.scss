@@ -1,13 +1,14 @@
 @import "../../../../resources/variables.scss";
 .box{
- 
-    width: 15%;
+    width: 180px;
+
 .rbbIcon{
     width:100%;
-    padding: 60px 0;
+    padding-bottom: 20px;
 }
 .textUnder{
-    padding: 0 1px;
+    width: 100%;
+
     .label{
         text-align: left;
         padding: 0 9%;
@@ -15,7 +16,8 @@
     }
     p{
         width:100%;
-        padding: 5% 10%;
+        box-sizing: border-box;
+        padding-left: calc(9% + 4px);
         text-align: left;
     }
 }

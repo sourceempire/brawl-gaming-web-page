@@ -100,7 +100,9 @@ const FAQ = () => {
   return (
     <section className="faq">
       <h1 className="title">How can we help you?</h1>
-      <Searchbar setPhrase={setPhrase} onSearch={setSearchResults} />
+      <div className="searchbar-wrapper">
+        <Searchbar setPhrase={setPhrase} onSearch={setSearchResults} />
+      </div>
       { searchResults.length !== 0 ? <Results title={`Search results for: "${phrase}"`} list={searchResults} /> : <Results id="categoryResult" title={category} list={categoryResults} />}
       
       <Categories

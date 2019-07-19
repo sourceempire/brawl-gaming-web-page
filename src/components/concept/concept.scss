@@ -1,31 +1,45 @@
 @import "../../resources/variables.scss";
 
-.grids {
+.concept {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-flow: column wrap;
-  .grid {
-    display: grid;
-    grid-template-rows: auto;
-    margin: 6% 0;
-    padding-left: 17%;
-    padding-right: 6%;
-    justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 135px 20px 20px 20px;
 
-    .text {
-      grid-area: text;
-      text-align: left;
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-    }
+  .wrappers {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    max-width: 900px;
+    margin-bottom: 80px;
 
-    .img {
-      grid-area: img;
-      display: flex;
-      align-items: center;
+    .container {
+      display: grid;
+      grid-template-rows: auto;
+      padding-left: 0%;
+      padding-right: 0%;
+      justify-content: space-between;
 
-      img {
-        width: 100%;
+      .text {
+        grid-area: text;
+        text-align: left;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+      }
+
+      .img {
+        grid-area: img;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 200px;
+        }
       }
     }
   }
@@ -61,30 +75,55 @@
   }
 }
 
-@media (max-width: 700px) {
-  section{
-    margin: auto;
-    padding: 0px;
-  .grid {
-    padding: 0 10%;
-    grid-template-areas:
-       "img" 
-       "text" !important;
+@media (max-width: 957px) {
+  .concept {
+    padding: 180px 20px 20px 20px;
+  
+    .wrappers {
+  
+      .container {
+        grid-template-areas:
+        "img" 
+        "text" !important;
+        grid-template-columns: 100% !important;
 
-        .text{
-          text-align: center !important;
+        .text {
+          max-width: 450px;
         }
 
-       .img{
-         padding-bottom: 15px;
-         width: 100%;
-       }
-
+        .img {
+          margin-bottom: 20px;
   
-    grid-template-columns: 100% !important;
-  }
-  .sideNav{
-    display: none;
+          img {
+            height: 100px;
+          }
+        }
+      }
+    }
   }
 }
+
+@media only screen and (max-width: 522px) {
+  .concept {
+    padding: 247px 20px 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 521px) {
+  .concept {
+    padding: 292px 20px 20px 20px;
+  }
+}
+
+
+@media (max-width: 482px) {
+  .concept {
+    padding: 309px 20px 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 322px) {
+  .concept {
+    padding: 337px 20px 20px 20px;
+  }
 }

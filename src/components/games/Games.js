@@ -31,24 +31,26 @@ const Games = () => {
   } 
 
   return (
-    <section className="games-section">
-      <div className="header-games"><h1>Available Games</h1></div>
-      <div className="availableGames">
+    <section className="available-games-container">
+      <div className="games">
+        <h1>Popular Games</h1>
+      </div>
+      <div className="game-container">
         {Object.entries(games).map(([id, game]) => (
-          <GameBox
-            key={id}
-            title={game.name}
-            img_back={getFrontAndBackImage(id) + 'back.png'}
-            img_front={getFrontAndBackImage(id) + 'front.png'}
-            contests={game.contests}
+            <GameBox
+              key={id}
+              title={game.name}
+              img_back={getFrontAndBackImage(id) + 'back.png'}
+              img_front={getFrontAndBackImage(id) + 'front.png'}
+              contests={game.contests}
+            />
+          ))}
+          <GameBox 
+            //title="More coming soon"
+            img_back="Brawl-MoreCommingSoon-Back.png"
+            img_front="Brawl-MoreCommingSoon-Front.png"
+            contests={[]}
           />
-        ))}
-        <GameBox 
-          title="More coming soon"
-          img_back="Brawl-MoreCommingSoon-Back.png"
-          img_front="Brawl-MoreCommingSoon-Front.png"
-          contests={[]}
-        />
       </div>
     </section>
   );

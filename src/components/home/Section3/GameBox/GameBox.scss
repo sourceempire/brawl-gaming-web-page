@@ -80,3 +80,26 @@
     }
     
 }
+
+@media (max-width: 540px) {
+    .gameBox{
+        width:150px;
+        height: 210px;
+
+        .gameImage{
+            height: 210px;
+
+            .frontImage{
+                position: absolute;
+                bottom:0;
+                width:auto;
+                right: -25%;
+                left: -25%; 
+                height: 110%;
+                border: none;
+                margin-left: auto;
+                margin-right: auto;
+               }
+        }
+    }
+}

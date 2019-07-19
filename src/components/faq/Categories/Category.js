@@ -43,7 +43,9 @@ const Category = ({ category, setCategory, setCategoryResults }) => {
       {category.top.map(t => (
         <p key={Math.random()}>{t}</p>
       ))}
-      <button onClick={e => searchCategory(e)}>Show more</button>
+      <div className="button-wrapper">
+        <button onClick={e => searchCategory(e)}>Show more</button>
+      </div>
     </div>
   );
 };

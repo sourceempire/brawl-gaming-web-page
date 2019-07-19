@@ -11,18 +11,34 @@ const Section2 = () => {
     "Play against opponents worldwide, and the winners gets the whole pot instantly after the match!";
 
   return (
-    <section>
+    <section className="HTB-container">
       <div className="HTB">
         <h1>How To Brawl</h1>
       </div>
-      <div className="threeBoxes">
-        <BoxHolder image="/images/User.svg" label="Ready" text={readyText} />
-        <img className="arrow" src="/images/Arrow.svg" alt="Arrow" />
-        <BoxHolder image="/images/Dollars.svg" label="Bet" text={betText} />
-        <img className="arrow" src="/images/Arrow.svg" alt="Arrow" />
-        <BoxHolder image="/images/brawl.svg" label="Brawl" text={brawlText} />
+      <div className="content-container">
+        <div className="steps">
+          <BoxHolder image="/images/User.svg" label="Ready" text={readyText} />
+        </div>
+        <div className="steps-arrow">
+          <img className="arrow" src="/images/Arrow.svg" alt="Arrow" />
+        </div>
+        <div className="steps-arrow-small">
+          <img className="arrow-small" src="/images/ArrowSmall.svg" alt="Arrow" />
+        </div>
+        <div className="steps">
+          <BoxHolder image="/images/Dollars.svg" label="Bet" text={betText} />
+        </div>
+        <div className="steps-arrow">
+          <img className="arrow" src="/images/Arrow.svg" alt="Arrow" />
+        </div>
+        <div className="steps-arrow-small">
+          <img className="arrow-small" src="/images/ArrowSmall.svg" alt="Arrow" />
+        </div>
+        <div className="steps">
+          <BoxHolder image="/images/brawl.svg" label="Brawl" text={brawlText} />
+        </div>
       </div>
-      <MediumButton label="Read more" navigationTo="concept" />
+      <MediumButton className="read-more" label="Read more" navigationTo="concept" />
     </section>
   );
 };
