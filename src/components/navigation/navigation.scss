@@ -83,7 +83,7 @@ $navigation-height: 80px;
   }
 }
 
-@media (max-width: 957px) {
+@media only screen and (max-width: 957px) {
   .navigation {
     flex-flow: column wrap;
 
@@ -111,22 +111,59 @@ $navigation-height: 80px;
 
 @media only screen and (max-width: 522px) {
   .navigation {
-    flex-flow: column wrap;
-    padding-top: 20px;
+    position: static;
 
     .logo {
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: center;
-
-      .is-mobile {
-        display: flex;
-        padding-top: 20px;
+      .text {
+        text-align: left;
       }
     }
 
     .menu {
       justify-content: center;
+
+      .nav-text {
+        padding: 0 4px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .navigation {
+    padding: 10px 5px;
+
+    .logo .signup {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .navigation .menu {
+    padding-top: 5px;
+
+    .nav-text {
+      padding: 0 20px;
+      margin-top: 0px;
+      line-height: 30px;
+
+      &:first-of-type {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navigation {
+    padding: 10px 5px;
+
+    .login .button {
+      padding: 0;
+    }
+
+    .logo .signup {
+      margin-left: 5px;
     }
   }
 }

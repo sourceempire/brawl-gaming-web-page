@@ -147,8 +147,13 @@ $navigation-height: 80px;
 @media (max-width: 522px) {
   .login{
     .form{
-      top: $navigation-height - 40px;
-      right: calc(50% - 150px);
+      right: 30px;
     }
+  }
 }
+
+@media (max-width: 360px) {
+  .login .form {
+    right: 0;
+  }
 }
