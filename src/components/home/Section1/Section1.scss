@@ -8,6 +8,7 @@
   min-height: 100vh;
   box-sizing: border-box;
   padding: 135px 20px 0px 20px;
+  position: relative; // for bouncing arrow positioning
 
   .content-wrapper {
     display: flex;
@@ -90,7 +91,7 @@
     height: 30px;
     width: 30px;
     position: absolute;
-    bottom: 65px;
+    bottom: 50px;
     left: calc(50% - 15px);
     margin: 0 auto;
     cursor: pointer;
@@ -139,7 +140,7 @@
     }
 
     .arrow {
-      bottom: 35px;
+      bottom: 0px;
     }
   }
 }
@@ -166,9 +167,13 @@
   }
 }
 
-@media only screen and (max-width: 522px) {
+@media (max-width: 522px) {
   .section1 {
     padding: 0px 20px 0px 20px;
+
+    .arrow {
+      display: none;
+    }
   }
 }
 
