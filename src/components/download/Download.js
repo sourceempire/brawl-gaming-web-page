@@ -60,10 +60,16 @@ const Download = () => {
             <button id="dlBtn" onClick={downloadPrimary}>
               <h3 id="dlText">Download</h3>
               <img className="dlBtnImg" src={osImg1} alt="current os" />
+              <div className="overlay">
+                <p className="overlay-content">SOON AVAILABLE FOR<img className="dlBtnImg" src={osImg1} alt="current os" /></p>
+              </div>
             </button>
             <button id="dlBtn-secondary" onClick={downloadSecondary}>
               <h3 id="dlText">Download</h3>
               <img className="dlBtnImg" src={osImg2} alt="current os" />
+              <div className="overlay">
+                <p className="overlay-content">SOON AVAILABLE FOR<img className="dlBtnImg" src={osImg2} alt="current os" /></p>
+              </div>
             </button>
           </div>
         </div>

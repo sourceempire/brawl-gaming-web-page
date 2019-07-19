@@ -25,6 +25,7 @@
       padding: 0px 5px;
 
       .left-download-content {
+        position: relative;
         display: block;
         border-left: 4px solid #598053;
         border-radius: 4px;
@@ -74,8 +75,29 @@
           height: 60px;
           padding: 10px 20px;
           margin-top: 30px;
+          pointer-events: none; // TAKE AWAY WHEN BUTTON SHOULD WORK
+
           &:hover {
               background: $color-button-hover;
+          }
+
+          // TAKE AWAY WHEN BUTTON SHOULD WORK
+          .overlay {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #1d211c;
+            border-radius: 5px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.9);
+
+            // TAKE AWAY WHEN BUTTON SHOULD WORK
+            .overlay-content {
+              display: flex;
+              align-items: center;
+            }  
           }
 
           #dlText {
@@ -107,8 +129,29 @@
           height: 60px;
           padding: 10px 20px;
           margin-top: 10px;
+          pointer-events: none; // TAKE AWAY WHEN BUTTON SHOULD WORK
+
           &:hover {
               background: $color-button-hover;
+          }
+
+          // TAKE AWAY WHEN BUTTON SHOULD WORK
+          .overlay {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #1d211c;
+            border-radius: 5px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.9);
+
+            // TAKE AWAY WHEN BUTTON SHOULD WORK
+            .overlay-content {
+              display: flex;
+              align-items: center;
+            }  
           }
 
           #dlText {
