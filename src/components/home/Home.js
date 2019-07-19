@@ -7,7 +7,7 @@ import Section3 from "./Section3/Section3";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Section1/>
       <Section2/>   
       <Section3/>

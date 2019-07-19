@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Navigation from "../navigation/Navigation";
 import Home from "../home/Home";
 import Download from "../download/Download";
@@ -14,7 +14,7 @@ import "../../resources/site.scss";
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app">
         <Navigation loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
         <Switch>
@@ -28,7 +28,7 @@ const App = () => {
         </Switch>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
