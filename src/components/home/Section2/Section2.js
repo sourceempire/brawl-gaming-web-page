@@ -17,7 +17,7 @@ const Section2 = () => {
       </div>
       <div className="content-container">
         <div className="steps">
-          <BoxHolder image="/images/User.svg" label="Ready" text={readyText} />
+          <BoxHolder image="/images/user.svg" label="Ready" text={readyText} />
         </div>
         <div className="steps-arrow">
           <img className="arrow" src="/images/Arrow.svg" alt="Arrow" />
