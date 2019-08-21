@@ -38,6 +38,11 @@
         
         .game-container {
             max-width: 300px;
+            margin-top: 0 
+        }
+        .gameBox{
+          //margin: 50px 50px;
+          padding-bottom: 30px;
         }
     }
   }
@@ -57,31 +62,39 @@
   @media only screen and (max-width: 540px) {
     .available-games-container { 
       justify-content: flex-start;
+      .game-container {
+        max-width: 300px;
+        margin-top: 0 
+    }
+    .gameBox{
+      margin: 50px 50px;
+      //padding-bottom: 30px;
+    }
     }
   }
   
   @media only screen and (max-width: 522px) {
     .available-games-container {
-      padding: 247px 20px 0px 20px;
+      padding: 40px 20px 0px 20px;
     }
   }
   
   @media only screen and (max-width: 521px) {
     .available-games-container {
-      padding: 292px 20px 0px 20px;
+      padding: 40px 20px 0px 20px;
     }
   }
   
   
   @media (max-width: 482px) {
     .available-games-container {
-      padding: 309px 20px 0px 20px;
+      padding: 40px 20px 0px 20px;
       
     }
   }
   
   @media only screen and (max-width: 322px) {
     .available-games-container {
-      padding: 337px 20px 0px 20px;
+      padding: 40px 20px 0px 20px;
     }
   }

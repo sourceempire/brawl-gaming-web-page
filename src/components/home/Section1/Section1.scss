@@ -118,17 +118,13 @@
 @media (max-width: 957px) {
   .section1 {
     padding: 196px 20px 0px 20px;
-    
     .content-wrapper {
-  
       .left-content {
         width: 100%;
         margin-bottom: 50px;
-  
         .RBB {
           display: none;
         }
-  
         .RBB-small {
           display: block;
   
@@ -138,7 +134,6 @@
         }
       }
     }
-
     .arrow {
       bottom: 0px;
     }
@@ -147,19 +142,15 @@
 
 @media (max-width: 608px) {
   .section1 {
-    
+    align-items: flex-start;
     .content-wrapper {
-  
       .left-content {
-  
         .RBB-small {
-  
           h1 {
             font-size: 24px;
           }
         }
       }
-
       .right-content {
         width: 100%;
       }
@@ -169,8 +160,7 @@
 
 @media (max-width: 522px) {
   .section1 {
-    padding: 0px 20px 0px 20px;
-
+    padding: 40px 20px 0px 20px;
     .arrow {
       display: none;
     }
@@ -180,20 +170,11 @@
 
 @media (max-width: 482px) {
   .section1 {
-    padding: 45px 20px 0px 20px;
-    
     .content-wrapper {
-      
       .threeButtons {
         width: 100%;
         flex-flow: column wrap;
       }
     }
-  }
-}
-
-@media only screen and (max-width: 322px) {
-  .section1 {
-    padding: 15px 20px 0px 20px;
   }
 }

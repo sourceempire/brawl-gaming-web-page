@@ -66,6 +66,7 @@
 @media (max-width: 957px) {
   .register {
     padding: 180px 20px 100px 20px;
+    min-height: 0;
 
     .register-content-wrapper {
 
@@ -109,26 +110,26 @@
 
 @media only screen and (max-width: 522px) {
   .register {
-    padding: 247px 20px 100px 20px;
+    padding: 40px 20px 100px 20px;
   }
 }
 
 @media only screen and (max-width: 521px) {
   .register {
-    padding: 292px 20px 100px 20px;
+    padding: 40px 20px 100px 20px;
   }
 }
 
 
 @media (max-width: 482px) {
   .register {
-    padding: 309px 20px 100px 20px;
+    padding: 40px 20px 100px 20px;
   }
 }
 
 @media only screen and (max-width: 322px) {
   .register {
-    padding: 337px 20px 100px 20px;
+    padding: 40px 20px 100px 20px;
   }
 }
 

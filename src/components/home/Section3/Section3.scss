@@ -33,9 +33,13 @@
 
 @media (max-width: 957px) {
     .PG-container {
-        
+        padding: 0 20px 100px 20px;
+        .PG{
+            margin-bottom: 50px;
+        }
         .games-container {
             max-width: 300px;
+            margin-top: 0;
         }
     }
   }
@@ -44,7 +48,7 @@
     .PG-container {
         
         .PG {
-    
+            
             h1 {
                 font-size: 24px;
             }

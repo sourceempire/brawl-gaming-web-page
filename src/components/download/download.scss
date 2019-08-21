@@ -199,7 +199,8 @@
 
 @media (max-width: 957px) {
   .download {
-    padding: 180px 20px 100px 20px;
+    padding: 185px 20px 100px 20px;
+    align-items: flex-start;
     
     .download-wrapper {
     
@@ -259,25 +260,25 @@
 
 @media only screen and (max-width: 522px) {
   .download {
-    padding: 247px 20px 100px 20px;
+    padding: 40px 20px 100px 20px;
   }
 }
 
 @media only screen and (max-width: 521px) {
   .download {
-    padding: 292px 20px 100px 20px;
+    padding: 40px 20px 100px 20px;
   }
 }
 
 
 @media (max-width: 482px) {
   .download {
-    padding: 309px 20px 100px 20px;
+    padding: 40px 20px 100px 20px;
   }
 }
 
 @media only screen and (max-width: 322px) {
   .download {
-    padding: 337px 20px 100px 20px;
+    padding: 40px 20px 100px 20px;
   }
 }
