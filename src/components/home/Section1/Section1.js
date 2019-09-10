@@ -19,9 +19,8 @@ const Section1 = () => {
         <div className="right-content">
           <div className="computerDiv1">
             <img className="computer" src="/images/dator.svg" alt="computer" />
-            <video className="clientImg" loop autoPlay muted>
+            <video className="clientImg" loop autoPlay muted playsInline>
               <source src="/videos/bg.mp4" type="video/mp4" />
-              <source src="/videos/bg.mp4" type="video/ogg" />
               Your browser does not support the video tag.
             </video>
           </div>

@@ -6,6 +6,7 @@ $navigation-height: 80px;
   display: inline-flex;
   position: relative;
   align-items: center;
+  z-index: 100;
 
   .button {
     font-family: "Orbitron", sans-serif;

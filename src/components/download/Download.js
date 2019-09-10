@@ -76,9 +76,8 @@ const Download = () => {
         <div className="right-container">
           <div className="right-download-content">
             <img className="computer" src="/images/dator.svg" alt="computer" />
-            <video className="clientImg" loop autoPlay muted>
+            <video className="clientImg" loop autoPlay muted playsInline>
               <source src="/videos/bg.mp4" type="video/mp4" />
-              <source src="/videos/bg.mp4" type="video/ogg" />
               Your browser does not support the video tag.
             </video>
           </div>
