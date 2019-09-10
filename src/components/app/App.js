@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Navigation from "../navigation/Navigation";
 import Home from "../home/Home";
@@ -10,9 +10,19 @@ import Signup from "../signup/Signup";
 import Footer from "../footer/Footer";
 import "./app.scss";
 import "../../resources/site.scss";
+import ReactGA from 'react-ga';
+
+function initializeReactGA() {
+  ReactGA.initialize('UA-147561487-1');
+  ReactGA.pageview('/');
+}
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
+  console.log(process.env.NODE_ENV)
+  if (process.env.NODE_ENV !== 'development') {
+  useEffect(initializeReactGA, []); // run only once
+  }
   return (
     <HashRouter>
       <div className="app">
