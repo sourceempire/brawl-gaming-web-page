@@ -17,7 +17,6 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    console.log(window.navigator)
     Fetcher.get(SERVER_URL + "login/validate", {}) //KOLLAR OM MAN REDAN ÄR INLOGGAD
       .then(() => Fetcher.get(SERVER_URL + "api/user")) //OM MAN LYCKAS LOGGA IN =>  HÄMTAR INFORMATION OM ANVÄNDAREN SOM LOGGATS IN
       .then(user => {
