@@ -17,6 +17,7 @@ class Login extends Component {
   }
 
   componentDidMount() {
+    console.log(window.navigator)
     Fetcher.get(SERVER_URL + "login/validate", {}) //KOLLAR OM MAN REDAN ÄR INLOGGAD
       .then(() => Fetcher.get(SERVER_URL + "api/user")) //OM MAN LYCKAS LOGGA IN =>  HÄMTAR INFORMATION OM ANVÄNDAREN SOM LOGGATS IN
       .then(user => {
@@ -84,6 +85,26 @@ class Login extends Component {
     window.scrollTo(0, 0);
   };
 
+   checkiOS = () => {
+
+    var iDevices = [
+      'iPad Simulator',
+      'iPhone Simulator',
+      'iPod Simulator',
+      'iPad',
+      'iPhone',
+      'iPod'
+    ];
+  
+    if (!!navigator.platform) {
+      while (iDevices.length) {
+        if (navigator.platform === iDevices.pop()){ return true; }
+      }
+    }
+  
+    return false;
+  }
+
   render(){
     if (!this.state.loggedIn) {
       return (
@@ -115,7 +136,7 @@ class Login extends Component {
     } else {
       return (
         <div className="login">
-          <div className="button" onClick={this.toggleClass} /*ref={node => { this.node = node; }}*/>
+          <div className="button" onTouchStart={this.toggleClass} onClick={this.toggleClass} /*ref={node => { this.node = node; }}*/>
             {this.state.user.usertag}
           </div>
           <div
