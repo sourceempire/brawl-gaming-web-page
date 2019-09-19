@@ -8,6 +8,8 @@ import Concept from "../concept/Concept";
 import FAQ from "../faq/Faq";
 import Signup from "../signup/Signup";
 import Footer from "../footer/Footer";
+import ForgotPassword from "../forgotpassword/ForgotPassword";
+import PasswordReset from "../passwordreset/PasswordReset";
 import "./app.scss";
 import "../../resources/site.scss";
 import ReactGA from 'react-ga';
@@ -34,6 +36,8 @@ const App = () => {
           <Route path="/concept" component={Concept} />
           <Route path="/faq" component={FAQ} />
           <Route path="/signup" component={Signup} />
+          <Route path="/forgotpassword" component={ForgotPassword} />
+          <Route path="/passwordreset" component={PasswordReset} />
           <Redirect from="*" to="/" component={Home} />
         </Switch>
         <Footer />

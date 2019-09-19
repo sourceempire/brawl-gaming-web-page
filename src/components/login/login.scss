@@ -28,6 +28,12 @@ $navigation-height: 80px;
     }
   }
 
+  .login-error {
+    color: #AE4848;
+    padding: 4px;
+    font-size: 15px;
+  }
+
   .signup {
     background: $color-button-gradient-accept;
     min-width: 75px;

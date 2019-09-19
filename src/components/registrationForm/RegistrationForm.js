@@ -259,7 +259,7 @@ class RegistrationForm extends Component {
           } else if (e.target.name === "email") {
             this.setErrorMsgAndInvalid(e.target.name, "Email must contain @ and .");
           } else if (e.target.name === "password") {
-            this.setErrorMsgAndInvalid(e.target.name, "Password must contain upper case and number");
+            this.setErrorMsgAndInvalid(e.target.name, "Password must contain at least upper case letter and a number");
           } else if (e.target.name === "alphakey") {
             this.setErrorMsgAndInvalid(e.target.name, "Wrong alpha key");
           }

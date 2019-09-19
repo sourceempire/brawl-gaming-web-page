@@ -14,6 +14,7 @@ class Login extends Component {
     username: "",
     password: "",
     usertag: "",
+    loginError: '',
   }
 
   componentDidMount() {
@@ -43,7 +44,7 @@ class Login extends Component {
   }
   toggleClass = () => {
     const currentState = this.state.active;
-    this.setState({ active: !currentState });
+    this.setState({ active: !currentState, loginError: '' });
   };
 
   onSubmit = (e) => {
@@ -60,7 +61,11 @@ class Login extends Component {
           active: false,
         }) 
       }) //HÄR HÄMTAS ANVÄNDARE => SÄTT ATT MAN ÄR INLOGGAD, TA BORT SIGN UP OCH LOG IN OCH LÄGG TILL ANVÄNDARE DÄR ISTÄLLET
-      .catch(err => console.log(err));
+      .catch(err => {
+        this.setState({
+          loginError: 'Invalid username or password'
+        })
+      });
   };
   logout = (e) => {
     e.preventDefault();
@@ -68,6 +73,7 @@ class Login extends Component {
       .then(() => this.setState({
         loggedIn: false,
         active: false,
+        loginError: ''
       }))
   }
   
@@ -104,7 +110,7 @@ class Login extends Component {
     return false;
   }
 
-  render(){
+  render() {
     if (!this.state.loggedIn) {
       return (
         <div className="login">
@@ -121,11 +127,12 @@ class Login extends Component {
               <input type="email" placeholder='Brawl email address' name="username" value={this.state.username} onChange={this.onChange} required />
               <input value={this.state.password} onChange={this.onChange} name="password" type="password" placeholder="Password" required />
               <input type="submit" value="Log in" />
+              {this.state.loginError !== '' && <div className="login-error">{ this.state.loginError }</div>}
               <span>
                 <Link to="/signup" onClick={() => {}}>
                   Sign up here
                 </Link>
-                <Link to="/" onClick={() => {}}>
+                <Link to="/forgotpassword" onClick={() => {}}>
                   Forgot password?
                 </Link>
               </span>
