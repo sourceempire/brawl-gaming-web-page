@@ -34,9 +34,13 @@ const Footer = () => {
             <Link to="/games" onClick={() => scrollToTop()}>
               Games
             </Link>
-            <Link to="/faq" onClick={() => scrollToTop()}>
-              FAQ
+            <Link to="/legal" onClick={() => scrollToTop()}>
+              Terms of Use
             </Link>
+            <Link to="/privacy" onClick={() => scrollToTop()}>
+              Privacy
+            </Link>
+            
           </div>
         </div>
         <div className="box">

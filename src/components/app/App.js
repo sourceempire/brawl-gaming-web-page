@@ -7,6 +7,8 @@ import Games from "../games/Games";
 import Concept from "../concept/Concept";
 import FAQ from "../faq/Faq";
 import Signup from "../signup/Signup";
+import Legal from "../legal/Legal";
+import Privacy from "../privacy/Privacy";
 import Footer from "../footer/Footer";
 import "./app.scss";
 import "../../resources/site.scss";
@@ -34,6 +36,8 @@ const App = () => {
           <Route path="/concept" component={Concept} />
           <Route path="/faq" component={FAQ} />
           <Route path="/signup" component={Signup} />
+          <Route path="/legal" component={Legal} />
+          <Route path="/privacy" component={Privacy} />
           <Redirect from="*" to="/" component={Home} />
         </Switch>
         <Footer />

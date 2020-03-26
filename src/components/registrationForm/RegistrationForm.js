@@ -315,6 +315,15 @@ class RegistrationForm extends Component {
         password: this.state.inputs.password.value,
         usertag: this.state.inputs.usertag.value,
         "alpha-key": this.state.inputs.alphakey.value,
+        /*first_name: "Admin",
+        last_name: "Admin",
+        age: "19900000000",
+        street_address: "Admin",
+        postal_code: "90000",
+        city: "Admin",
+        state: "Admin",
+        country: "sve",*/
+        
         
       })
       .then(() => {
@@ -327,7 +336,7 @@ class RegistrationForm extends Component {
         this.state.done.play()
         this.props.history('/');
       }).catch(err => {
-        if (err.error === "Not valid jwt") {
+        if (err) {//.error === "Not valid jwt") {
           this.setState({
             registered: false,
             loading: false,

@@ -1,0 +1,35 @@
+.privacy-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 135px 20px 20px 20px;
+    .privacy-header {
+        width: 100%;
+        text-align: left;
+        border-left: 4px solid #598053;
+        box-sizing: border-box;
+        padding:0 20px; 
+
+        h1 {
+            font-size: 32px;
+        }
+    }
+    .privacy-content {
+        width: 50%;
+        text-align: start;
+        font-size: 15px;
+        line-height: 1.2em;
+
+        h3 {
+            padding: 14px 0;
+        }
+        p {
+            padding: 7px 0;
+            opacity: .85;
+        }
+    }
+}
