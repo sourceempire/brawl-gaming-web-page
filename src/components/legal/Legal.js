@@ -4,7 +4,6 @@ import "./Legal.scss";
 
 const Legal = () => {
 
-
   return (
     <section className="legal-container" >
         <div className="legal-header">

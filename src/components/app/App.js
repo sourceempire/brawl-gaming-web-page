@@ -38,13 +38,10 @@ const App = () => {
           <Route path="/concept" component={Concept} />
           <Route path="/faq" component={FAQ} />
           <Route path="/signup" component={Signup} />
-<<<<<<< HEAD
           <Route path="/legal" component={Legal} />
           <Route path="/privacy" component={Privacy} />
-=======
           <Route path="/forgotpassword" component={ForgotPassword} />
           <Route path="/passwordreset" component={PasswordReset} />
->>>>>>> 32cf2daf2551f1072ef589bfdc9e606dc30f79be
           <Redirect from="*" to="/" component={Home} />
         </Switch>
         <Footer />
