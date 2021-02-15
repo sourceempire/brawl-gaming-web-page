@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./forgotpassword.scss";
+import "./ForgotPassword.scss";
 
 import Fetcher from "../../utils/Fetcher";
 

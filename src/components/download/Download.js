@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./download.scss";
+import "./Download.scss";
 
 const Download = () => {
 

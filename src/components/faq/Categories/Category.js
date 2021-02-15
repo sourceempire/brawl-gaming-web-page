@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Server from "../../../utils/Server";
 import Fetcher from "../../../utils/Fetcher";
-import "./categories.scss";
+import "./Categories.scss";
 
 const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 

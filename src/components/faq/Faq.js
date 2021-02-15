@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./faq.scss";
+import "./Faq.scss";
 import Searchbar from "./Searchbar/Searchbar";
 import Results from "./Results/Results";
 import Categories from "./Categories/Categories";

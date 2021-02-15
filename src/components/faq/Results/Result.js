@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "./results.scss";
+import "./Results.scss";
 
 const Result = ({ question, answer }) => {
   const [active, setActive] = useState(true);

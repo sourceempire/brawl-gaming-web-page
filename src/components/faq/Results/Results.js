@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./results.scss";
+import "./Results.scss";
 import Result from "./Result";
 
 const Results = ({ title, list }) => {

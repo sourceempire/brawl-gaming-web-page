@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./games.scss";
+import "./Games.scss";
 import Fetcher from "../../utils/Fetcher";
 import GameBox from "../home/Section3/GameBox/GameBox";
 

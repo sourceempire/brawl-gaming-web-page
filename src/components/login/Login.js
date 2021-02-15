@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./login.scss";
+import "./Login.scss";
 import Fetcher from "../../utils/Fetcher";
 
 

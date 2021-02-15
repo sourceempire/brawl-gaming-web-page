@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./categories.scss";
+import "./Categories.scss";
 import Category from "./Category";
 
 const Categories = ({ list, setCategory, setCategoryResults }) => {

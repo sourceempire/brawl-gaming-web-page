@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import PropTypes from "prop-types";
-import Server from "../../../utils/Server";
 import Fetcher from "../../../utils/Fetcher";
-import "./searchbar.scss";
+import "./Searchbar.scss";
 
 const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./concept.scss";
+import "./Concept.scss";
 import SideNav from "./SideNav";
 
 const concepts = [

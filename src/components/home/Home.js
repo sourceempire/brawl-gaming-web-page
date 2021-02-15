@@ -1,5 +1,5 @@
 import React from "react";
-import "./home.scss";
+import "./Home.scss";
 import "./Section1/Section1";
 import Section1 from "./Section1/Section1";
 import Section2 from "./Section2/Section2";

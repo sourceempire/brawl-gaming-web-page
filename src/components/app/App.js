@@ -12,8 +12,8 @@ import Privacy from "../privacy/Privacy";
 import Footer from "../footer/Footer";
 import ForgotPassword from "../forgotpassword/ForgotPassword";
 import PasswordReset from "../passwordreset/PasswordReset";
-import "./app.scss";
-import "../../resources/site.scss";
+import "./App.scss";
+import "../../resources/styles/site.scss";
 import ReactGA from 'react-ga';
 
 function initializeReactGA() {

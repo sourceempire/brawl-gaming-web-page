@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./navigation.scss";
+import "./Navigation.scss";
 import Login from "../login/Login";
 
 const Navigation = ({ loggedIn, setLoggedIn }) => {
