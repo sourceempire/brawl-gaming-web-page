@@ -1,48 +1,55 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "./Navigation.scss";
-import Login from "../login/Login";
+import React from 'react';
+import { NavLink, withRouter } from 'react-router-dom';
+import { useSelector } from 'react-redux'
+//import Login from '../login/Login';
+import './Navigation.scss';
 
-const Navigation = ({ loggedIn, setLoggedIn }) => {
+import filledlogo from '../../resources/images/logo/filled.svg';
+import outlinewhite from '../../resources/images/logo/outline-white.svg';
+
+const Navigation = ({ loggedIn, setLoggedIn, history }) => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
+
+  const navBgShown = useSelector(state => state.app.navBgShown)
+
   return (
-    <div className="navigation">
-      <div className="logo">
-        <NavLink exact to="/">
-          <div className="logo-wrapper">
-            <img src="/images/logo.png" alt="logo" />
-            <div className="text">
-              <h4>Brawl Gaming</h4>
-            </div>
-          </div>
-        </NavLink>
-        <div className="mobile"> 
-        <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
-        </div>
-        <div className="is-mobile"><Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} /></div>
-      </div>
-      <div className="menu">
-        <NavLink className="nav-text" exact to="/" onClick={() => scrollToTop()}>
-          Home
-        </NavLink>
-        <NavLink className="nav-text" to="/download" onClick={() => scrollToTop()}>
-          Download
-        </NavLink>
-        <NavLink className="nav-text" to="/concept" onClick={() => scrollToTop()}>
+    <div className='navigation'>
+      <NavLink exact to='/' className='logo'>
+        <img src={outlinewhite} className="logo-outline" alt='logo'/>
+      </NavLink>
+      <div className='menu'>
+        <NavLink className='nav-text' to='/concept' onClick={() => scrollToTop()}>
           Concept
         </NavLink>
-        <NavLink className="nav-text" to="/games" onClick={() => scrollToTop()}>
-          Games
-        </NavLink>
-        <NavLink className="nav-text" to="/faq" onClick={() => scrollToTop()}>
+        <NavLink className='nav-text' to='/faq' onClick={() => scrollToTop()}>
           FAQ
         </NavLink>
-        <div className="not-mobile"><Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} /></div>
+      </div>
+      <div className={'navigation nav-bg' + (navBgShown? ' shown': '')}>
+        <div className='logo'>
+          <img src={filledlogo} alt='logo'/>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Navigation;
+export default withRouter(Navigation);
+
+
+/* <NavLink className='nav-text' exact to='/' onClick={() => scrollToTop()}>
+          Home
+        </NavLink> */
+        /* <NavLink className='nav-text' to='/download' onClick={() => scrollToTop()}>
+          Downloads
+        </NavLink> */
+
+        /* <NavLink className='nav-text' to='/games' onClick={() => scrollToTop()}>
+          Games
+        </NavLink> */
+
+        /* <div className='not-mobile'>
+          <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+        </div> */

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Concept.scss";
 import SideNav from "./SideNav";
+import logo from '../../resources/images/logo/filled.svg';
 
 const concepts = [
   {
@@ -15,7 +16,7 @@ const concepts = [
       "and our automatic match verification instantly gets the match " +
       "result and rewards the winners. No manual match reporting " +
       "needed!",
-    img: "/images/logo.png",
+    img: logo,
     key: "about"
   },
   {
@@ -116,7 +117,7 @@ const Concept = () => {
           </div>
         </div>
       ))}
-      <SideNav links={concepts} active={active} onClick={setActive} />
+      {/* <SideNav links={concepts} active={active} onClick={setActive} /> */}
     </section>
   );
 };

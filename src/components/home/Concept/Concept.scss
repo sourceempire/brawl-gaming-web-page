@@ -1,0 +1,59 @@
+@import '../../../resources/styles/variables';
+
+
+$register-background-url: url("../../../resources/images/home-concept/register.jpg");
+$download-background-url: url("../../../resources/images/home-concept/download.jpg");
+$choose-background-url: url("../../../resources/images/home-concept/choose.jpg");
+$play-background-url: url("../../../resources/images/home-concept/play.jpg");
+
+.home-concept {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+  .concept-background {
+    z-index: -2;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0;
+    
+    transition: opacity 1s;
+    
+    background-size: cover;
+    background-position: 100% 0%;
+    
+    &.register-background {
+      background-image: $register-background-url;
+    }
+    &.download-background {
+      
+      background-image: $download-background-url;
+    }
+    &.choose-background {
+      background-image: $choose-background-url;
+    }
+    &.play-background {
+      background-image: $play-background-url;
+    }
+    &.active {
+      opacity: 1;
+    }
+  }
+  
+  
+
+  .angle {
+    position: absolute;
+    height: 250px;
+    left: 0;
+    width: 100%;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 1));
+    right: 0;
+    &.angle-bottom {
+      bottom: 0;   
+    }
+    &.angle-top {
+      top: 0;
+    }
+  }
+}
+

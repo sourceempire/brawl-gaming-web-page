@@ -1,65 +1,88 @@
 @import "../../resources/styles/variables.scss";
 
-$navigation-height: 80px;
+$navigation-height: 100px;
+
+@mixin navigation_padding($padding) {
+  padding: 0 calc(#{$padding} + 30px);
+}
 
 .navigation {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 10px 20px;
+  height: $navigation-height;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  background-color: $color-navigation;
+
   z-index: 99;
+  
+  @include navigation_padding($padding: 120px);
 
-  .logo {
+  @media screen and (max-width: 1170px) {
+    @include navigation_padding($padding: 90px);
+  }
+
+  @media screen and (max-width: 900px) {
+    @include navigation_padding($padding: 60px);
+  }
+
+  @media screen and (max-width: 500px) {
+    @include navigation_padding($padding: 0px);
+  }
+  
+  .nav-bg {
+    position: absolute;
     display: flex;
-    flex-flow: row;
-
-    .logo-wrapper {
-      display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+    overflow: hidden;
+    z-index: -1;
+    .logo {
+      height: 100%;
+      transform: translateY(100%);
+      transition: transform 0.5s, opacity 0.5s;
     }
-
-    img {
-      height: $navigation-height - 25px;
-    }
-    .text {
-      color: $color-text;
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: flex-start;
-      h4 {
-        margin: 2px;
+    &.shown {
+      transform: translateY(0);
+      .logo {
+        transform: translateY(0);
+        opacity: 1;
+        filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.2))
       }
     }
-    .mobile {
-      display: none;
-    }
-
-    .is-mobile{
-      display: none;
+  }
+ 
+  .logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+    height: 100%;
+    img {
+      margin-top: -3px;
+      height: 70%;
     }
   }
 
   .menu {
     display: flex;
     flex-flow: row wrap;
-
-    .nav-text {
-      margin: 0;
-    }
-
+    padding-bottom: 3px;
     a {
-      display: inline-block;
       line-height: 35px;
-      padding: 0 15px;
       font-size: 1rem;
       color: $color-text;
+      margin-left: 40px;
       &:hover {
         color: $color-active;
       }
@@ -83,87 +106,3 @@ $navigation-height: 80px;
   }
 }
 
-@media only screen and (max-width: 957px) {
-  .navigation {
-    flex-flow: column wrap;
-
-    .logo {
-      width: 100%;
-      justify-content: space-between;
-
-      .is-mobile {
-        display: flex;
-      }
-    }
-
-    .menu {
-
-      .nav-text {
-        margin-top: 10px;
-      }
-
-      .not-mobile{
-        display: none;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 522px) {
-  .navigation {
-    position: static;
-
-    .logo {
-      .text {
-        text-align: left;
-      }
-    }
-
-    .menu {
-      justify-content: center;
-
-      .nav-text {
-        padding: 0 15px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .navigation {
-    padding: 10px 5px;
-
-    .logo .signup {
-      margin-left: 10px;
-    }
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .navigation .menu {
-    padding-top: 5px;
-
-    .nav-text {
-      padding: 0 20px;
-      margin-top: 0px;
-      line-height: 30px;
-
-      &:first-of-type {
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .navigation {
-    padding: 10px 5px;
-
-    .login .button {
-      padding: 0;
-    }
-
-    .logo .signup {
-      margin-left: 5px;
-    }
-  }
-}

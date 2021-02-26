@@ -1,0 +1,71 @@
+
+.hexagon-wrapper {
+  display: flex;
+  position: relative;
+  .hexagon-content {
+    position: absolute;
+    width: 100%;
+    left: 0;right: 0;top: 0;bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Orbitron';
+    font-size: 25px;
+  }
+  .hexagon-img {
+    width: 100%;
+    position: relative;
+
+    .hexagon {
+      fill:rgba(0, 0, 0, 0.3);
+      stroke:#fff;
+      stroke-linecap:square;
+      stroke-miterlimit:10;
+      stroke-width:2px;
+      opacity: 1;
+      box-sizing: border-box;
+      transition: opacity 1s, fill 1s;
+    }
+  } 
+}
+
+
+.hex-grid {
+  position: relative;
+  width: 155%;
+  .hex-grid-row {
+    display: flex;
+    .hex-grid-item {
+      margin: 10px;
+      @for $i from 0 through 30 {
+        &:nth-of-type(#{$i}) {
+          transform: translateX(calc(-25% * #{$i}));
+        }
+      }
+      &:nth-of-type(2n) {
+        .hexagon-wrapper {
+          .hexagon-img, .hexagon-content {
+            transform: translateY(calc(-50% - 10px));
+          }
+        }
+      }
+      .hexagon-wrapper {
+        .hexagon-content {
+          p {
+            opacity: 0;
+            transition: opacity 1s;
+          }
+        }
+        &.active {
+          .hexagon-content {
+            p {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
