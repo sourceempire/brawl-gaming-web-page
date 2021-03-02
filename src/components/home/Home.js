@@ -3,6 +3,9 @@ import React from "react";
 import Hero from "./Hero/Hero";
 import Concept from './Concept/Concept';
 
+import orc from '../../resources/images/home-hero/orc.png'
+import military from '../../resources/images/home-hero/military.png'
+
 import "./Home.scss";
 import "./Section1/Section1";
 // import Section1 from "./Section1/Section1";
@@ -11,8 +14,12 @@ import Section3 from "./Section3/Section3";
 
 const Home = () => {
   return (
-    <div className="home" onScroll={(e) => console.log("hej")}>
+    <div className="home">
       <Hero>
+        <div className="home-hero">
+          {/* <img className="orc" src={orc}></img>
+          <img className="military" src={military}></img> */}
+        </div>
         {/* <Fire /> */}
       </Hero>
       <Concept />

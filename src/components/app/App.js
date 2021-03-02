@@ -24,9 +24,12 @@ function initializeReactGA() {
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   
-  if (process.env.NODE_ENV !== 'development') {
-    useEffect(initializeReactGA, []); // run only once
-  }
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'development') {
+      initializeReactGA()
+    }
+  }, []);
+  
   return (
     <HashRouter>
       <div className="app">

@@ -1,7 +1,7 @@
 import React from "react";
-import "./signup.scss";
+import "./Signup.scss";
 
-import RegistrationForm from "../registrationForm/RegistrationForm"
+import RegistrationForm from "../registrationform/RegistrationForm"
 
 const Signup = ({history}) => {
   const createAccount = async e => {

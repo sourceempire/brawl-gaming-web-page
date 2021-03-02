@@ -1,8 +1,29 @@
 @import "../../resources/styles/variables.scss";
 
 .home {
-
+    
     margin: 0 auto;
+    .home-hero {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        width: 100%;
+        background-image: url('../../resources/images/home-hero/brawl-hero.jpg');
+        background-size: cover;
+        .orc {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 400px;
+        }
+        .military {
+            position: absolute;
+            right: 0;
+            transform: scaleX(-1);
+            height: 350px;
+            bottom: 0;
+        }
+    }
 }
 
 
