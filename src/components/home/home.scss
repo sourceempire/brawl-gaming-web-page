@@ -1,27 +1,26 @@
 @import "../../resources/styles/variables.scss";
 
 .home {
-    
-    margin: 0 auto;
     .home-hero {
         position: relative;
         overflow: hidden;
-        height: 600px;
+        height: 616px;
         width: 100%;
-        background-image: url('../../resources/images/home-hero/brawl-hero.jpg');
+        background-image: url('../../resources/images/home-hero/brawl-hero-xl.jpg');
         background-size: cover;
-        .orc {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 400px;
+        background-position: 50%;
+        @media screen and (max-width: 1150px) {
+            background-image: url('../../resources/images/home-hero/brawl-hero-l.jpg');
         }
-        .military {
-            position: absolute;
-            right: 0;
-            transform: scaleX(-1);
-            height: 350px;
-            bottom: 0;
+        @media screen and (max-width: 850px) {
+            background-image: url('../../resources/images/home-hero/brawl-hero-m.jpg');
+        }
+        @media screen and (max-width: 600px) {
+            background-image: url('../../resources/images/home-hero/brawl-hero-s.jpg');
+        }
+        @media screen and (max-width: 350px) {
+            background-image: url('../../resources/images/home-hero/brawl-hero-s.jpg');
+            background-position: 30%;
         }
     }
 }

@@ -7,6 +7,8 @@ import './Navigation.scss';
 import filledlogo from '../../resources/images/logo/filled.svg';
 import outlinewhite from '../../resources/images/logo/outline-white.svg';
 
+import Logo from '../../resources/images/logo/logo';
+
 const Navigation = ({ loggedIn, setLoggedIn, history }) => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -15,9 +17,9 @@ const Navigation = ({ loggedIn, setLoggedIn, history }) => {
   const navBgShown = useSelector(state => state.app.navBgShown)
 
   return (
-    <div className='navigation'>
-      <NavLink exact to='/' className='logo'>
-        <img src={outlinewhite} className="logo-outline" alt='logo'/>
+    <div className={'navigation' + (navBgShown? ' not-top': '')}>
+      <NavLink exact to='/' className='logo-link'>
+        <Logo filled={navBgShown}/>
       </NavLink>
       <div className='menu'>
         <NavLink className='nav-text' to='/concept' onClick={() => scrollToTop()}>
@@ -26,11 +28,6 @@ const Navigation = ({ loggedIn, setLoggedIn, history }) => {
         <NavLink className='nav-text' to='/faq' onClick={() => scrollToTop()}>
           FAQ
         </NavLink>
-      </div>
-      <div className={'navigation nav-bg' + (navBgShown? ' shown': '')}>
-        <div className='logo'>
-          <img src={filledlogo} alt='logo'/>
-        </div>
       </div>
     </div>
   );

@@ -1,0 +1,48 @@
+@import '../../styles/colors.scss';
+
+.logo {
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.0));
+    transition: filter 0.4s;
+    .cls-1 {
+        fill: transparent;
+        transition: fill 0.2s;
+    }
+    .cls-2 {
+        fill: $color-dark;
+        transition: fill 0.2s;
+    }
+    .shadow {
+        opacity:0;
+        transition: opacity 0.2s;
+    }
+
+    &:hover {
+        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
+        .cls-1 {
+            fill: rgba(0, 0, 0, 0.05);
+        }
+        .cls-2 {
+            fill: $color-active;
+        }
+    }
+    
+    &.filled {
+        .cls-1 {
+            fill: $color-apple;
+        }
+        .cls-2 {
+            fill: $color-light;
+        }
+        .shadow {
+            opacity:0.15;
+        }
+        &:hover {
+            .cls-1 {
+                fill: $color-primary;
+                
+            }
+        }
+    }
+}
+
+

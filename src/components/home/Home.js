@@ -17,6 +17,11 @@ const Home = () => {
     <div className="home">
       <Hero>
         <div className="home-hero">
+          <div className="hero-text">
+            
+            {/* <p>Earn real money rewards, playing the game of your choice</p> */}
+          </div>
+          
           {/* <img className="orc" src={orc}></img>
           <img className="military" src={military}></img> */}
         </div>

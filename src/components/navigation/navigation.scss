@@ -1,6 +1,6 @@
 @import "../../resources/styles/variables.scss";
 
-$navigation-height: 100px;
+$navigation-height: 80px;
 
 @mixin navigation_padding($padding) {
   padding: 0 calc(#{$padding} + 30px);
@@ -17,10 +17,32 @@ $navigation-height: 100px;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  background: linear-gradient(
+    90deg, 
+    rgba(237, 228, 215, 0) 5%, 
+    rgba(237, 228, 215, 0.5), 
+    rgba(237, 228, 215, 0) 95%
+  );
 
   z-index: 99;
-  
-  @include navigation_padding($padding: 120px);
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg, 
+      rgba(237, 228, 215, 0) 5%, 
+      rgba(237, 228, 215, 0.8), 
+      rgba(237, 228, 215, 0) 95%
+    );
+    filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.205))
+  }
+
+  @include navigation_padding($padding: 170px);
 
   @media screen and (max-width: 1170px) {
     @include navigation_padding($padding: 90px);
@@ -33,42 +55,12 @@ $navigation-height: 100px;
   @media screen and (max-width: 500px) {
     @include navigation_padding($padding: 0px);
   }
-  
-  .nav-bg {
-    position: absolute;
-    display: flex;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    transform: translateY(-100%);
-    transition: transform 0.5s;
-    overflow: hidden;
-    z-index: -1;
-    .logo {
-      height: 100%;
-      transform: translateY(100%);
-      transition: transform 0.5s, opacity 0.5s;
-    }
-    &.shown {
-      transform: translateY(0);
-      .logo {
-        transform: translateY(0);
-        opacity: 1;
-        filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.2))
-      }
-    }
-  }
  
-  .logo {
-    display: flex;
-    height: 100%;
+  .logo-link {
+    display: flex; 
     align-items: center;
-    opacity: 1;
-    transition: opacity 0.5s;
     height: 100%;
-    img {
+    svg {
       margin-top: -3px;
       height: 70%;
     }
@@ -80,9 +72,10 @@ $navigation-height: 100px;
     padding-bottom: 3px;
     a {
       line-height: 35px;
-      font-size: 1rem;
-      color: $color-text;
+      font-size: 15px;
+      color: $color-dark;
       margin-left: 40px;
+      transition: color 0.2s;
       &:hover {
         color: $color-active;
       }
@@ -102,6 +95,17 @@ $navigation-height: 100px;
     }
     .not-mobile {
       display: flex;
+    }
+  }
+
+  &.not-top {
+    .menu {
+      a {
+        color: $color-text;
+        &:hover {
+          color: $color-active;
+        }
+      }
     }
   }
 }
