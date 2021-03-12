@@ -2,10 +2,9 @@ import React from 'react';
 
 import './Shapes.scss';
 
-export const Hexagon = ({fill, active, content, opacity}) => {
+export const Hexagon = ({fill, active, hinted, content, opacity}) => {
   return (
-    <div className={"hexagon-wrapper" + (fill? ' filled': '') + (active? ' active': '')}>
-      
+    <div className={"hexagon-wrapper" + (fill? ' filled': '') + (active? ' active': '') + (hinted? ' hinted': '')}>
       <svg className="hexagon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.77 341.88">
         <g>
           <g>
@@ -16,15 +15,14 @@ export const Hexagon = ({fill, active, content, opacity}) => {
           </g>
         </g>
       </svg>
-      <div className="hexagon-content">
-        <p>{content? content: ''}</p>
-      </div>
+        <div className="hexagon-content">
+          {content? content: ''}
+        </div>
     </div>
-    
   )
 }
 
-export const HexagonalGrid = ({currentStep}) => {
+export const HexagonalGrid = ({currentStep, hoverStep}) => {
 
   const rows = [...Array(8).fill().map(() => [...Array(8).fill().map(() => "")])]
 
@@ -37,13 +35,33 @@ export const HexagonalGrid = ({currentStep}) => {
             <div className="hex-grid-item" key={j}>
               {
                 i === 1 && j === 1 
-                ? <Hexagon fill="#005756" active={currentStep === 0} content="Sign up" opacity={Math.random() * 0.9}/>
+                ? <Hexagon 
+                    fill="#171715" 
+                    active={currentStep === 0} 
+                    hinted={hoverStep === 0} 
+                    content={<OnboardingStep header="SIGN UP" text={["BECAUSE ", <span>YOU</span>, ' CAN']}/>} 
+                    opacity={Math.random() * 0.9}/>
                 : i === 1 && j === 2
-                ? <Hexagon fill="#49346f" active={currentStep === 1} content="Download" opacity={Math.random() * 0.9}/>
+                ? <Hexagon 
+                    fill="#171715" 
+                    active={currentStep === 1} 
+                    hinted={hoverStep === 1} 
+                    content={<OnboardingStep header="DOWNLOAD" text={['THE ', <span>DESKTOP</span>, ' APP']}/>} 
+                    opacity={Math.random() * 0.9}/>
                 : i === 1 && j === 4
-                ? <Hexagon fill="#A08800" active={currentStep === 2} content="Choose" opacity={Math.random() * 0.9}/>
+                ? <Hexagon 
+                  fill="#171715" 
+                  active={currentStep === 2} 
+                  hinted={hoverStep === 2} 
+                  content={<OnboardingStep header="CHOOSE" text={['YOUR ', <span>FAVORITE</span>, ' GAME']}/>} 
+                  opacity={Math.random() * 0.9}/>
                 : i === 2 && j === 5
-                ? <Hexagon fill="#457C1E" active={currentStep === 3} content="Compete" opacity={Math.random() * 0.9}/>
+                ? <Hexagon 
+                  fill="#171715" 
+                  active={currentStep === 3} 
+                  hinted={hoverStep === 3} 
+                  content={<OnboardingStep header="COMPETE" text={['WITH ', <span>FAIR</span>, ' CONDITIONS']}/>} 
+                  opacity={Math.random() * 0.9}/>
                 : <Hexagon opacity={Math.random() * 0.9}/>}
 
             </div>
@@ -51,6 +69,16 @@ export const HexagonalGrid = ({currentStep}) => {
           }
         </div>
       )}
+    </div>
+  )
+}
+
+const OnboardingStep = ({header, text, icon, active}) => {
+  return (
+    <div className="onboarding-step">
+ 
+      <p className="header">{header}</p>
+      <p className="text">{text}</p>
     </div>
   )
 }

@@ -52,9 +52,7 @@ $navigation-height: 80px;
     @include navigation_padding($padding: 60px);
   }
 
-  @media screen and (max-width: 500px) {
-    @include navigation_padding($padding: 0px);
-  }
+  
  
   .logo-link {
     display: flex; 

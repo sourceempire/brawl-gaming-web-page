@@ -1,0 +1,52 @@
+@import '../../../../resources/styles/variables.scss';
+
+.concept-part {
+    position: relative;
+    height: 100%;
+    width: 240px;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid $color-light;
+    margin: 0 10px;
+    z-index: 10;
+    transition: border 0.2s, background-color 0.2s;
+    background-color: $color-background-lighter;
+    cursor: pointer;
+    
+    * {
+        pointer-events: none;
+    }
+
+    &:nth-of-type(2) {
+        transform: translateY(-40px);
+    }
+    &:nth-of-type(3) {
+        transform: translateY(-80px);
+    }
+    &:nth-of-type(4) {
+        transform: translateY(-120px);
+    }
+
+    &:hover {
+        border: 1px solid $color-apple;
+        background-color: #1E221B;
+    }
+    
+    .animation-container {
+        height: 50px;
+    }
+    .title {
+        font-family: $font-header;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 15px;
+        color: $color-apple;
+    }
+    .description {
+        font-size: 15px;
+        margin-top: 15px;
+        opacity: 0.8;
+        line-height: 25px;
+      
+    }
+}

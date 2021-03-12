@@ -1,15 +1,10 @@
-$color-background: #171715;
+
 $color-text: #ede4d7;
 $color-border: #598053;
 $color-active: #7ff071;
 $color-header: #32322f;
 $color-subheader: #1e221b;
 $color-navigation: #1d211c;
-
-$color-header-gradient: linear-gradient($color-header, $color-background);
-$color-button-gradient-accept: linear-gradient(#66b62d, #457c1e);
-$color-button-gradient-decline: linear-gradient(#ae4848, #6d2727);
-$color-button-hover:linear-gradient(#73cc33 ,#509023);
 
 
 $color-forest-green:    #2C821F;
@@ -21,15 +16,11 @@ $color-ku-crimson:      #E3170A;
 $color-shadow:          rgba(0, 0, 0, 0.5);   
 
 
-
-
-
-
-
 /* Base Colors */
 $color-primary:    #66B62D;
 $color-light:      #ede4d7;
 $color-background: #1C1818;
+$color-background-lighter: #201d1d;
 $color-subheader:  #1E221B;
 $color-active:     #7FF071;
 $color-accent:     #AE4848;
@@ -54,4 +45,9 @@ $color-button-red:     linear-gradient(#{$color-accent}           , #{$color-acc
 $color-overlay-top:    linear-gradient(#{$color-black}            , #{$color-black-transparent} );
 $color-overlay-bottom: linear-gradient(#{$color-black-transparent}, #{$color-black}             );
 $color-black-button:   linear-gradient(#{$color-semi-dark}        , #{$color-background}        );
+
+$color-header-gradient: linear-gradient($color-header, $color-background);
+$color-button-gradient-accept: linear-gradient(#66b62d, #457c1e);
+$color-button-gradient-decline: linear-gradient(#ae4848, #6d2727);
+$color-button-hover:linear-gradient(#73cc33 ,#509023);
 

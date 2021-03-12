@@ -4,7 +4,8 @@
     .home-hero {
         position: relative;
         overflow: hidden;
-        height: 616px;
+        height: 80vh;
+        min-height: 500px;
         width: 100%;
         background-image: url('../../resources/images/home-hero/brawl-hero-xl.jpg');
         background-size: cover;
@@ -15,7 +16,7 @@
         @media screen and (max-width: 850px) {
             background-image: url('../../resources/images/home-hero/brawl-hero-m.jpg');
         }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 580px) {
             background-image: url('../../resources/images/home-hero/brawl-hero-s.jpg');
         }
         @media screen and (max-width: 350px) {

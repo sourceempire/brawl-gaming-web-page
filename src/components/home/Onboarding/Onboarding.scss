@@ -1,0 +1,124 @@
+@import '../../../resources/styles/variables';
+
+
+$register-background-url: url("../../../resources/images/home-onboarding/signup.jpg");
+$download-background-url: url("../../../resources/images/home-onboarding/download.jpg");
+$choose-background-url: url("../../../resources/images/home-onboarding/choose.jpg");
+$play-background-url: url("../../../resources/images/home-onboarding/compete.jpg");
+
+.onboarding-header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 200px;
+  position: relative;
+  z-index: 1;
+  transform: translateY(140px) rotate(9deg) ;
+  .pre-label {
+    font-size: 20px;
+    opacity: 0.6;
+  }
+  .label {
+    font-size: 40px;
+    font-family: $font-header;
+    span {
+      color: $color-apple
+    }
+  }
+}
+
+.home-onboarding {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+  margin-top: 70px;
+  .onboarding-background {
+    z-index: -2;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0;
+    transition: opacity 1s;
+    background-size: cover;
+    background-position: 100% 0%;
+    
+    &.register-background {
+      background-image: $register-background-url;
+    }
+    &.download-background {
+      background-image: $download-background-url;
+    }
+    &.choose-background {
+      background-image: $choose-background-url;
+    }
+    &.play-background {
+      background-image: $play-background-url;
+    }
+    &.active {
+      opacity: 1;
+    }
+  }
+  
+  .angle {
+    position: absolute;
+    height: 250px;
+    left: 0;
+    width: 100%;
+    min-width: 1500px;
+    right: 0;
+    &.angle-bottom {
+      bottom: 0;   
+    }
+    &.angle-top {
+      top: 0;
+    }
+  }
+
+  .step-choice {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transform: rotate(9deg);
+    z-index: 3;
+    height: 100px;
+    right: 0;
+    left: 0;
+    bottom : 0;
+    .step {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      background-color: transparent;
+      border: 2px solid $color-light;
+      box-sizing: border-box;
+      margin: 10px;
+      border-radius: 50%;
+      transition: background-color 1s;
+      &:hover {
+        transition: background-color 0.3s;
+        background-color: #{$color-light + '80'};
+      }
+      &.active {
+        background-color: $color-light;
+      }
+    }
+  }
+}
+
+
+.onboarding-step {
+  .header {
+    color: $color-light;
+    margin-bottom: 4px; 
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .text {
+    font-family: $font-header;
+    font-size: 14px;
+    opacity: 0.7;
+    color: $color-light;
+    font-weight: bold;
+    span {
+      color: $color-apple;
+    }
+  }
+}

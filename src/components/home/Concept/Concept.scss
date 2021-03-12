@@ -1,59 +1,64 @@
-@import '../../../resources/styles/variables';
-
-
-$register-background-url: url("../../../resources/images/home-concept/register.jpg");
-$download-background-url: url("../../../resources/images/home-concept/download.jpg");
-$choose-background-url: url("../../../resources/images/home-concept/choose.jpg");
-$play-background-url: url("../../../resources/images/home-concept/play.jpg");
+@import '../../../resources/styles/colors.scss';
+@import '../../../resources/styles/fonts.scss';
 
 .home-concept {
-  position: relative;
-  height: 700px;
-  overflow: hidden;
-  .concept-background {
-    z-index: -2;
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    opacity: 0;
-    
-    transition: opacity 1s;
-    
-    background-size: cover;
-    background-position: 100% 0%;
-    
-    &.register-background {
-      background-image: $register-background-url;
-    }
-    &.download-background {
-      
-      background-image: $download-background-url;
-    }
-    &.choose-background {
-      background-image: $choose-background-url;
-    }
-    &.play-background {
-      background-image: $play-background-url;
-    }
-    &.active {
-      opacity: 1;
-    }
-  }
-  
-  
-
-  .angle {
-    position: absolute;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
     height: 250px;
-    left: 0;
-    width: 100%;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 1));
-    right: 0;
-    &.angle-bottom {
-      bottom: 0;   
+    padding: 10px 100px;
+    .concept-label {
+        margin-right: 20px;
+        width: 330px;
+        text-align: right;
+        transform: translate(-70px, 0px);
+        .concept-label-pre-header {
+            font-size: 17px;
+            opacity: 0.6;
+        }
+        .concept-label-header {
+            font-family: $font-header;
+            font-weight: 700;
+            font-size: 34px;
+            
+            span {
+                color: $color-apple;
+            }
+        }
+        .concept-label-text {
+            margin: 25px 0;
+            line-height: 30px;
+            span {
+                color: $color-apple;
+                
+                letter-spacing: 1px;
+                @for $i from 1 through 5 {
+                    &:nth-of-type(#{$i}) {
+                        animation: opacityChange 4s #{$i * 0.15}s linear infinite;
+                    }
+                }
+                
+                @keyframes opacityChange {
+                    0% {
+                        opacity: 1;
+                    }
+                    10% {
+                        opacity: 0.4
+                    }
+                    20% {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
     }
-    &.angle-top {
-      top: 0;
+    .slider {
+        .element {
+            width: 250px;
+            margin-left: 10px;
+            border: 1px solid $color-light;
+            
+        }
     }
-  }
 }
 

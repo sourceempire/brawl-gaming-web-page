@@ -4,6 +4,7 @@ import "./Signup.scss";
 import RegistrationForm from "../registrationform/RegistrationForm"
 
 const Signup = ({history}) => {
+  
   const createAccount = async e => {
     e.preventDefault();
     alert("created account");

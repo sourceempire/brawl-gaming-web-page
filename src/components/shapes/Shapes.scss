@@ -1,3 +1,4 @@
+@import '../../resources/styles/colors.scss';
 
 .hexagon-wrapper {
   display: flex;
@@ -5,13 +6,13 @@
   .hexagon-content {
     position: absolute;
     width: 100%;
-    left: 0;right: 0;top: 0;bottom: 0;
+    left:0;right:0;top:0;bottom:0;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-family: 'Orbitron';
-    font-size: 25px;
+    font-size: 23px;
   }
   .hexagon-img {
     width: 100%;
@@ -52,14 +53,15 @@
       }
       .hexagon-wrapper {
         .hexagon-content {
-          p {
+          .onboarding-step {
             opacity: 0;
             transition: opacity 1s;
           }
         }
-        &.active {
+        
+        &.active, &.hinted {
           .hexagon-content {
-            p {
+            .onboarding-step {
               opacity: 1;
             }
           }

@@ -1,22 +1,23 @@
 @import "./variables.scss";
 
 html {
-  scroll-behavior: smooth;
+  //scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
-  //background: url("/images/background.png") $color-background;
-  background-size: 100% auto;
-  background-repeat: repeat-y;
+  font-family: $font-body;
   background-color: $color-background;
+
+  //Hide scrollbar
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
 }
 
-section {
- 
-}
 
 h1,
 h2,
@@ -36,7 +37,6 @@ h6 {
 }
 
 p {
-  /* font-family: "Orbitron", sans-serif; */
   font-weight: 500;
   margin: 0;
   color: $color-text;
