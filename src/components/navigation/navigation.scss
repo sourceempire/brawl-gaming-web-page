@@ -7,6 +7,7 @@ $navigation-height: 80px;
 }
 
 .navigation {
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -33,6 +34,7 @@ $navigation-height: 80px;
     right: 0;
     bottom: 0;
     height: 3px;
+    box-sizing: border-box;
     background: linear-gradient(
       90deg, 
       rgba(237, 228, 215, 0) 5%, 
@@ -50,6 +52,10 @@ $navigation-height: 80px;
 
   @media screen and (max-width: 900px) {
     @include navigation_padding($padding: 60px);
+  }
+
+  @media screen and (max-width: 560px) {
+    @include navigation_padding($padding: 0px);
   }
 
   

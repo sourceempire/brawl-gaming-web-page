@@ -36,33 +36,37 @@ export const HexagonalGrid = ({currentStep, hoverStep}) => {
               {
                 i === 1 && j === 1 
                 ? <Hexagon 
+                    key={i +""+ j}
                     fill="#171715" 
                     active={currentStep === 0} 
                     hinted={hoverStep === 0} 
-                    content={<OnboardingStep header="SIGN UP" text={["BECAUSE ", <span>YOU</span>, ' CAN']}/>} 
+                    content={<OnboardingStep header="SIGN UP" text={["BECAUSE ", <span key={i +""+ j}>YOU</span>, ' CAN']}/>} 
                     opacity={Math.random() * 0.9}/>
                 : i === 1 && j === 2
                 ? <Hexagon 
+                    key={i +""+ j}
                     fill="#171715" 
                     active={currentStep === 1} 
                     hinted={hoverStep === 1} 
-                    content={<OnboardingStep header="DOWNLOAD" text={['THE ', <span>DESKTOP</span>, ' APP']}/>} 
+                    content={<OnboardingStep key={"DOWNLOAD"} header="DOWNLOAD" text={['THE ', <span key={i +""+ j}>DESKTOP</span>, ' APP']}/>} 
                     opacity={Math.random() * 0.9}/>
                 : i === 1 && j === 4
                 ? <Hexagon 
-                  fill="#171715" 
-                  active={currentStep === 2} 
-                  hinted={hoverStep === 2} 
-                  content={<OnboardingStep header="CHOOSE" text={['YOUR ', <span>FAVORITE</span>, ' GAME']}/>} 
-                  opacity={Math.random() * 0.9}/>
+                    key={i +""+ j}
+                    fill="#171715" 
+                    active={currentStep === 2} 
+                    hinted={hoverStep === 2} 
+                    content={<OnboardingStep key={"CHOOSE"} header="CHOOSE" text={['YOUR ', <span key={i +""+ j}>FAVORITE</span>, ' GAME']}/>} 
+                    opacity={Math.random() * 0.9}/>
                 : i === 2 && j === 5
                 ? <Hexagon 
+                  key={i +""+ j}
                   fill="#171715" 
                   active={currentStep === 3} 
                   hinted={hoverStep === 3} 
-                  content={<OnboardingStep header="COMPETE" text={['WITH ', <span>FAIR</span>, ' CONDITIONS']}/>} 
+                  content={<OnboardingStep key={"COMPETE"} header="COMPETE" text={['WITH ', <span key={i +""+ j}>FAIR</span>, ' CONDITIONS']}/>} 
                   opacity={Math.random() * 0.9}/>
-                : <Hexagon opacity={Math.random() * 0.9}/>}
+                : <Hexagon key={i +""+ j} opacity={Math.random() * 0.9}/>}
 
             </div>
             )

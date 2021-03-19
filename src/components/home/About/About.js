@@ -9,7 +9,7 @@ const About = ({}) => {
         <div className="home-about">
             <div className="about-label what">
                 <p className="about-label-pre-header">
-                    THAT'S GOOD AND ALL, BUT
+                    SOUNDS GOOD RIGHT? BUT...
                 </p>
                 <p className="about-label-header">
                     <span>WHAT</span> IS IT, REALLY?
@@ -18,7 +18,7 @@ const About = ({}) => {
 
             <div className="about-label why">
                 <p className="about-label-pre-header">
-                    THAT'S GOOD AND ALL, BUT
+                    WITH THAT SAID, YOU PROBABLY WONDER
                 </p>
                 <p className="about-label-header">
                     <span>WHY</span> CHOOSE US?

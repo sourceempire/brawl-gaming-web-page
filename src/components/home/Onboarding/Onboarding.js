@@ -43,7 +43,7 @@ const Onboarding = () => {
         <HexagonalGrid currentStep={currentStep} hoverStep={hoverStep}/>
         
         {elements.bgs.map((bgClass, index) => 
-          <div className={'onboarding-background ' + bgClass + (currentStep === index? ' active': '')  }/>  
+          <div key={index} className={'onboarding-background ' + bgClass + (currentStep === index? ' active': '')  }/>  
         )}
 
         <img className="angle angle-top" src={onboardingTop}/>
@@ -52,6 +52,7 @@ const Onboarding = () => {
         <div className="step-choice">
           {elements.bgs.map((_, index) =>
             <div 
+              key={index}
               className={"step" + (currentStep === index? ' active': '')} 
               onClick={() => setCurrentStep(index)}
               onMouseEnter={() => setHoverStep(index)}

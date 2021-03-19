@@ -9,16 +9,18 @@ $play-background-url: url("../../../resources/images/home-onboarding/compete.jpg
 .onboarding-header {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 200px;
+  overflow: hidden;
   position: relative;
   z-index: 1;
-  transform: translateY(140px) rotate(9deg) ;
+  transform: translateY(155px) rotate(9deg) ;
+  margin-top: -70px;
   .pre-label {
     font-size: 20px;
     opacity: 0.6;
   }
   .label {
     font-size: 40px;
+    font-weight: bold;
     font-family: $font-header;
     span {
       color: $color-apple

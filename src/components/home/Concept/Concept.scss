@@ -5,13 +5,25 @@
     margin-top: 60px;
     display: flex;
     justify-content: center;
-    height: 250px;
-    padding: 10px 100px;
+    flex-wrap: wrap;
+    min-height: 250px;
+    padding: 10px 100px 0;
+    @media screen and (max-width: 680px) {
+        padding: 10px 10px 0;
+        font-size: 20px;
+    }
     .concept-label {
         margin-right: 20px;
         width: 330px;
         text-align: right;
         transform: translate(-70px, 0px);
+        @media screen and (max-width: 790px) {
+            width: 440px;
+            text-align: center;
+            transform: translate(0, 0px);
+            margin-right: 0;
+        }
+        
         .concept-label-pre-header {
             font-size: 17px;
             opacity: 0.6;

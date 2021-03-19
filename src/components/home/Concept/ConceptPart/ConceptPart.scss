@@ -3,7 +3,8 @@
 .concept-part {
     position: relative;
     height: 100%;
-    width: 240px;
+    width: 19%;
+    max-width: 240px;
     box-sizing: border-box;
     padding: 20px;
     border: 1px solid $color-light;
@@ -12,6 +13,8 @@
     transition: border 0.2s, background-color 0.2s;
     background-color: $color-background-lighter;
     cursor: pointer;
+
+    
     
     * {
         pointer-events: none;
@@ -31,6 +34,31 @@
         border: 1px solid $color-apple;
         background-color: #1E221B;
     }
+
+    @media screen and (max-width: 1360px) {
+        padding: 15px;
+    }
+    @media screen and (max-width: 1210px) {
+        width: 220px;
+        &:nth-of-type(2) {
+            transform: none;
+        }
+        &:nth-of-type(3) {
+            transform: none;
+        }
+        &:nth-of-type(4) {
+            transform: none;
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width: 680px) {
+        width: 400px;
+        max-width: 400px;
+        margin-top: 20px;
+        &:nth-of-type(2) {
+            margin-top: 0;
+        }
+    }
     
     .animation-container {
         height: 50px;
@@ -41,12 +69,23 @@
         font-weight: bold;
         margin-top: 15px;
         color: $color-apple;
+        @media screen and (max-width: 1360px) {
+            font-size: 17px;
+        }
+        @media screen and (max-width: 680px) {
+            font-size: 20px;
+        }
     }
     .description {
         font-size: 15px;
         margin-top: 15px;
         opacity: 0.8;
         line-height: 25px;
-      
+        @media screen and (max-width: 1360px) {
+            font-size: 14px;
+        }
+        @media screen and (max-width: 680px) {
+            font-size: 16px;
+        }
     }
 }
