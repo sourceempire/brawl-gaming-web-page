@@ -8,21 +8,21 @@ import './Hero.scss';
 class Hero extends Component {
 
   section = createRef()
+  scrollRef = document.body;
 
   state = {
     scrollPosition: undefined,
   }
 
   componentDidMount = () => {
-    
-    window.addEventListener("scroll", this.addScrollListener);
-    window.dispatchEvent(new CustomEvent('scroll'));
+    this.scrollRef.addEventListener('scroll', this.addScrollListener);
+    this.scrollRef.dispatchEvent(new CustomEvent('scroll'));
 
   }
 
   componentWillUnmount = () => {
     this.props.setNavBgShown();
-    window.removeEventListener('scroll', this.addScrollListener);
+    this.scrollRef.removeEventListener('scroll', this.addScrollListener);
   }
 
   addScrollListener = () => {
@@ -34,14 +34,14 @@ class Hero extends Component {
   setScrollPosition = (scrollPosition) => this.setState({scrollPosition})
 
   scrollIsTopListener = () => {
-    if (window.scrollY === 0) {
+    if (this.scrollRef.scrollTop === 0) {
       //TODO, Create something on scroll top after hero design is completed.
     }
   } 
 
   scrollOutListener = () => {
     if (!this.props.navBgShown) {
-      if (window.scrollY + 100 > this.section.clientHeight) {
+      if (this.scrollRef.scrollTop + 100 > this.section.clientHeight) {
         this.props.setNavBgShown();
       }
     }
@@ -49,7 +49,7 @@ class Hero extends Component {
   
   scrollInListener = () => {
     if (this.props.navBgShown) {
-      if (window.scrollY + 100 <= this.section.clientHeight) {
+      if (this.scrollRef.scrollTop + 100 <= this.section.clientHeight) {
         this.props.setNavBgHidden();
       }
     }
