@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 
 import { HexagonalGrid } from '../../shapes/Shapes';
@@ -10,7 +10,7 @@ import './Onboarding.scss';
 
 const Onboarding = () => {
 
-  let timeout = {}
+  let timeout = useRef(null)
 
   const [elements] = useState({
     bgs: ['register-background', 'download-background', 'choose-background', 'play-background'],
@@ -20,13 +20,14 @@ const Onboarding = () => {
   const [hoverStep, setHoverStep] = useState(null);
   
   useEffect(() => {
-    clearTimeout(timeout) //If step is updated by user
+    clearTimeout(timeout.current) //If step is updated by user
 
-    timeout = setTimeout(() => {
+    timeout.current = setTimeout(() => {
       setCurrentStep(currentStep => (currentStep + 1) % 4)
     }, 3500)
+
     return () => {
-      clearTimeout(timeout)
+      clearTimeout(timeout.current)
     }
   }, [currentStep])
 

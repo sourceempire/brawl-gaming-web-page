@@ -1,31 +1,27 @@
 @import "../../resources/styles/variables.scss";
 
-$navigation-height: 80px;
-
 @mixin navigation_padding($padding) {
   padding: 0 calc(#{$padding} + 30px);
 }
 
 .navigation {
-  
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: $navigation-height;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  
   background: linear-gradient(
     90deg, 
     rgba(237, 228, 215, 0) 5%, 
     rgba(237, 228, 215, 0.5), 
     rgba(237, 228, 215, 0) 95%
   );
-
   z-index: 99;
+  @include navigation_padding($padding: 170px);
 
   &::after {
     position: absolute;
@@ -44,22 +40,6 @@ $navigation-height: 80px;
     filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.205))
   }
 
-  @include navigation_padding($padding: 170px);
-
-  @media screen and (max-width: 1170px) {
-    @include navigation_padding($padding: 90px);
-  }
-
-  @media screen and (max-width: 900px) {
-    @include navigation_padding($padding: 60px);
-  }
-
-  @media screen and (max-width: 560px) {
-    @include navigation_padding($padding: 0px);
-  }
-
-  
- 
   .logo-link {
     display: flex; 
     align-items: center;
@@ -112,5 +92,60 @@ $navigation-height: 80px;
       }
     }
   }
+
+  @media screen and (max-width: 1170px) {
+    @include navigation_padding($padding: 90px);
+  }
+  @media screen and (max-width: 900px) {
+    @include navigation_padding($padding: 60px);
+  }
+
 }
 
+.navigation-mobile {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: $color-background;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $color-apple;
+  z-index: 99;
+  height: $navigation-mobile-height;
+  .logo-link {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    .product-name {
+      font-size: 14px;
+      white-space: nowrap;
+      margin-top: 2px;
+      letter-spacing: 2px;
+    }
+  }
+  .logo {
+    height: 60%;
+    margin: 0 10px;
+    .cls-2 {
+      fill: $color-primary;
+    }
+  }
+  .menu-aside {
+    width: $navigation-mobile-height;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+}
+
+
+// Determine which navigation is shown 
+@media screen and (max-width: 560px) {
+  .navigation {
+    display: none;
+  }
+}
+@media screen and (min-width: 561px) {
+  .navigation-mobile {
+    display: none;
+  }
+}
