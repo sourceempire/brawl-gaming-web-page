@@ -28,15 +28,15 @@ const Navigation = ({ loggedIn, setLoggedIn, history }) => {
     animation.current.setSpeed(3);
   }, []);
   
-  const loadAnimation = () => {
-    return animation.current = lottie.loadAnimation({
+  const loadAnimation = () => 
+    lottie.loadAnimation({
       container: hamburgerMenu.current,
       renderer: "svg",
       loop: false,
       autoplay: false,
       animationData: hamburgerAnim
     });
-  }
+  
   
   
 

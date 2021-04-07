@@ -12,7 +12,7 @@ const SideNav = ({orientation, children, open, onClose}) => {
     
 
     return createPortal(
-        <div className={'side-nav-wrapper' + (open? ' open': '')}>
+        <div className={'side-nav-wrapper' + (orientation? ' from-'+orientation: '') + (open? ' open': '')}>
             <div className='nav-background' onClick={onClose}/>
             <div className={'side-nav'+ (orientation? ' from-'+orientation: '')}>
 

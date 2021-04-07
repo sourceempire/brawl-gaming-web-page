@@ -34,10 +34,11 @@
         @media screen and (max-width: 850px) {
             background-image: url('../../resources/images/home-hero/brawl-hero-m.jpg');
         }
-        @media screen and (max-width: 580px) {
+        @media screen and (max-width: 560px) {
             background-image: url('../../resources/images/home-hero/brawl-hero-s.jpg');
-            top: 20px;
+            top: 30px;
             height: 500px;
+            padding-bottom: 70px;
         }
         @media screen and (max-width: 350px) {
             background-image: url('../../resources/images/home-hero/brawl-hero-s.jpg');
