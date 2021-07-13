@@ -1,63 +1,57 @@
-import React, {Component, createRef} from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux'
 
 import * as appActions from '../../../store/actions/appActions';
 
 import './Hero.scss';
 
+
+const SCROLL_TOP_BREAK = 150;
+
 class Hero extends Component {
 
-  section = createRef()
-  scrollRef = document.body;
+  documentBody = document.body;
 
   state = {
     scrollPosition: undefined,
   }
 
   componentDidMount = () => {
-    this.scrollRef.addEventListener('scroll', this.addScrollListener);
-    this.scrollRef.dispatchEvent(new CustomEvent('scroll'));
-
+    this.documentBody.addEventListener('scroll', this.addScrollListener);
+    this.documentBody.dispatchEvent(new CustomEvent('scroll'));
   }
 
   componentWillUnmount = () => {
-    this.props.setNavBgShown();
-    this.scrollRef.removeEventListener('scroll', this.addScrollListener);
+    this.props.setNavigationTransparent(false);
+    this.documentBody.removeEventListener('scroll', this.addScrollListener);
   }
 
   addScrollListener = () => {
     this.scrollOutListener();
     this.scrollInListener();
-    this.scrollIsTopListener();
   }
 
   setScrollPosition = (scrollPosition) => this.setState({scrollPosition})
 
-  scrollIsTopListener = () => {
-    if (this.scrollRef.scrollTop === 0) {
-      //TODO, Create something on scroll top after hero design is completed.
-    }
-  } 
-
   scrollOutListener = () => {
-    if (!this.props.navBgShown) {
-      if (this.scrollRef.scrollTop + 100 > this.section.clientHeight) {
-        this.props.setNavBgShown();
+    if (this.props.shouldNavigationBeTransparent) {
+      if (this.documentBody.scrollTop > SCROLL_TOP_BREAK) {
+        this.props.setNavigationTransparent(false);
       }
     }
   }
   
   scrollInListener = () => {
-    if (this.props.navBgShown) {
-      if (this.scrollRef.scrollTop + 100 <= this.section.clientHeight) {
-        this.props.setNavBgHidden();
+    if (!this.props.shouldNavigationBeTransparent) {
+      if (this.documentBody.scrollTop <= SCROLL_TOP_BREAK) {
+        this.props.setNavigationTransparent(true);
       }
     }
   }
 
   render() {
     return(
-      <section ref={node => this.section = node} className="hero">
+      <section className="hero">
         {this.props.children}
       </section>
     )
@@ -65,15 +59,16 @@ class Hero extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
-    navBgShown: state.app.navBgShown,
+    shouldNavigationBeTransparent: state.app.navigation.transparent,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setNavBgShown: () => dispatch(appActions.setNavBgVisibility(true)),
-    setNavBgHidden: () => dispatch(appActions.setNavBgVisibility(false))
+    setNavigationTransparent: (transparent) => {
+      dispatch(appActions.setNavigationTransparent(transparent))},
   }
 }
 

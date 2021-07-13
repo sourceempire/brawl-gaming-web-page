@@ -2,27 +2,28 @@
 
 .home-about {
     height: 750px;
-    background-image: url('../../../resources/images/home-about/gladiator.jpg');
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
     background-size: cover;
-    margin-bottom: -240px;
     padding-bottom: 150px;
     box-sizing: border-box;
     position: relative;
-    overflow: hidden;
-
+    margin-bottom: -20%;
     .about-label { 
-        position: absolute;
         text-align: right;
         width: 420px;
+        text-shadow: 2px 2px 5px black;
         &.what {
-            position: absolute;
             text-align: right;
-            left: 20%;
+            left: 15%;
+            margin-right: 5%;
         }
         &.why {
             text-align: left;
             right: 10%;
             top: 180px;
+            margin-left: 5%;
         }
         .about-label-pre-header {
             font-size: 17px;
@@ -32,10 +33,23 @@
             font-family: $font-header;
             font-weight: 700;
             font-size: 34px;
-            
-            span {
-                color: $color-apple;
-            }
         }
+        .about-info {
+            line-height: 30px;
+            margin: 25px 0;
+        }
+        span {
+            color: $color-apple;
+        }
+    }
+    .gladiator {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60%;
+        opacity: 0.7;
+        min-width: 600px;
+        z-index: 20;
+        
     }
 }

@@ -8,7 +8,7 @@
         align-items: center;
         position: relative;
         overflow: hidden;
-        height: 80vh;
+        height: 78vh;
         min-height: 500px;
         width: 100%;
         background-size: cover;
@@ -30,9 +30,11 @@
 
         @media screen and (max-width: 1150px) {
             background-image: url('../../resources/images/home-hero/brawl-hero-l.jpg');
+            background-position: 56%;
         }
         @media screen and (max-width: 850px) {
             background-image: url('../../resources/images/home-hero/brawl-hero-m.jpg');
+            background-position: 53%;
         }
         @media screen and (max-width: 560px) {
             background-image: url('../../resources/images/home-hero/brawl-hero-s.jpg');
@@ -44,29 +46,24 @@
             background-image: url('../../resources/images/home-hero/brawl-hero-s.jpg');
             background-position: 30%;
         }
+        .home-hero-content {
+            position: relative;
+            left: 7px;
+            width: 650px;
+        }
         .home-hero-text {
             position: relative;
+            top: 10px;
             z-index: 10;
-            font-size: 30px;
+            font-size: 35px;
             text-transform: uppercase;
             font-family: $font-body;
             color: $color-light;
             font-weight: bold;
-            margin: 5px;
             opacity: 0;
-            text-shadow: 1px 1px 2px $color-background;
-            &:first-of-type {
-                animation: fadeInText 1s 0.8s forwards;
-            }
-            &:nth-of-type(2) {
-                top: 40px;
-                animation: fadeInText 1s 1.2s forwards;
-            }
-            &:last-of-type {
-                top: 80px;
-                animation: fadeInText 1s 1.6s forwards;
-            }
-            
+            text-shadow: 2px 2px 5px black;
+            animation: fadeInText 0.6s 0.8s forwards;
+            margin-bottom: 50px;
             span {
                 color: $color-apple;
             }
@@ -75,11 +72,11 @@
         @keyframes fadeInText {
             0% {
                 opacity: 0;
-                transform: translateX(-200px);
+                transform: translateY(100px);
             }
             100% {
                 opacity: 1;
-                transform: translateX(0);
+                transform: translateY(20px);
             }
         }
     }

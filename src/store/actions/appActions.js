@@ -1,3 +1,4 @@
-export const setNavBgVisibility = (shown) => ({
-  type: 'SET_NAV_BG_VISIBILITY', shown
+export const setNavigationTransparent = (transparent) => ({
+  type: 'SET_TRANSPARENT_NAVIGATION', 
+  transparent
 })

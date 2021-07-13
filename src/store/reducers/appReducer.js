@@ -1,11 +1,20 @@
 const initState = {
-  navBgShown: false,
+  navigation: {
+    transparent: false
+  }
 }
 
 const appReducer = (state = initState, action) => {
   switch (action.type) {
-    case 'SET_NAV_BG_VISIBILITY':
-      return {...state, navBgShown: action.shown}
+    case 'SET_TRANSPARENT_NAVIGATION':
+      
+      return {
+        ...state, 
+        navigation: { 
+          ...state.navigation,
+          transparent: action.transparent 
+        }
+      }
     default:
       return state;
   }

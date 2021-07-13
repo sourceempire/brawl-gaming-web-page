@@ -7,47 +7,32 @@
 .navigation {
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: $navigation-height;
+  height: 50px;
+  background-color: $color-background;
+  border-bottom: 1px solid $color-dark;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  
-  background: linear-gradient(
-    90deg, 
-    rgba(237, 228, 215, 0) 5%, 
-    rgba(237, 228, 215, 0.5), 
-    rgba(237, 228, 215, 0) 95%
-  );
-  z-index: 99;
-  @include navigation_padding($padding: 170px);
 
-  &::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    box-sizing: border-box;
-    background: linear-gradient(
-      90deg, 
-      rgba(237, 228, 215, 0) 5%, 
-      rgba(237, 228, 215, 0.8), 
-      rgba(237, 228, 215, 0) 95%
-    );
-    filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.205))
-  }
+  z-index: 99;
+  @include navigation_padding($padding: 40px);
 
   .logo-link {
     display: flex; 
     align-items: center;
     height: 100%;
     svg {
-      margin-top: -3px;
-      height: 70%;
+      height: 75%;
+      .cls-2 {
+        fill: $color-primary;
+      }
     }
+    .logo-label {
+      margin-left: 20px;
+    }
+    
   }
 
   .menu {
@@ -57,9 +42,8 @@
     a {
       line-height: 35px;
       font-size: 15px;
-      color: $color-dark;
+      color: $color-text;
       margin-left: 40px;
-      transition: color 0.2s;
       &:hover {
         color: $color-active;
       }
@@ -82,22 +66,41 @@
     }
   }
 
-  &.not-top {
+  &.is-transparent {
+    background-color: transparent;
+    height: $navigation-height;
+    border-bottom: none;
+    .logo-label {
+      display: none;
+    }
     .menu {
       a {
-        color: $color-text;
+        color: $color-dark;
         &:hover {
-          color: $color-active;
+          color: $color-light;
+          text-shadow: 0 0 2px rgb(0, 0, 0);
+        }
+      }
+    }
+    .logo-link {
+      svg {
+        .cls-2 {
+          fill: $color-dark;
+        }
+        &:hover {
+          .cls-2 {
+            fill: $color-light;
+          }
         }
       }
     }
   }
 
   @media screen and (max-width: 1170px) {
-    @include navigation_padding($padding: 90px);
+    @include navigation_padding($padding: 30px);
   }
   @media screen and (max-width: 900px) {
-    @include navigation_padding($padding: 60px);
+    @include navigation_padding($padding: 10px);
   }
 
 }
@@ -138,7 +141,7 @@
 }
 
 
-// Determine which navigation is shown 
+// Determines which navigation is shown 
 @media screen and (max-width: 560px) {
   .navigation {
     display: none;

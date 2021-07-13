@@ -7,6 +7,7 @@ import SideNav from './SideNav/SideNav';
 import Logo from '../../resources/images/logo/logo';
 
 import hamburgerAnim from '../../resources/animations/hamburger-toggle.json';
+import profileAnim from '../../resources/animations/profile-toggle.json';
 
 import './Navigation.scss';
 
@@ -17,18 +18,21 @@ const Navigation = ({ loggedIn, setLoggedIn, history }) => {
 
   const hamburgerMenu = useRef()
   const profileMenu = useRef()
-  const animation = useRef();
+  const hamburgerAnimation = useRef();
+  const profileAnimation = useRef();
   
-  const navBgShown = useSelector(state => state.app.navBgShown)
+  const shouldNavigationBeTransparent = useSelector(state => state.app.navigation.transparent)
   
   const [menuOpen, setOpen] = useState(false);
   
   useEffect(() => {
-    animation.current = loadAnimation();
-    animation.current.setSpeed(3);
+    hamburgerAnimation.current = loadHamburgerAnimation();
+    hamburgerAnimation.current.setSpeed(3);
+
+    profileAnimation.current = loadProfileAnimation();
   }, []);
   
-  const loadAnimation = () => 
+  const loadHamburgerAnimation = () => 
     lottie.loadAnimation({
       container: hamburgerMenu.current,
       renderer: "svg",
@@ -36,21 +40,27 @@ const Navigation = ({ loggedIn, setLoggedIn, history }) => {
       autoplay: false,
       animationData: hamburgerAnim
     });
-  
-  
-  
 
+  const loadProfileAnimation = () => 
+    lottie.loadAnimation({
+      container: profileMenu.current,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      animationData: profileAnim
+    })
+  
+  
   const toggleSideNavigation = () => {
-   
     if (menuOpen) {
       setOpen(false);
-      animation.current.setDirection(-1);
-      animation.current.play();
+      hamburgerAnimation.current.setDirection(-1);
+      hamburgerAnimation.current.play();
       
     } else {
       setOpen(true);
-      animation.current.setDirection(1);
-      animation.current.play();
+      hamburgerAnimation.current.setDirection(1);
+      hamburgerAnimation.current.play();
     }
   }
 
@@ -60,9 +70,10 @@ const Navigation = ({ loggedIn, setLoggedIn, history }) => {
 
   return (
     <>
-      <div className={'navigation' + (navBgShown? ' not-top': '')}>
+      <div className={'navigation' + (shouldNavigationBeTransparent? ' is-transparent': '')}>
         <NavLink exact to='/' className='logo-link' onClick={() => scrollToTop()}>
-          <Logo filled={navBgShown}/>
+          <Logo/>
+          <p className="logo-label">BRAWL GAMING</p>
         </NavLink>
         <div className='menu'>
           <NavLink className='nav-text' to='/concept' onClick={() => scrollToTop()}>

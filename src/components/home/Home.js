@@ -17,15 +17,11 @@ const Home = () => {
     <div className="home">
       <Hero>
         <div className="home-hero">
-          <p className="home-hero-text">
-            If you've got <span>time</span>
-          </p>
-          <p className="home-hero-text">
-            we've got <span>esports</span>
-          </p>
-          <p className="home-hero-text">
-            for <span>everyone</span>
-          </p>
+          <div className="home-hero-content">
+            <p className="home-hero-text">
+              <span>esports</span> for the people
+            </p>
+          </div>
         </div>
       </Hero>
       <About />
